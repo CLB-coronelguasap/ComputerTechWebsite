@@ -4,4 +4,8 @@
 }
 .md-typescale-display-medium{
     font-family: 'Roboto';
+    color: var(--md-sys-primary);
+}
+div{
+    background-color: var(--md-sys-color-surface-container);
 }
