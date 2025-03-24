@@ -1,3 +1,3 @@
-# Website for my Computer Tech Task 2
+# Material Design Website
 
-I'm committing
+This website is for my Computer Tech assignment, it can be found (here){https://clb-coronelguasap.github.io/ComputerTechWebsite/}

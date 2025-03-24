@@ -8,31 +8,42 @@
           "@material/web/": "https://esm.run/@material/web/"
         }
       }
-    </script>
-    <script type="module">
-      import '@material/web/all.js';
-      import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js';
-  
-      document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
-    </script>
-  </head>
-  <body>
-    <h1 class="md-typescale-display-medium">GonkSec</h1>
-    <div class="btnContainer">
-      <md-filled-button id="Home" class="reset">Home</md-filled-button>
-      <md-filled-button id="Aspects" class="button">Aspects</md-filled-button>
+    }
+  </script>
+  <script type="module">
+    import '@material/web/all.js';
+    import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js';
+
+    document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
+  </script>
+</head>
+<body>
+  <div>
+    <md-menu-item></md-menu-item>
+	<md-list-item></md-list-item>
+	<md-menu-item></md-menu-item>
+	
+  </div>
+  <h1 class="md-typescale-display-medium">Hello Material!</h1>
+  <form>
+    <p class="md-typescale-body-medium">Check out these controls in a form!</p>
+    <md-checkbox></md-checkbox>
+    <div>
+      <md-radio name="group"></md-radio>
+      <md-radio name="group"></md-radio>
+      <md-radio name="group"></md-radio>
     </div>
-    <div class="textfield1">
-      <h1 class="md-typescale-title-large">Do you know how much of your info is on the internet?</h1>
-    </div>
-    
-    </form>
-    <style>
-      form {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 16px;
-      }
-    </style>
-  </body>
+                
+                
+    <md-outlined-text-field label="Favorite color" value="Purple"></md-outlined-text-field>
+    <md-outlined-button type="button"></md-outlined-button>
+  </form>
+  <style>
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+  </style>
+</body>
