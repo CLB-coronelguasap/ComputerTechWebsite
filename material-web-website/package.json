@@ -1,0 +1,16 @@
+{
+  "name": "material-web-website",
+  "version": "1.0.0",
+  "description": "A website using Material Web components.",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "live-server src",
+    "build": "echo 'Build step not defined'",
+    "test": "echo 'Test step not defined'"
+  },
+  "dependencies": {
+    "@material/web": "^latest"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}
