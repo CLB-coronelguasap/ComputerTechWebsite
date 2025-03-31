@@ -1,6 +1,10 @@
 # Cybersecurity Website
 
-This project is a comprehensive and visually appealing website focused on cybersecurity. It aims to educate users about cybersecurity threats, provide tools for managing personal information online, and promote awareness about the importance of online security.
+This project is made for my Computer Tech Task 2
+
+It aims to make a website which informs users about the topic of cybersecurity and 
+
+![dock](dock.jpg)
 
 ## Project Structure
 
@@ -14,8 +18,10 @@ cybersecurity-website
 │   ├── lookup.html         # Page for users to look up and manage their personal information
 │   ├── about.html          # Find out more page about the organization
 │   └── assets
+│       ├── images
+│       │   └── dock.jpg  # Icon for website / Used for README
 │       ├── css
-│       │   └── styles.css  # Styles for the website using the material-web library
+│       │   └── styles.css  # Styles for the website
 │       └── js
 │           └── scripts.js  # JavaScript for interactivity and functionality
 ├── src
