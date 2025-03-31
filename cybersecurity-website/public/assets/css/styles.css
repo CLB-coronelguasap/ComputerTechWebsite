@@ -27,7 +27,11 @@ nav a:hover {
     text-decoration: underline;
 }
 
-h1, h2, h3 {
+h1 {
+    color: #ffffff;
+}
+
+h2, h3 {
     color: #333;
 }
 
