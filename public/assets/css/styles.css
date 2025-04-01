@@ -1,3 +1,5 @@
+
+
 :root{
     --alice-blue: #e8f1f2ff;
     --celadon: #b3efb2ff;
@@ -11,13 +13,14 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
+    font-family: "Funnel Display", sans-serif;
 }
 
 .funnel-display-header {
     font-family: "Funnel Display", sans-serif;
     font-optical-sizing: auto;
     font-weight: 550;
-    font-style: normal;
+    font-style: bold;
   }
 
 header {
@@ -43,7 +46,8 @@ nav a:hover {
 }
 
 h1 {
-    color: #fff;
+    color: var(--celadon);
+    background-color: var(--brunswick-green);
 }
 
 h2, h3 {
