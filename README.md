@@ -41,7 +41,7 @@ cybersecurity-website
 
 ## Features
 
-- **Home Page**: An introduction to cybersecurity and the website's purpose.
+- [**Home Page**](/public/index.html): An introduction to cybersecurity and the website's purpose.
 - **Security Page**: Detailed information about cybersecurity, including statistics and best practices.
 - **Lookup Page**: Functionality for users to look up their personal information and options to remove it from the internet.
 - **About Page**: Information about the organization or team behind the website.
