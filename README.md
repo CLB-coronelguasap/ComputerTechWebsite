@@ -42,19 +42,19 @@ cybersecurity-website
 ## Features
 
 - [**Home Page**](/public/index.html): An introduction to cybersecurity and the website's purpose.
-- **Security Page**: Detailed information about cybersecurity, including statistics and best practices.
-- **Lookup Page**: Functionality for users to look up their personal information and options to remove it from the internet.
-- **About Page**: Information about the organization or team behind the website.
+- [**Security Page**](/public/security.html): Detailed information about cybersecurity, including statistics and best practices.
+- [**Lookup Page**](/public/lookup.html): Functionality for users to look up their personal information and options to remove it from the internet.
+- [**About Page**](/public/about.html): Information about the organization or team behind the website.
 
 ## Setup Instructions
 
 1. Clone the repository:
    ```
-   git clone <repository-url>
+   git clone https://github.com/CLB-coronelguasap/ComputerTechWebsite
    ```
 2. Navigate to the project directory:
    ```
-   cd cybersecurity-website
+   cd ComputerTechWebsite
    ```
 3. Install the dependencies:
    ```
