@@ -40,11 +40,13 @@ nav a {
 }
 
 ul {
+    position: sticky;
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    width: 100%;
   }
   
   li {
@@ -56,8 +58,9 @@ ul {
     color: var(--celadon);
     background-color: var(--brunswick-green);
     text-align: center;
-    padding: 14px 16px;
+    padding: 8px;
     text-decoration: none;
+    border-radius: 72px;
   }
   
   /* Change the link color to #111 (black) on hover */
@@ -96,6 +99,11 @@ p{
     background-color: var(--rich-black);
 }
 
+.active {
+    background-color: var(--celadon);
+    color: var(--rich-black);
+}
+
 .card {
     background: white;
     border-radius: 8px;
@@ -105,8 +113,8 @@ p{
 }
 
 .footer {
-    background-color: #6200ea;
-    color: white;
+    background-color: var(--brunswick-green);
+    color: var(--celadon);
     text-align: center;
     padding: 10px 0;
     position: relative;
@@ -117,7 +125,6 @@ p{
 .navbar{
     background-color: var(--brunswick-green);
     color: var(--cambridge-blue);
-    padding: 20%;
 }
 
 .button {
