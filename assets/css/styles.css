@@ -91,6 +91,7 @@ h2, h3 {
     margin: auto;
     overflow: hidden;
     padding: 20px;
+    display: flex;
 }
 
 p{
