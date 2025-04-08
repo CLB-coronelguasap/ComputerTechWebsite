@@ -114,6 +114,12 @@ p{
     width: 100%;
 }
 
+.navbar{
+    background-color: var(--brunswick-green);
+    color: var(--cambridge-blue);
+    padding: 20%;
+}
+
 .button {
     background-color: #6200ea;
     color: white;
