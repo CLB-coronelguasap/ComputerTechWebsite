@@ -41,10 +41,10 @@ cybersecurity-website
 
 ## Features
 
-- [**Home Page**](/public/index.html): An introduction to cybersecurity and the website's purpose.
-- [**Security Page**](/public/security.html): Detailed information about cybersecurity, including statistics and best practices.
-- [**Lookup Page**](/public/lookup.html): Functionality for users to look up their personal information and options to remove it from the internet.
-- [**About Page**](/public/about.html): Information about the organization or team behind the website.
+- [**Home Page**](index.html): An introduction to cybersecurity and the website's purpose.
+- [**Security Page**](security.html): Detailed information about cybersecurity, including statistics and best practices.
+- [**Lookup Page**](lookup.html): Functionality for users to look up their personal information and options to remove it from the internet.
+- [**About Page**](about.html): Information about the organization or team behind the website.
 
 ## Setup Instructions
 
