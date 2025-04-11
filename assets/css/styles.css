@@ -92,6 +92,8 @@ h2, h3 {
     overflow: hidden;
     padding: 20px;
     display: flex;
+    border: 2px solid var(--celadon); 
+    border-radius: 72px;
 }
 
 p{
@@ -106,7 +108,7 @@ p{
 }
 
 .card {
-    background: white;
+    background: var(--brunswick-green);
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin: 20px 0;
