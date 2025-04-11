@@ -158,6 +158,20 @@ h2, h3 {
     font-size: xx-large;
 }
 
+.inner_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.inner_container h1{
+    color: var(--celadon);
+    background-color: var(--brunswick-green);
+    font-size: 72px;
+}
+
 .container {
     width: 80%;
     margin: auto;
