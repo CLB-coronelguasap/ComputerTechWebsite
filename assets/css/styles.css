@@ -36,7 +36,7 @@
     font-family: 'Material Symbols Outlined';
     font-weight: normal;
     font-style: normal;
-    font-size: xx-large;
+    font-size: 72px;
     line-height: 1;
     letter-spacing: normal;
     text-transform: none;
@@ -44,7 +44,6 @@
     white-space: nowrap;
     word-wrap: normal;
     direction: ltr;
-    border: 4px solid var(--celadon);
     -moz-font-feature-settings: 'liga';
     -moz-osx-font-smoothing: grayscale;
   }
@@ -166,11 +165,6 @@ h2, h3 {
     padding: 20px;
 }
 
-.inner_container h1{
-    color: var(--celadon);
-    background-color: var(--brunswick-green);
-    font-size: 72px;
-}
 
 .container {
     width: 80%;
