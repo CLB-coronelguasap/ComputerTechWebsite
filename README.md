@@ -4,7 +4,7 @@ This project is made for my Computer Tech Task 2
 
 It aims to make a website which informs users about the topic of cybersecurity
 
-![dock](/public/assets/images/dock.jpg)
+![dock](assets/images/dock.jpg)
 
 ## Project Structure
 
