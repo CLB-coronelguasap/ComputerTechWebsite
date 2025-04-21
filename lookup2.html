@@ -36,6 +36,8 @@
             <div class="container">
                 <h1>Do you really know how much of your info is online?</h1>
                 <p>The availability of public information on the internet has grown significantly with the rise of social media platforms, online directories, and data aggregation services. Personal details such as full names, email addresses, phone numbers, and even home addresses can often be found online, either through public records or information shared voluntarily. This data is frequently collected, stored, and sold by third-party companies, making it accessible to anyone with the right tools or resources. While this can be convenient for legitimate purposes like reconnecting with old friends or verifying identities, it also poses significant privacy risks.</p>
+                <p>One of the primary concerns is the misuse of this information by malicious actors. Cybercriminals can exploit publicly available data for phishing attacks, identity theft, or social engineering schemes. Additionally, the widespread availability of personal information can lead to unwanted solicitations, spam, or even harassment. Many individuals are unaware of just how much of their data is accessible online, often due to lax privacy settings or outdated information-sharing practices.</p>
+                <p>To mitigate these risks, it is essential to regularly audit your online presence and take steps to limit the exposure of sensitive information. This includes adjusting privacy settings on social media accounts, opting out of data broker services, and being cautious about the information you share online. Tools and services are also available to help individuals locate and remove their personal data from the internet, providing an added layer of protection in an increasingly connected world.</p>
                 <p>Enter your details below to check your personal information online and find options to remove it from the internet.</p>
                 
                 <form id="lookup-form">
@@ -47,13 +49,41 @@
                     
                     <button type="submit">Lookup</button>
                 </form>
-                
-                <div class="container" id="results" style="display:none;">
-                    <h3>Lookup Results</h3>
-                    <p id="result-message"></p>
-                    <button id="remove-info">Remove Information</button>
-                </div>
+                <p>Note: Your information will not be stored or shared with any third parties.</p>
+                <p>By using this service, you agree to our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+            <div class="container" id="results" style="display:none;">
+                <h3>Lookup Results</h3>
+                <p id="result-message"></p>
+                <button id="remove-info">Remove Information</button>
             </div>
+            
+            <div class="container" id="statistics" style="display:none;">
+                <h3>Statistics</h3>
+                <p>We found the following information about you:</p>
+                <ul>
+                    <li><strong>Social Media Profiles:</strong> <span id="social-media-count">0</span></li>
+                    <li><strong>Data Breaches:</strong> <span id="data-breach-count">0</span></li>
+                    <li><strong>Public Records:</strong> <span id="public-records-count">0</span></li>
+                </ul>
+            </div>
+
+            <script>
+                document.getElementById('lookup-form').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    
+                    // Simulate a lookup process
+                    setTimeout(() => {
+                        document.getElementById('results').style.display = 'block';
+                        document.getElementById('result-message').innerText = `We found some information associated with ${name} (${email}).`;
+                    }, 1000);
+                });
+                
+                document.getElementById('remove-info').addEventListener('click', function() {
+                    alert('Information removal process initiated. Please check your email for further instructions.');
+                });
+            </script>
         </main>
         <footer class="footer">
             <p>&copy; 2023 Cybersecurity Organization. All rights reserved.</p>
