@@ -282,3 +282,31 @@ input[type="text"]:focus, input[type="email"]:focus {
     background-color: var(--alice-blue);
     color: var(--rich-black);
 }
+
+.cybersecurity-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.text-section {
+    color: var(--alice-blue);
+    background-color: var(--brunswick-green);
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+.image-section {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 10px;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
