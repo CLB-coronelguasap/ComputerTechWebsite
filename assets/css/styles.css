@@ -125,7 +125,7 @@ ul {
     text-align: center;
     padding: 8px;
     text-decoration: none;
-    border-radius: 72px;
+    border-radius: 50%;
   }
   
   /* Change the link color to #111 (black) on hover */
