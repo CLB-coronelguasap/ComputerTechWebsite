@@ -255,6 +255,11 @@ p{
     text-align: center;
 }
 
+label {
+    font-size: 18px;
+    color: var(--celadon);
+}
+
 .statistic h4 {
     margin: 5px 0;
 }
