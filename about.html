@@ -3,55 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>Cybersecurity Awareness - About Us</title>
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="/assets/images/dock.jpg">
+    <link rel="icon" type="image/x-icon" href="assets/images/dock.jpg">
+    <script src="assets/js/scripts.js" defer></script>
+    <style>
+        /* Additional Advanced Styling for the About Page */
+        .about-hero {
+            position: relative;
+            background: url('assets/images/about-hero.jpg') center/cover no-repeat;
+            min-height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--alice-blue);
+            text-align: center;
+        }
+        .about-hero::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(49,73,60,0.7);
+        }
+        .about-hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .info-box {
+            background-color: var(--brunswick-green);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 40px auto;
+            max-width: 800px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            color: var(--alice-blue);
+        }
+        .info-box h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .team-card {
+            background-color: var(--brunswick-green);
+            padding: 20px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .team-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+        .contact-info a {
+            color: var(--celadon);
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .info-box {
+                margin: 20px;
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>About Us</h1>
-        <br>
-        <nav>
-            <ul>
-                <li><a href="index.html"><span class="material-symbols-outlined">
-                    home
-                    </span></a></li>
-                <li><a href="security.html"><span class="material-symbols-outlined">
-                    security
-                    </span></a></li>
-                <li><a href="lookup.html"><span class="material-symbols-outlined">
-                    search
-                    </span></a></li>
-                <li><a class="active" href="about.html"><span class="material-symbols-outlined">
-                    info
-                    </span></a></li>
-            </ul>
-        </nav>
+    <div class="plutarco" role="main">
+        <header>
+            <h1>About Us</h1>
+            <nav aria-label="Main Navigation">
+                <ul class="navbar">
+                    <li><a href="index.html"><span class="material-symbols-outlined">home</span></a></li>
+                    <li><a href="security.html"><span class="material-symbols-outlined">security</span></a></li>
+                    <li><a href="lookup.html"><span class="material-symbols-outlined">search</span></a></li>
+                    <li><a class="active" href="about.html"><span class="material-symbols-outlined">info</span></a></li>
+                </ul>
+            </nav>
+        </header>
         
-    </header>
-    <main>
-        <div class="container">    
-            <section>
-                <h2>Our Mission</h2>
-                <p>We are dedicated to providing individuals and organizations with the knowledge and tools necessary to protect their digital lives. Cybersecurity is not just a technical issue; it's a fundamental aspect of personal and organizational safety in the digital age.</p>
-            </section>
-            <section>
-                <h2>Our Team</h2>
-                <p>Our team consists of cybersecurity experts, researchers, and educators who are passionate about making the internet a safer place for everyone. We believe in empowering users with information and resources to take control of their online presence.</p>
-            </section>
-            <section>
-                <h2>Contact Us</h2>
-                <p>If you have any questions or need assistance, feel free to reach out to us at <a href="mailto:info@cybersecuritywebsite.com">info@cybersecuritywebsite.com</a>.</p>
-            </section>
-        </div>
-    </main>
-    <footer>
-        <p>&copy; 2023 Cybersecurity Organization. All rights reserved.</p>
-    </footer>
-    <script src="assets/js/scripts.js"></script>
-    <noscript>Sorry, your browser does not support JavaScript!</noscript>
+        <!-- Hero Section for About -->
+        <section class="about-hero" aria-labelledby="aboutHeroHeading">
+            <div class="about-hero-content">
+                <h2 id="aboutHeroHeading">Our Vision for a Safer Digital World</h2>
+                <p>Empowering communities through cybersecurity education and innovation.</p>
+            </div>
+        </section>
+        
+        <main>
+            <div class="container">
+                <!-- Mission Section -->
+                <div class="info-box" aria-labelledby="missionHeading">
+                    <h2 id="missionHeading">Our Mission</h2>
+                    <p>At Cybersecurity Organization, our mission is to inform, educate, and empower individuals and businesses in safeguarding their digital identities. We believe that cybersecurity is not merely a technical challenge, but a vital aspect of everyday life that protects our personal freedom and economic wellbeing.</p>
+                </div>
+                
+                <!-- Team Section -->
+                <div class="info-box" aria-labelledby="teamHeading">
+                    <h2 id="teamHeading">Meet Our Team</h2>
+                    <p>Our success is powered by a team of dedicated cybersecurity experts, researchers, and educators who are passionate about creating a safer online environment. Get to know the people behind our mission:</p>
+                    <div class="team-grid">
+                        <div class="team-card">
+                            <img src="assets/images/team1.jpg" alt="Alex Johnson">
+                            <h3>Alex Johnson</h3>
+                            <p>Lead Cybersecurity Analyst</p>
+                        </div>
+                        <div class="team-card">
+                            <img src="assets/images/team2.jpg" alt="Maria Rodriguez">
+                            <h3>Maria Rodriguez</h3>
+                            <p>Security Researcher</p>
+                        </div>
+                        <div class="team-card">
+                            <img src="assets/images/team3.jpg" alt="David Lee">
+                            <h3>David Lee</h3>
+                            <p>IT Security Consultant</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Section -->
+                <div class="info-box contact-info" aria-labelledby="contactHeading">
+                    <h2 id="contactHeading">Get in Touch</h2>
+                    <p>For inquiries, partnerships, or support, please reach out to us. We are here to help you navigate and protect your digital journey.</p>
+                    <p>Email us at <a href="mailto:info@cybersecuritywebsite.com">info@cybersecuritywebsite.com</a> or call us at <strong>(123) 456-7890</strong>.</p>
+                </div>
+            </div>
+        </main>
+        
+        <footer role="contentinfo">
+            <p>&copy; 2023 Cybersecurity Organization. All rights reserved.</p>
+        </footer>
+        <noscript>Sorry, your browser does not support JavaScript!</noscript>
+    </div>
 </body>
 </html>
