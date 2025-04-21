@@ -284,29 +284,38 @@ input[type="text"]:focus, input[type="email"]:focus {
 }
 
 .cybersecurity-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 20px;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: row;
     align-items: center;
+    background-color: var(--brunswick-green);
+    border-radius: 16px;
+    overflow: hidden;
+    padding: 20px;
+    gap: 20px;
 }
 
 .text-section {
+    flex: 1;
     color: var(--alice-blue);
-    background-color: var(--brunswick-green);
-    padding: 20px;
-    border-radius: 8px;
     font-size: 18px;
 }
 
 .image-section {
-    display: grid;
-    grid-template-rows: auto auto;
-    gap: 10px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .image-section img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 16px; /* Matches the container's corner radius */
+    object-fit: cover;
 }
