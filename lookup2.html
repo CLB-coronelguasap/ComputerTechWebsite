@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cybersecurity Awareness</title>
+    <title>Lookup - Cybersecurity</title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
@@ -17,13 +17,13 @@
             <br>
             <nav>
                 <ul class="navbar">
-                    <li><a class="active" href="index.html"><span class="material-symbols-outlined">
+                    <li><a href="index.html"><span class="material-symbols-outlined">
                         home
                         </span></a></li>
                     <li><a href="security.html"><span class="material-symbols-outlined">
                         security
                         </span></a></li>
-                    <li><a href="lookup.html"><span class="material-symbols-outlined">
+                    <li><a class="active" href="lookup.html"><span class="material-symbols-outlined">
                         search
                         </span></a></li>
                     <li><a href="about.html"><span class="material-symbols-outlined">
@@ -32,15 +32,31 @@
                 </ul>
             </nav>
         </header>
-        </nav>
         <main>
             <div class="container">
-                <h1>Welcome to Cybersecurity Awareness</h1>
-                <br>
-                <p>Your online safety is our priority. Explore our resources to learn more about protecting your personal information.</p>
+                <h1>Personal Information Lookup</h1>
+                <p>Enter your details below to check your personal information online and find options to remove it from the internet.</p>
+                
+                <form id="lookup-form">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <button type="submit">Lookup</button>
+                </form>
+                
+                <div class="container" id="results" style="display:none;">
+                    <h3>Lookup Results</h3>
+                    <p id="result-message"></p>
+                    <button id="remove-info">Remove Information</button>
+                </div>
             </div>
         </main>
-        <footer class="footer">By Caleb Serrano@Gonk</footer>
+        <footer class="footer">
+            <p>&copy; 2023 Cybersecurity Organization. All rights reserved.</p>
+        </footer>
         <noscript>Sorry, your browser does not support JavaScript!</noscript>
     </div>
 </body>
