@@ -315,7 +315,10 @@ input[type="text"]:focus, input[type="email"]:focus {
 
 .image-section img {
     width: 100%;
+    max-width: 300px; /* Limit the maximum width */
+    max-height: 200px; /* Limit the maximum height */
     height: auto;
     border-radius: 16px; /* Matches the container's corner radius */
-    object-fit: cover;
+    object-fit: cover; /* Ensures the image fits within the container */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
 }
