@@ -168,9 +168,9 @@ h2, h3 {
 
 .container {
     width: 80%;
-    margin: auto;
+    margin: 30px auto;
     overflow: hidden;
-    padding: 20px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     border: 2px solid var(--celadon); 
