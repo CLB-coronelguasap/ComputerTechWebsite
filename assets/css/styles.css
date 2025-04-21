@@ -322,3 +322,63 @@ input[type="text"]:focus, input[type="email"]:focus {
     object-fit: cover; /* Ensures the image fits within the container */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
 }
+
+        /* Inline additional advanced styling if needed */
+        .hero {
+            position: relative;
+            background: url('assets/images/cyber-hero.jpg') center/cover no-repeat;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--alice-blue);
+        }
+        .hero-overlay {
+            position: absolute;
+            top:0;
+            left:0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(49, 73, 60, 0.7);
+        }
+        .hero-content {
+            position: relative;
+            text-align: center;
+            z-index: 1;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        .info-card {
+            background-color: var(--brunswick-green);
+            border-radius: 16px;
+            padding: 20px;
+            color: var(--alice-blue);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .info-card:hover {
+            transform: translateY(-5px);
+        }
+        .info-card img {
+            width: 100%;
+            border-radius: 16px;
+            object-fit: cover;
+        }
+        .cta-btn {
+            background-color: var(--celadon);
+            color: var(--rich-black);
+            border: none;
+            padding: 15px 25px;
+            font-size: 1.2em;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .cta-btn:hover, .cta-btn:focus {
+            background-color: var(--cambridge-blue);
+            outline: none;
+        }
