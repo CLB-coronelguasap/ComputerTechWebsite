@@ -224,6 +224,8 @@ p{
 .navbar{
     background-color: var(--brunswick-green);
     color: var(--cambridge-blue);
+    float: left ;
+    display: flex;
 }
 
 .button {
