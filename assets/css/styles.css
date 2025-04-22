@@ -104,7 +104,7 @@ ul {
   }
   
   li {
-    float: left;
+    display: block;
   }
 
   img {
@@ -139,6 +139,21 @@ nav a:hover {
 
 div{
     background-color: var(--brunswick-green);
+}
+
+a {
+    color: var(--alice-blue); 
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;    
+    transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+    color: var(--celadon);   
+    text-decoration: underline; 
+    font-weight: bolder;
 }
 
 h1 {
