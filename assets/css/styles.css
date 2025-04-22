@@ -137,6 +137,24 @@ nav a:hover {
     text-decoration: underline;
 }
 
+/* Use Funnel Sans for all non-header text */
+body,
+p,
+a,
+button,
+input,
+textarea,
+span,
+li,
+div {
+    font-family: "Funnel Sans", sans-serif;
+}
+
+/* Ensure headers remain using Funnel Display */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Funnel Display", sans-serif;
+}
+
 div{
     background-color: var(--brunswick-green);
 }
@@ -149,12 +167,13 @@ a {
     transition: color 0.3s ease;
 }
 
-a:hover,
-a:focus {
-    color: var(--celadon);   
-    text-decoration: underline; 
-    font-weight: bolder;
-}
+a:hover {
+    text-decoration: none;
+    /*! font-weight: lighter; */
+    transition: ease-in-out;
+    scale: 101%;
+    background-color: var(--cambridge-blue);
+  }
 
 h1 {
     color: var(--celadon);
@@ -224,8 +243,8 @@ p{
 .navbar{
     background-color: var(--brunswick-green);
     color: var(--cambridge-blue);
-    float: left ;
     display: flex;
+    float: left;
 }
 
 .button {

@@ -45,10 +45,12 @@
             padding: 20px;
             color: var(--alice-blue);
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease-in-out;
+            outline: 2px solid var(--cambridge-blue);
         }
         .info-card:hover {
-            transform: translateY(-5px);
+            transform: scale(105%);
+            outline: 2px solid var(--celadon);
         }
         .info-card img {
             width: 100%;
@@ -65,6 +67,7 @@
             border-radius: 50px;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            font-family: inherit;
         }
         .cta-btn:hover, .cta-btn:focus {
             background-color: var(--cambridge-blue);
