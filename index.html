@@ -73,118 +73,85 @@
             outline: none;
         }
 
-        #bg-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: url("assets/images/dock.jpg") center/cover no-repeat;
-        filter: blur(8px);
-        opacity: 1;
-        z-index: -1;
-        transition: opacity 0.2s ease;
-        }
 
-        #bg-base {
-        position: fixed;
-         top: 0;
-        left: 0;
-         width: 100%;
-        height: 100%;
-        background-color: var(--brunswick-green);
-        z-index: -2;
-        }
     </style>
 </head>
 <body>
-    <div id="bg-base"></div>
-        <div id="bg-overlay"></div>
-            <div class="plutarco" role="main">
-                <header id="header">
-                    <nav aria-label="Main Navigation">
-                        <ul class="navbar">
-                            <li><a class="active" href="index.html"><span class="material-symbols-outlined">home</span></a></li>
-                            <li><a href="security.html"><span class="material-symbols-outlined">security</span></a></li>
-                            <li><a href="lookup.html"><span class="material-symbols-outlined">search</span></a></li>
-                            <li><a href="about.html"><span class="material-symbols-outlined">info</span></a></li>
-                        </ul>
-                    </nav>
-                </header>
+        <div class="plutarco" role="main">
+            <header id="header">
+                <nav aria-label="Main Navigation">
+                    <ul class="navbar">
+                        <li><a class="active" href="index.html"><span class="material-symbols-outlined">home</span></a></li>
+                        <li><a href="security.html"><span class="material-symbols-outlined">security</span></a></li>
+                        <li><a href="lookup.html"><span class="material-symbols-outlined">search</span></a></li>
+                        <li><a href="about.html"><span class="material-symbols-outlined">info</span></a></li>
+                    </ul>
+                </nav>
+            </header>
 
-                <!-- Hero Section -->
-                <section class="hero" aria-labelledby="heroHeading">
-                    <div class="hero-overlay"></div>
-                    <div class="hero-content">
-                        <h1 id="heroHeading" style="font-size: 2000%;margin-top: 0px;margin-bottom: 0px;">#!</h1>
-                        <p>Empowering you with the knowledge, tools, and best practices to stay safe online.</p>
-                        <button class="cta-btn" onclick="window.location.href='security.html'">Learn More</button>
-                    </div>
-                </section>
+            <!-- Hero Section -->
+            <section class="hero" aria-labelledby="heroHeading">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1 id="heroHeading" style="font-size: 2000%;margin-top: 0px;margin-bottom: 0px;">#!</h1>
+                    <p>Empowering you with the knowledge, tools, and best practices to stay safe online.</p>
+                    <button class="cta-btn" onclick="window.location.href='security.html'">Learn More</button>
+                </div>
+            </section>
 
-                <main>
-                    <div class="container">
-                            <!-- Information Grid -->
-                            <section aria-labelledby="infoHeading">
-                                <h2 id="infoHeading" style="text-align: center;">Why Cybersecurity Matters</h2>
-                                <div class="info-grid">
-                                    <div class="info-card">
-                                        <a href="https://www.cisa.gov/cybersecurity-awareness-month" target="_blank">
-                                            <img src="assets/images/cyber-threat.png" alt="Cyber Threats Illustration">
-                                            <h3>Rising Cyber Threats</h3>
-                                            <p>Digital attacks continually evolve, targeting individuals and organizations across the globe. Staying informed about the latest trends is crucial.</p>
-                                        </a>
-                                    </div>
-                                    <div class="info-card">
-                                        <a href="https://www.ftc.gov/news-events/media-resources/consumer-finance" target="_blank">
-                                            <img src="assets/images/protection.png" alt="Data Protection">
-                                            <h3>Data Protection</h3>
-                                            <p>Secure your personal and professional data with strong passwords, two-factor authentication, and proactive cybersecurity measures.</p>
-                                        </a>
-                                    </div>
-                                    <div class="info-card">
-                                        <a href="https://www.nist.gov/topics/cybersecurity" target="_blank">
-                                            <img src="assets/images/education.png" alt="Cybersecurity Education">
-                                            <h3>Cybersecurity Education</h3>
-                                            <p>Knowledge is power. Explore our resources, guides, and tutorials to understand how to protect your digital presence.</p>
-                                        </a>
-                                    </div>
-                                    <div class="info-card">
-                                        <a href="https://www.cybersecurity-insiders.com/" target="_blank">
-                                            <img src="assets/images/innovation.png" alt="Innovative Security Solutions">
-                                            <h3>Innovative Solutions</h3>
-                                            <p>Discover cutting-edge technologies and strategies designed to safeguard your online activities.</p>
-                                        </a>
-                                    </div>
+            <main>
+                <div class="container">
+                        <!-- Information Grid -->
+                        <section aria-labelledby="infoHeading">
+                            <h2 id="infoHeading" style="text-align: center;">Why Cybersecurity Matters</h2>
+                            <div class="info-grid">
+                                <div class="info-card">
+                                    <a href="https://www.cisa.gov/cybersecurity-awareness-month" target="_blank">
+                                        <img src="assets/images/cyber-threat.png" alt="Cyber Threats Illustration">
+                                        <h3>Rising Cyber Threats</h3>
+                                        <p>Digital attacks continually evolve, targeting individuals and organizations across the globe. Staying informed about the latest trends is crucial.</p>
+                                    </a>
                                 </div>
-                            </section>
-                        <!-- Interactive Section -->
-                        <section aria-labelledby="interactiveHeading">
-                            <h2 id="interactiveHeading" style="text-align: center;">Join the Conversation</h2>
-                            <p style="text-align: center;">Connect with experts, ask questions, and share your experiences in our cybersecurity community.</p>
-                            <div style="text-align: center; margin-top: 20px;">
-                                <button class="cta-btn" onclick="window.location.href='about.html'">Contact Us</button>
+                                <div class="info-card">
+                                    <a href="https://www.ftc.gov/news-events/media-resources/consumer-finance" target="_blank">
+                                        <img src="assets/images/protection.png" alt="Data Protection">
+                                        <h3>Data Protection</h3>
+                                        <p>Secure your personal and professional data with strong passwords, two-factor authentication, and proactive cybersecurity measures.</p>
+                                    </a>
+                                </div>
+                                <div class="info-card">
+                                    <a href="https://www.nist.gov/topics/cybersecurity" target="_blank">
+                                        <img src="assets/images/education.png" alt="Cybersecurity Education">
+                                        <h3>Cybersecurity Education</h3>
+                                        <p>Knowledge is power. Explore our resources, guides, and tutorials to understand how to protect your digital presence.</p>
+                                    </a>
+                                </div>
+                                <div class="info-card">
+                                    <a href="https://www.cybersecurity-insiders.com/" target="_blank">
+                                        <img src="assets/images/innovation.png" alt="Innovative Security Solutions">
+                                        <h3>Innovative Solutions</h3>
+                                        <p>Discover cutting-edge technologies and strategies designed to safeguard your online activities.</p>
+                                    </a>
+                                </div>
                             </div>
                         </section>
-                    </div>
-                </main>
+                    <!-- Interactive Section -->
+                    <section aria-labelledby="interactiveHeading">
+                        <h2 id="interactiveHeading" style="text-align: center;">Join the Conversation</h2>
+                        <p style="text-align: center;">Connect with experts, ask questions, and share your experiences in our cybersecurity community.</p>
+                        <div style="text-align: center; margin-top: 20px;">
+                            <button class="cta-btn" onclick="window.location.href='about.html'">Contact Us</button>
+                        </div>
+                    </section>
+                </div>
+            </main>
 
-                <footer class="footer" role="contentinfo">
-                    <p>&copy; 2025 Cybersecurity Organization. All rights reserved.</p>
-                    <p>Designed by Caleb Serrano@Gonk</p>
-                </footer>
-                <noscript>Sorry, your browser does not support JavaScript!</noscript>
-            </div>
-    </div>
-  
-    <script>
-        // Adjust the opacity of the background overlay based on scroll position
-        window.addEventListener("scroll", function() {
-          const maxScroll = 500;
-          let newOpacity = Math.max(1 - window.scrollY / maxScroll, 0);
-          document.getElementById("bg-overlay").style.opacity = newOpacity;
-        });
-      </script>
+            <footer class="footer" role="contentinfo">
+                <p>&copy; 2025 Cybersecurity Organization. All rights reserved.</p>
+                <p>Designed by Caleb Serrano@Gonk</p>
+            </footer>
+        </div>
+            <noscript>Sorry, your browser does not support JavaScript!</noscript>
 </body>
 </html>
 
