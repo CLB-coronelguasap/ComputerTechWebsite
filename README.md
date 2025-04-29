@@ -58,16 +58,12 @@ cybersecurity-website
    ```
 3. Install the dependencies:
    ```
-   npm install
-   ```
-4. Start the development server:
-   ```
-   npm start
+   npx http-server
    ```
 
 ## Usage
 
-Once the server is running, you can access the website at `http://localhost:3000`. Navigate through the different pages using the navigation bar to explore the content and features.
+Once the server is running, you can access the website at `http://127.0.0.1:8080`. Navigate through the different pages using the navigation bar to explore the content and features.
 
 ## Contributing
 
