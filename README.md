@@ -13,30 +13,23 @@ The project is organized as follows:
 ```
 cybersecurity-website
 ├── public
-│   ├── index.html          # Main entry point of the website
-│   ├── security.html       # Page with information about cybersecurity and statistics
-│   ├── lookup.html         # Page for users to look up and manage their personal information
-│   ├── about.html          # Find out more page about the organization
 │   └── assets
 │       ├── images
-│       │   └── dock.jpg  # Icon for website / Used for README
-│       ├── css
-│       │   └── styles.css  # Styles for the website
-│       └── js
-│           └── scripts.js  # JavaScript for interactivity and functionality
-├── src
-│   ├── components
-│   │   ├── header.js       # Header component for the website
-│   │   ├── footer.js       # Footer component for the website
-│   │   └── navbar.js       # Navbar component for navigation
-│   └── pages
-│       ├── home.js         # Home page component
-│       ├── security.js     # Security page component
-│       ├── lookup.js       # Lookup page component
-│       └── about.js        # About page component
-├── package.json            # npm configuration file
+│       │   ├── dock.jpg    # Used for README
+│       │   ├── embed.png   # Image for social media embedding
+│       │   ├── cyber-threat.png # Used in index
+│       │   ├── icon.ico  # Icon
+│       │   ├── innovation.png  # Used in index
+│       │   ├── protection.png  # Used in index
+│       │   └── education.png   # Used in index
+│       └── css
+│           └── styles.css #styles for website
 ├── README.md               # Project documentation
-└── .gitignore              # Files to be ignored by version control
+├── LICENSE                 # License file (GPL v3)
+├── index.html          # Main entry point of the website
+├── security.html       # Page with information about cybersecurity and statistics
+├── lookup.html         # Page for users to look up and manage their personal information
+└── about.html          # Find out more page
 ```
 
 ## Features
@@ -50,7 +43,7 @@ cybersecurity-website
 
 1. Clone the repository:
    ```
-   git clone https://github.com/CLB-coronelguasap/ComputerTechWebsite
+   git clone https://github.com/CLB-coronelguasap/ComputerTechWebsite.git
    ```
 2. Navigate to the project directory:
    ```
@@ -65,7 +58,7 @@ cybersecurity-website
 
 Once the server is running, you can access the website at `http://127.0.0.1:8080`. Navigate through the different pages using the navigation bar to explore the content and features.
 
-Alternatively, visit the website at https://clb-coronelguasap.github.io/ComputerTechWebsite/
+Alternatively, visit the website at https://clb-coronelguasap.github.io/ComputerTechWebsite/index.html
 
 ## Contributing
 
