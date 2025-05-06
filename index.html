@@ -19,9 +19,15 @@
         .hero {
             position: relative;
             min-height: 60vh;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
             color: var(--alice-blue);
         }
         .hero-overlay {
@@ -38,6 +44,7 @@
             z-index: 1;
         }
         .info-grid {
+            display: -ms-grid;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
@@ -48,18 +55,26 @@
             border-radius: 16px;
             padding: 20px;
             color: var(--alice-blue);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            -webkit-box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+                    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            -webkit-transition: -webkit-transform 0.3s ease-in-out;
+            transition: -webkit-transform 0.3s ease-in-out;
+            -o-transition: transform 0.3s ease-in-out;
             transition: transform 0.3s ease-in-out;
+            transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
             outline: 2px solid var(--cambridge-blue);
         }
         .info-card:hover {
-            transform: scale(105%);
+            -webkit-transform: scale(105%);
+                -ms-transform: scale(105%);
+                    transform: scale(105%);
             outline: 2px solid var(--celadon);
         }
         .info-card img {
             width: 100%;
             border-radius: 16px;
-            object-fit: cover;
+            -o-object-fit: cover;
+               object-fit: cover;
             padding: 0px;
         }
         .cta-btn {
@@ -70,6 +85,8 @@
             font-size: 1.2em;
             border-radius: 50px;
             cursor: pointer;
+            -webkit-transition: background-color 0.3s ease;
+            -o-transition: background-color 0.3s ease;
             transition: background-color 0.3s ease;
             font-family: inherit;
         }
@@ -77,7 +94,6 @@
             background-color: var(--cambridge-blue);
             outline: none;
         }
-
 
     </style>
 </head>

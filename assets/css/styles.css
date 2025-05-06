@@ -1,11 +1,23 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 
 
 :root{
     --alice-blue: #e8f1f2ff;
+    --tea-green: #cef0d2ff;
     --celadon: #b3efb2ff;
+    --celadon-2: #97c798ff;
     --cambridge-blue: #7a9e7eff;
+    --hookers-green: #56745dff;
     --brunswick-green: #31493cff;
+    --gunmetal: #193230ff;
     --rich-black: #001a23ff;
+    --gunmetal-2: #172f37ff;
 }
 
 @font-face {
@@ -76,6 +88,8 @@ header {
     color: var(--celadon);
     padding: 20px;
     text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: sticky;
 }
@@ -116,7 +130,8 @@ ul {
     display: block;
     padding: 20px;
     border: 2px solid var(--celadon);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);    
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);    
   }  
   li a {
     display: block;
@@ -164,12 +179,16 @@ a {
     font-weight: bold;
     font-size: 18px;
     text-decoration: none;    
+    -webkit-transition: color 0.3s ease;    
+    -o-transition: color 0.3s ease;    
     transition: color 0.3s ease;
 }
 
 a:hover {
     text-decoration: none;
     /*! font-weight: lighter; */
+    -webkit-transition: ease-in-out;
+    -o-transition: ease-in-out;
     transition: ease-in-out;
     scale: 101%;
     background-color: var(--cambridge-blue);
@@ -192,10 +211,19 @@ h2, h3 {
 }
 
 .inner_container{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding: 20px;
 }
 
@@ -205,10 +233,25 @@ h2, h3 {
     margin: 30px auto;
     overflow: hidden;
     padding: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     border: 2px solid var(--celadon); 
     border-radius: 72px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 p{
@@ -225,7 +268,8 @@ p{
 .card {
     background: var(--brunswick-green);
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin: 20px 0;
     padding: 20px;
 }
@@ -243,6 +287,8 @@ p{
 .navbar{
     background-color: var(--brunswick-green);
     color: var(--cambridge-blue);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     float: left;
 }
@@ -257,9 +303,15 @@ p{
 }
 
 .img_container{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin: 20px 0;
 }
 .img_container img{
@@ -276,9 +328,15 @@ p{
 }
 
 .statistic {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin: 10px 0;
 }
 
@@ -287,7 +345,9 @@ p{
 }
 
 .statistic div {
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     text-align: center;
 }
 
@@ -308,7 +368,8 @@ input[type="text"], input[type="email"] {
     padding: 10px;
     font-size: 16px;
     width: 100%;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     margin: 10px 0;
 }
 
@@ -320,15 +381,27 @@ input[type="text"]:focus, input[type="email"]:focus {
 }
 
 .cybersecurity-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 20px;
 }
 
 .content-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     background-color: var(--brunswick-green);
     border-radius: 16px;
     overflow: hidden;
@@ -337,16 +410,26 @@ input[type="text"]:focus, input[type="email"]:focus {
 }
 
 .text-section {
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     color: var(--alice-blue);
     font-size: 18px;
 }
 
 .image-section {
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .image-section img {
@@ -355,16 +438,24 @@ input[type="text"]:focus, input[type="email"]:focus {
     max-height: 200px; /* Limit the maximum height */
     height: auto;
     border-radius: 16px; /* Matches the container's corner radius */
-    object-fit: cover; /* Ensures the image fits within the container */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    -o-object-fit: cover;
+       object-fit: cover; /* Ensures the image fits within the container */
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
 }
 
 .hero {
     position: relative;
     min-height: 60vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     color: var(--alice-blue);
 }
 .hero-overlay {
@@ -381,6 +472,7 @@ input[type="text"]:focus, input[type="email"]:focus {
     z-index: 1;
 }
 .info-grid {
+    display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
@@ -391,18 +483,21 @@ input[type="text"]:focus, input[type="email"]:focus {
     border-radius: 16px;
     padding: 20px;
     color: var(--alice-blue);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    transition: -webkit-transform 0.3s ease-in-out;
+    -o-transition: transform 0.3s ease-in-out;
     transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
     outline: 2px solid var(--cambridge-blue);
 }
-.info-card:hover {
-    transform: scale(105%);
-    outline: 2px solid var(--celadon);
-}
+
 .info-card img {
     width: 100%;
     border-radius: 16px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     padding: 0px;
 }
 .cta-btn {
@@ -413,6 +508,8 @@ input[type="text"]:focus, input[type="email"]:focus {
     font-size: 1.2em;
     border-radius: 50px;
     cursor: pointer;
+    -webkit-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
     transition: background-color 0.3s ease;
     font-family: inherit;
 }

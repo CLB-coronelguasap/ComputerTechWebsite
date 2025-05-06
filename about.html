@@ -7,16 +7,22 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="assets/images/dock.jpg">
     <style>
-        /* Additional Advanced Styling for the About Page */
         .about-hero {
             position: relative;
             background: url('assets/images/about-hero.jpg') center/cover no-repeat;
             min-height: 40vh;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
             color: var(--alice-blue);
             text-align: center;
         }
@@ -38,7 +44,8 @@
             padding: 30px;
             margin: 40px auto;
             max-width: 800px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            -webkit-box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+                    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             color: var(--alice-blue);
         }
         .info-box h2 {
@@ -46,6 +53,7 @@
             margin-bottom: 20px;
         }
         .team-grid {
+            display: -ms-grid;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
@@ -56,12 +64,14 @@
             padding: 20px;
             border-radius: 16px;
             text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            -webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         .team-card img {
             width: 100%;
             height: 200px;
-            object-fit: cover;
+            -o-object-fit: cover;
+               object-fit: cover;
             border-radius: 16px;
         }
         .contact-info a {
