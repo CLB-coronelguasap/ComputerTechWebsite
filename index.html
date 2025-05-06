@@ -95,6 +95,47 @@
             outline: none;
         }
 
+        @media (max-width: 768px) {
+            .info-card {
+                margin: 20px;
+                padding: 20px;
+            }
+
+            .typewriter h1 {
+              overflow: hidden; /* Ensures the content is not revealed until the animation */
+              border-right: .15em solid orange; /* The typwriter cursor */
+              white-space: nowrap; /* Keeps the content on a single line */
+              margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+              letter-spacing: .15em; /* Adjust as needed */
+              -webkit-animation: 
+                typing 3.5s steps(40, end),
+                blink-caret .75s step-end infinite;
+                      animation: 
+                typing 3.5s steps(40, end),
+                blink-caret .75s step-end infinite;
+            }
+
+            /* The typing effect */
+            @-webkit-keyframes typing {
+              from { width: 0 }
+              to { width: 100% }
+            }
+            @keyframes typing {
+              from { width: 0 }
+              to { width: 100% }
+            }
+
+            /* The typewriter cursor effect */
+            @-webkit-keyframes blink-caret {
+              from, to { border-color: transparent }
+              50% { border-color: orange; }
+            }
+            @keyframes blink-caret {
+              from, to { border-color: transparent }
+              50% { border-color: orange; }
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -114,8 +155,8 @@
             <section class="hero" aria-labelledby="heroHeading">
                 <div class="hero-overlay"></div>
                 <div class="hero-content">
-                    <h1 id="heroHeading" style="font-size: 2000%;margin-top: 0px;margin-bottom: 0px;">#!</h1>
-                    <p>Empowering you with the knowledge, tools, and best practices to stay safe online.</p>
+                    <h1 id="heroHeading" class="typewriter" style="font-size: 2000%;margin-top: 0px;margin-bottom: 0px;">SHEBANG</h1>
+                    <p class="typewriter">Empowering you with the knowledge, tools, and best practices to stay safe online.</p>
                     <button class="cta-btn" onclick="window.location.href='security.html'">Learn More</button>
                 </div>
             </section>
