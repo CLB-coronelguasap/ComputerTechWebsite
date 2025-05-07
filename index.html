@@ -112,40 +112,6 @@
           }
         }
 
-        .typewriter h1 {
-              overflow: hidden; /* Ensures the content is not revealed until the animation */
-              border-right: .15em solid var(--celadon); /* The typwriter cursor */
-              white-space: nowrap; /* Keeps the content on a single line */
-              margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-              letter-spacing: .15em; /* Adjust as needed */
-              -webkit-animation: 
-                typing 3.5s steps(40, end),
-                blink-caret .75s step-end infinite;
-                      animation: 
-                typing 3.5s steps(40, end),
-                blink-caret .75s step-end infinite;
-            }
-
-            /* The typing effect */
-            @-webkit-keyframes typing {
-              from { width: 0 }
-              to { width: 100% }
-            }
-            @keyframes typing {
-              from { width: 0 }
-              to { width: 100% }
-            }
-
-            /* The typewriter cursor effect */
-            @-webkit-keyframes blink-caret {
-              from, to { border-color: transparent }
-              50% { border-color: orange; }
-            }
-            @keyframes blink-caret {
-              from, to { border-color: transparent }
-              50% { border-color: orange; }
-            }
-        
         @media (max-width: 768px) {
             .info-card {
                 margin: 20px;
@@ -227,8 +193,7 @@
 
             <script src="assets/js/index.js"></script>
             <footer class="footer" role="contentinfo">
-                <p>&copy; 2025 Cybersecurity Organization. All rights reserved.</p>
-                <p>Designed by Caleb Serrano@Gonk</p>
+                <p>This site is on <a href="https://github.com/CLB-coronelguasap/ComputerTechWebsite" target="_blank">GitHub</a></p>
             </footer>
         </div>
             <noscript>Sorry, your browser does not support JavaScript!</noscript>

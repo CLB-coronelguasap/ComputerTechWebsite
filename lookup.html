@@ -128,6 +128,17 @@
             margin: 10px 0;
             font-size: 18px;
         }
+
+        .stats-list, .practices-list {
+            list-style-type: none;
+            padding: 0;
+            line-height: 1.8;
+            font-size: 18px;
+        }
+        .stats-list li::before {
+            content: "• ";
+            color: var(--celadon);
+        }
     </style>
 </head>
 <body>
@@ -207,8 +218,7 @@
         </main>
         
         <footer class="footer" role="contentinfo">
-            <p>&copy; SHEBANG. All rights reserved.</p>
-            <p>Designed by Caleb@SHEBANG</p>
+            <p>This site is on <a href="https://github.com/CLB-coronelguasap/ComputerTechWebsite" target="_blank">GitHub</a></p>
         </footer>
         <noscript>Sorry, your browser does not support JavaScript!</noscript>
     </div>

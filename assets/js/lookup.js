@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded',function(event){
         if (typeof dataText[i] == 'undefined') {
             setTimeout(function() {
                 StartTextAnimation(0); // Restart from the beginning
-            }, 20000);
+            }, 10000);
         } else if (i < dataText.length) { // Correct condition
             typeWriter(dataText[i], 0, function() {
                 // After callback (and whole text has been animated), start next text

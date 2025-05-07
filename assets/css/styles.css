@@ -274,15 +274,20 @@ p{
     padding: 20px;
 }
 
-.footer {
-    background-color: var(--brunswick-green);
-    color: var(--celadon);
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
+footer{
+    font-size: 0.6rem;
+    color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
     bottom: 0;
-    width: 100%;
-}
+    left: 0;
+    border-radius: 5px 5px 5px 0;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    transform: scale(80%);
+    transform-origin: left bottom;
+    }
 
 .navbar{
     background-color: var(--brunswick-green);
