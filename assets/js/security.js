@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded',function(event){
     // array with texts to type in typewriter
-    var dataText = [ "#!", "SHEBANG", "CYBERSECURITY", "INNOVATION"];
+    var dataText = [ "CRYPTOMINERS", "PHISHING", "RANSOMWARE", "TROJANS", "SPYWARE", "WORM", "ADWARE", "ROOTKIT", "KEYLOGGER", "EXPLOIT", "VIRUS", "MALWARE", "BOTNET", "DDoS", "SQL INJECTION", "XSS", "RAT" ];
     
     // type one text in the typwriter
     // keeps calling itself until the text is finished
