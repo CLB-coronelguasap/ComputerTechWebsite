@@ -16,6 +16,75 @@
     <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="assets/images/icon.ico">
     <style>
+         :root {
+            --background-color: var(--alice-blue);
+            --text-color: var(--rich-black);
+            --card-background: var(--celadon);
+            --button-background: var(--cambridge-blue);
+            --button-hover: var(--hookers-green);
+        }
+
+        [data-theme="dark"] {
+            --background-color: var(--gunmetal);
+            --text-color: var(--alice-blue);
+            --card-background: var(--brunswick-green);
+            --button-background: var(--hookers-green);
+            --button-hover: var(--tea-green);
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            font-family: "Funnel Sans", sans-serif;
+        }
+
+        .info-card {
+            background-color: var(--card-background);
+            color: var(--text-color);
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .cta-btn {
+            background-color: var(--button-background);
+            color: var(--text-color);
+            border: none;
+            padding: 15px 25px;
+            font-size: 1.2em;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-btn:hover, .cta-btn:focus {
+            background-color: var(--button-hover);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: var(--button-background);
+        }
+
+        .dark-mode-toggle {
+            background-color: var(--button-background);
+            color: var(--text-color);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dark-mode-toggle:hover {
+            background-color: var(--button-hover);
+        }
+
         .hero {
             position: relative;
             min-height: 60vh;
@@ -50,20 +119,6 @@
             gap: 20px;
             margin: 40px 0;
         }
-        .info-card {
-            background-color: var(--brunswick-green);
-            border-radius: 16px;
-            padding: 20px;
-            color: var(--alice-blue);
-            -webkit-box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-                    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            -webkit-transition: -webkit-transform 0.3s ease-in-out;
-            transition: -webkit-transform 0.3s ease-in-out;
-            -o-transition: transform 0.3s ease-in-out;
-            transition: transform 0.3s ease-in-out;
-            transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-            outline: 2px solid var(--cambridge-blue);
-        }
         .info-card:hover {
             -webkit-transform: scale(105%);
                 -ms-transform: scale(105%);
@@ -77,24 +132,6 @@
                object-fit: cover;
             padding: 0px;
         }
-        .cta-btn {
-            background-color: var(--celadon);
-            color: var(--rich-black);
-            border: none;
-            padding: 15px 25px;
-            font-size: 1.2em;
-            border-radius: 50px;
-            cursor: pointer;
-            -webkit-transition: background-color 0.3s ease;
-            -o-transition: background-color 0.3s ease;
-            transition: background-color 0.3s ease;
-            font-family: inherit;
-        }
-        .cta-btn:hover, .cta-btn:focus {
-            background-color: var(--cambridge-blue);
-            outline: none;
-        }
-
         span {
           border-right: .05em solid;
           animation: caret 1s steps(1) infinite;
@@ -159,6 +196,9 @@
                         <li><a href="lookup.html"><span class="material-symbols-outlined">search</span></a></li>
                         <li><a href="about.html"><span class="material-symbols-outlined">info</span></a></li>
                     </ul>
+                    <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle Dark Mode">
+                        <span class="material-symbols-outlined">dark_mode</span>
+                    </button>
                 </nav>
             </header>
 
@@ -220,6 +260,19 @@
             </main>
 
             <script src="assets/js/index.js"></script>
+            <script>
+                // Dark Mode Toggle
+                const darkModeToggle = document.getElementById('darkModeToggle');
+                const body = document.body;
+
+                darkModeToggle.addEventListener('click', () => {
+                    if (body.dataset.theme === 'dark') {
+                        body.dataset.theme = 'light';
+                    } else {
+                        body.dataset.theme = 'dark';
+                    }
+                });
+            </script>
             <footer class="footer" role="contentinfo">
                 <p>&copy; 2025 Cybersecurity Organization. All rights reserved.</p>
                 <p>Designed by Caleb Serrano@Gonk</p>
