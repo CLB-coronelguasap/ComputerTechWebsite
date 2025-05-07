@@ -125,7 +125,7 @@
                 <ul class="navbar">
                     <li><a href="index.html"><span class="material-symbols-outlined">home</span></a></li>
                     <li><a href="security.html"><span class="material-symbols-outlined">security</span></a></li>
-                    <li><a class="active" href="lookup2.html"><span class="material-symbols-outlined">search</span></a></li>
+                    <li><a class="active" href="lookup.html"><span class="material-symbols-outlined">search</span></a></li>
                     <li><a href="about.html"><span class="material-symbols-outlined">info</span></a></li>
                 </ul>
             </nav>
@@ -134,8 +134,8 @@
         <!-- Hero Section for Lookup -->
         <section class="lookup-hero" aria-labelledby="lookupHeroHeading">
             <div class="lookup-hero-content">
-                <h1 id="lookupHeroHeading">Discover Your Online Footprint</h1>
-                <p>Uncover the extent of your public digital data and take charge of your privacy.</p>
+                <h1 id="lookupHeroHeading"></h1>
+                <p>Your data is available online, find out where and why.</p>
             </div>
         </section>
         
@@ -144,7 +144,19 @@
                 <!-- Introduction -->
                 <section class="lookup-intro" aria-labelledby="introHeading">
                     <h2 id="introHeading">Your Data, Your Choice</h2>
-                    <p>In today's digital world, our personal information can be found scattered across the internet—from social media profiles to public records. Our lookup service is designed to help you discover what information is publicly accessible, so you can better protect your privacy and take actionable steps to control your digital footprint.</p>
+                    <p>The internet has become an integral part of our lives, facilitating communication, commerce, and access to vast amounts of information. However, this interconnectedness has also led to an unprecedented availability of personal information online. From social media profiles and online shopping accounts to digital footprints left through browsing history and location data, a significant amount of our personal details is now accessible in the digital realm. This widespread availability creates both convenience and considerable risks.</p>
+                    <p>Personal information on the internet can be exposed through various means, including data breaches, social media oversharing, unsecure websites, and even publicly available records. Once this information is exposed, it can be exploited for malicious purposes such as identity theft, financial fraud, and cyberstalking. Understanding the extent of your digital footprint and the potential risks associated with it is the first step towards protecting yourself.</p>
+                    <p>Taking proactive measures to manage your personal information online is crucial in today's digital age. This includes adjusting privacy settings on social media, being cautious about the information you share, using strong and unique passwords, enabling multi-factor authentication, and being aware of phishing attempts. Regularly reviewing your online presence and taking steps to limit the exposure of sensitive data can significantly reduce your vulnerability to online threats and help safeguard your personal life in an increasingly digital world.</p>
+                    <h2 id="statsHeading">Cybersecurity Statistics</h2>
+                    <ul class="stats-list">
+                        <li>In 2024, the United States Internet Crime Complaint Center (IC3) received 859,532 complaints of suspected internet crime, with reported losses exceeding $16 billion, a 33% increase from 2023.</li>
+                        <li>33% of data breaches in Australia in a specific period were due to personal information being sent to the wrong recipient email.</li>
+                        <li>A significant number of data breaches in 2024 and 2025 have exposed the personal information of hundreds of thousands of individuals, including names, social security numbers, medical histories, and financial details.</li>
+                        <li>Over 82% of iOS apps track private user data, and free apps are significantly more likely to do so than paid apps.</li>
+                        <li>68% of breaches in 2024 involved a human element.</li>
+                        <li>Less than one-quarter of American smartphone users feel in control of their personal data online, and only 64% use tools to help protect their online privacy.</li>
+                        <li>85% of global adults want to do more to protect their online privacy.</li>
+                    </ul>
                 </section>
                 
                 <!-- Lookup Form Section -->
@@ -179,33 +191,12 @@
                     </ul>
                 </section>
             </div>
-            
-            <script>
-                // Enhanced lookup logic
-                document.getElementById('lookup-form').addEventListener('submit', function(event) {
-                    event.preventDefault();
-                    const name = document.getElementById('name').value;
-                    const email = document.getElementById('email').value;
-                    
-                    // Simulate lookup processing with a timed delay
-                    setTimeout(() => {
-                        document.getElementById('results').style.display = 'block';
-                        document.getElementById('result-message').innerText = `We discovered several public records and social signals linked to ${name} (${email}).`;
-                        
-                        // Simulated stats
-                        document.getElementById('social-media-count').innerText = Math.floor(Math.random()*10) + 1;
-                        document.getElementById('data-breach-count').innerText = Math.floor(Math.random()*5) + 1;
-                        document.getElementById('public-records-count').innerText = Math.floor(Math.random()*15) + 1;
-                        
-                        document.getElementById('statistics').style.display = 'block';
-                    }, 1200);
-                });
-            </script>
+            <script src="assets/js/lookup.js"></script>
         </main>
         
         <footer class="footer" role="contentinfo">
-            <p>&copy; 2025 Cybersecurity Organization. All rights reserved.</p>
-            <p>Designed by Caleb Serrano@Gonk</p>
+            <p>&copy; SHEBANG. All rights reserved.</p>
+            <p>Designed by Caleb@SHEBANG</p>
         </footer>
         <noscript>Sorry, your browser does not support JavaScript!</noscript>
     </div>

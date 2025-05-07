@@ -66,7 +66,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: var(--alice-blue);
+    background-color: var(--tea-green);
     font-family: "Funnel Display", sans-serif;
 }
 
@@ -172,12 +172,16 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Funnel Display", sans-serif;
 }
 
+h2, h3, h4, h5, h6 {
+    color: var(--tea-green)
+}
+
 div{
     background-color: var(--brunswick-green);
 }
 
 a {
-    color: var(--alice-blue); 
+    color: var(--tea-green); 
     font-weight: bold;
     font-size: 18px;
     text-decoration: none;    
@@ -251,7 +255,7 @@ h2, h3 {
 }
 
 p{
-    color: var(--alice-blue);
+    color: var(--tea-green);
     border-radius: 72px;
     background-color: var(--brunswick-green);
 }
@@ -291,7 +295,7 @@ p{
 
 .button {
     background-color: var(--rich-black);
-    color: var(--alice-blue);
+    color: var(--tea-green);
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
@@ -357,7 +361,7 @@ label {
 }
 
 input[type="text"], input[type="email"] {
-    color: var(--alice-blue);
+    color: var(--tea-green);
     background-color: var(--brunswick-green);
     border: 2px solid var(--celadon);
     border-radius: 72px;
@@ -372,7 +376,7 @@ input[type="text"], input[type="email"] {
 input[type="text"]:focus, input[type="email"]:focus {
     outline: none;
     border-color: var(--cambridge-blue);
-    background-color: var(--alice-blue);
+    background-color: var(--tea-green);
     color: var(--rich-black);
 }
 
@@ -409,7 +413,7 @@ input[type="text"]:focus, input[type="email"]:focus {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
-    color: var(--alice-blue);
+    color: var(--tea-green);
     font-size: 18px;
 }
 
@@ -452,7 +456,7 @@ input[type="text"]:focus, input[type="email"]:focus {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    color: var(--alice-blue);
+    color: var(--tea-green);
 }
 .hero-overlay {
     position: absolute;
@@ -478,7 +482,7 @@ input[type="text"]:focus, input[type="email"]:focus {
     background-color: var(--brunswick-green);
     border-radius: 16px;
     padding: 20px;
-    color: var(--alice-blue);
+    color: var(--tea-green);
     -webkit-box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     -webkit-transition: -webkit-transform 0.3s ease-in-out;
