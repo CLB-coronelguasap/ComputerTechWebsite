@@ -95,15 +95,20 @@
             outline: none;
         }
 
-        @media (max-width: 768px) {
-            .info-card {
-                margin: 20px;
-                padding: 20px;
-            }
+        span {
+          border-right: .05em solid;
+          animation: caret 1s steps(1) infinite;
+        }
 
-            .typewriter h1 {
+        @keyframes caret {
+          50% {
+            border-color: transparent;
+          }
+        }
+
+        .typewriter h1 {
               overflow: hidden; /* Ensures the content is not revealed until the animation */
-              border-right: .15em solid orange; /* The typwriter cursor */
+              border-right: .15em solid var(--celadon); /* The typwriter cursor */
               white-space: nowrap; /* Keeps the content on a single line */
               margin: 0 auto; /* Gives that scrolling effect as the typing happens */
               letter-spacing: .15em; /* Adjust as needed */
@@ -133,6 +138,12 @@
             @keyframes blink-caret {
               from, to { border-color: transparent }
               50% { border-color: orange; }
+            }
+        
+        @media (max-width: 768px) {
+            .info-card {
+                margin: 20px;
+                padding: 20px;
             }
         }
 
@@ -208,6 +219,7 @@
                 </div>
             </main>
 
+            <script src="assets/js/index.js"></script>
             <footer class="footer" role="contentinfo">
                 <p>&copy; 2025 Cybersecurity Organization. All rights reserved.</p>
                 <p>Designed by Caleb Serrano@Gonk</p>

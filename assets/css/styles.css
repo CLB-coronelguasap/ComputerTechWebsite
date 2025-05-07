@@ -197,6 +197,7 @@ a:hover {
 h1 {
     color: var(--celadon);
     background-color: var(--brunswick-green);
+    text-transform: uppercase;
 }
 
 h2, h3 {
@@ -516,4 +517,8 @@ input[type="text"]:focus, input[type="email"]:focus {
 .cta-btn:hover, .cta-btn:focus {
     background-color: var(--cambridge-blue);
     outline: none;
+}
+
+.icon {
+    
 }
