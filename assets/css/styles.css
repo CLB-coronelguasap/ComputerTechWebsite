@@ -26,6 +26,8 @@
     --on-background: #001a23;
     --surface: #ffffff;
     --on-surface: #001a23;
+    --error: #b00020;
+    --on-error: #ffffff;
 }
 
 @font-face {
@@ -95,8 +97,8 @@ body {
 }
 
 header {
-    background-color: var(--brunswick-green);
-    color: var(--celadon);
+    background-color: var(--primary);
+    color: var(--on-primary);
     padding: 20px;
     text-align: center;
     display: -webkit-box;
@@ -110,12 +112,17 @@ nav {
 }
 
 nav a {
-    color: var(--celadon);
-    background-color: var(--brunswick-green);
+    color: var(--on-primary);
+    background-color: var(--primary);
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
     display: block;
+}
+
+nav a:hover {
+    background-color: var(--secondary);
+    color: var(--on-secondary);
 }
 
 ul {
@@ -158,10 +165,6 @@ ul {
   li a:hover {
     background-color: var(--cambridge-blue);
   }
-
-nav a:hover {
-    text-decoration: underline;
-}
 
 /* Use Funnel Sans for all non-header text */
 body,
@@ -375,10 +378,10 @@ label {
 }
 
 input[type="text"], input[type="email"] {
-    color: var(--tea-green);
-    background-color: var(--brunswick-green);
-    border: 2px solid var(--celadon);
-    border-radius: 72px;
+    background-color: var(--surface);
+    color: var(--on-surface);
+    border: 2px solid var(--primary);
+    border-radius: 8px;
     padding: 10px;
     font-size: 16px;
     width: 100%;
@@ -389,9 +392,9 @@ input[type="text"], input[type="email"] {
 
 input[type="text"]:focus, input[type="email"]:focus {
     outline: none;
-    border-color: var(--cambridge-blue);
-    background-color: var(--tea-green);
-    color: var(--rich-black);
+    border-color: var(--secondary);
+    background-color: var(--background);
+    color: var(--on-background);
 }
 
 .cybersecurity-grid {
@@ -516,8 +519,8 @@ input[type="text"]:focus, input[type="email"]:focus {
     padding: 0px;
 }
 .cta-btn {
-    background-color: var(--celadon);
-    color: var(--rich-black);
+    background-color: var(--primary);
+    color: var(--on-primary);
     border: none;
     padding: 15px 25px;
     font-size: 1.2em;
@@ -529,8 +532,8 @@ input[type="text"]:focus, input[type="email"]:focus {
     font-family: inherit;
 }
 .cta-btn:hover, .cta-btn:focus {
-    background-color: var(--cambridge-blue);
-    outline: none;
+    background-color: var(--secondary);
+    color: var(--on-secondary);
 }
 
 .theme-toggle-btn {
