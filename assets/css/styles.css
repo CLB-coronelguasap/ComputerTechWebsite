@@ -18,6 +18,14 @@
     --gunmetal: #193230ff;
     --rich-black: #001a23ff;
     --gunmetal-2: #172f37ff;
+    --primary: #31493c; /* Default fallback */
+    --on-primary: #ffffff;
+    --secondary: #56745d;
+    --on-secondary: #ffffff;
+    --background: #e8f1f2;
+    --on-background: #001a23;
+    --surface: #ffffff;
+    --on-surface: #001a23;
 }
 
 @font-face {
@@ -66,7 +74,8 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: var(--tea-green);
+    background-color: var(--background);
+    color: var(--on-background);
     font-family: "Funnel Display", sans-serif;
 }
 
@@ -299,8 +308,8 @@ footer p{
 }
 
 .button {
-    background-color: var(--rich-black);
-    color: var(--tea-green);
+    background-color: var(--primary);
+    color: var(--on-primary);
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
@@ -484,10 +493,11 @@ input[type="text"]:focus, input[type="email"]:focus {
     margin: 40px 0;
 }
 .info-card {
-    background-color: var(--brunswick-green);
+    background-color: var(--surface);
+    color: var(--on-surface);
+    border: 2px solid var(--primary);
     border-radius: 16px;
     padding: 20px;
-    color: var(--tea-green);
     -webkit-box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     -webkit-transition: -webkit-transform 0.3s ease-in-out;
@@ -523,6 +533,23 @@ input[type="text"]:focus, input[type="email"]:focus {
     outline: none;
 }
 
+.theme-toggle-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--alice-blue);
+    font-size: 24px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: color 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+    color: var(--celadon);
+}
+
 h1 span {
     border-right: .05em solid;
     animation: caret 1s steps(1) infinite;
@@ -534,4 +561,3 @@ h1 span {
     }
   }
 
-  
