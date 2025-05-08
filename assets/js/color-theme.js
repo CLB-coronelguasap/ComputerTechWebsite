@@ -21,23 +21,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Toggle between light and dark themes
     const themeToggleButton = document.getElementById("theme-toggle");
-    let isDarkMode = false;
+    console.log(themeToggleButton); // Should not be null
 
-    // Save and load theme preference
-    const savedTheme = localStorage.getItem("theme") || "light";
-    isDarkMode = savedTheme === "dark";
-    applyTheme(isDarkMode ? darkTheme : lightTheme);
+    if (themeToggleButton) {
+        let isDarkMode = false;
 
-    // Save the preference when toggling
-    themeToggleButton.addEventListener("click", () => {
-        isDarkMode = !isDarkMode;
-        const theme = isDarkMode ? darkTheme : lightTheme;
-        applyTheme(theme);
-        localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+        // Save and load theme preference
+        const savedTheme = localStorage.getItem("theme") || "light";
+        isDarkMode = savedTheme === "dark";
+        applyTheme(isDarkMode ? darkTheme : lightTheme);
 
-        // Update the button icon
-        themeToggleButton.innerHTML = isDarkMode
-            ? '<span class="material-symbols-outlined">light_mode</span>'
-            : '<span class="material-symbols-outlined">dark_mode</span>';
-    });
+        // Save the preference when toggling
+        themeToggleButton.addEventListener("click", () => {
+            console.log("Button clicked!"); // Check if the event listener is triggered
+            isDarkMode = !isDarkMode;
+            const theme = isDarkMode ? darkTheme : lightTheme;
+            applyTheme(theme);
+            localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+
+            // Update the button icon
+            themeToggleButton.innerHTML = isDarkMode
+                ? '<span class="material-symbols-outlined">light_mode</span>'
+                : '<span class="material-symbols-outlined">dark_mode</span>';
+        });
+    } else {
+        console.error("Theme toggle button not found!");
+    }
 });
