@@ -1,4 +1,4 @@
-import { argbFromHex, themeFromSourceColor } from "@material/material-color-utilities";
+import { argbFromHex, themeFromSourceColor } from "https://esm.sh/@material/material-color-utilities";
 
 document.addEventListener("DOMContentLoaded", () => {
     // Define primary colors for light and dark themes
