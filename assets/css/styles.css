@@ -131,7 +131,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: var(--brunswick-green);
+    background-color: var(--primary);
     width: 100%;
   }
   
@@ -147,23 +147,24 @@ ul {
     margin: 0 auto;
     display: block;
     padding: 20px;
-    border: 2px solid var(--celadon);
+    border: 2px solid var(--secondary);
     -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);    
   }  
   li a {
     display: block;
-    color: var(--celadon);
-    background-color: var(--brunswick-green);
+    color: var(--on-primary);
+    background-color: var(--primary);
     text-align: center;
     padding: 8px 8px 6px 8px;
     text-decoration: none;
     border-radius: 20%;
   }
   
-  /* Change the link color to #111 (black) on hover */
+  /* Change the link color on hover */
   li a:hover {
-    background-color: var(--cambridge-blue);
+    background-color: var(--secondary);
+    color: var(--on-secondary);
   }
 
 /* Use Funnel Sans for all non-header text */
@@ -185,15 +186,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2, h3, h4, h5, h6 {
-    color: var(--tea-green)
+    color: var(--secondary);
 }
 
 div{
-    background-color: var(--brunswick-green);
+    background-color: var(--background);
 }
 
 a {
-    color: var(--tea-green); 
+    color: var(--on-background); 
     font-weight: bold;
     font-size: 18px;
     text-decoration: none;    
@@ -204,17 +205,16 @@ a {
 
 a:hover {
     text-decoration: none;
-    /*! font-weight: lighter; */
     -webkit-transition: ease-in-out;
     -o-transition: ease-in-out;
     transition: ease-in-out;
     scale: 101%;
-    background-color: var(--cambridge-blue);
+    background-color: var(--secondary);
   }
 
 h1 {
-    color: var(--celadon);
-    background-color: var(--brunswick-green);
+    color: var(--on-primary);
+    background-color: var(--primary);
     text-transform: uppercase;
     font-size: 10vw;
 }
@@ -225,26 +225,18 @@ h2, h3 {
 }
 
 .icon_font{
-    color: var(--celadon);
-    background-color: var(--brunswick-green);
+    color: var(--on-primary);
+    background-color: var(--primary);
     font-size: xx-large;
 }
 
 .inner_container{
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 20px;
+    background-color: var(--surface);
 }
 
 
@@ -253,32 +245,26 @@ h2, h3 {
     margin: 30px auto;
     overflow: hidden;
     padding: 30px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    border: 2px solid var(--celadon); 
+    flex-direction: column;
+    border: 2px solid var(--primary); 
     border-radius: 72px;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 p{
-    color: var(--tea-green);
+    color: var(--on-surface);
     border-radius: 72px;
-    background-color: var(--brunswick-green);
+    background-color: var(--surface);
 }
 
 .active {
-    background-color: var(--celadon);
-    color: var(--rich-black);
+    background-color: var(--secondary);
+    color: var(--on-secondary);
 }
 
 .card {
-    background: var(--brunswick-green);
+    background: var(--surface);
     border-radius: 8px;
     -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -288,7 +274,7 @@ p{
 
 footer p{
     font-size: 0.6rem;
-    color: rgba(0, 0, 0, 0.5);
+    color: var(--on-background);
     display: flex;
     justify-content: space-between;
     position: fixed;
@@ -302,10 +288,8 @@ footer p{
     }
 
 .navbar{
-    background-color: var(--brunswick-green);
-    color: var(--cambridge-blue);
-    display: -webkit-box;
-    display: -ms-flexbox;
+    background-color: var(--primary);
+    color: var(--on-primary);
     display: flex;
     float: left;
 }
@@ -341,19 +325,13 @@ footer p{
 }
 
 .button:hover {
-    background-color: #3700b3;
+    background-color: var(--secondary);
 }
 
 .statistic {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: space-between;
+    align-items: center;
     margin: 10px 0;
 }
 
@@ -362,15 +340,13 @@ footer p{
 }
 
 .statistic div {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    flex: 1;
     text-align: center;
 }
 
 label {
     font-size: 18px;
-    color: var(--celadon);
+    color: var(--on-surface);
 }
 
 .statistic h4 {
@@ -385,8 +361,7 @@ input[type="text"], input[type="email"] {
     padding: 10px;
     font-size: 16px;
     width: 100%;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     margin: 10px 0;
 }
 
