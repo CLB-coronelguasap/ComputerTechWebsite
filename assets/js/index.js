@@ -2,10 +2,10 @@ document.addEventListener('DOMContentLoaded',function(event){
     // array with texts to type in typewriter
     var dataText = [ "#!", "SHEBANG", "CYBERSECURITY"];
     const meligy_chance = Math.floor(Math.random() * 101)
-    const meligymessage = "MELIGY CHANCE IS ${meligy_chance}!"
+    const meligymessage = `MELIGY CHANCE IS ${meligy_chance}!`
     console.log(meligymessage)
     const gonk_chance = Math.floor(Math.random() * 101)
-    const gonkmessage = "GONK CHANCE IS ${gonk_chance}!"
+    const gonkmessage = `GONK CHANCE IS ${gonk_chance}!`
     console.log(gonkmessage)
     if (meligy_chance == 59) {
       dataText.push("MELIGY")
