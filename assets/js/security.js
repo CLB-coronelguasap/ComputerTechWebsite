@@ -1,7 +1,18 @@
 document.addEventListener('DOMContentLoaded',function(event){
     // array with texts to type in typewriter
     var dataText = [ "CRYPTOMINERS", "PHISHING", "RANSOMWARE", "TROJANS", "SPYWARE", "WORM", "ADWARE", "ROOTKIT", "KEYLOGGER", "EXPLOIT", "VIRUS", "MALWARE", "BOTNET", "DDoS", "SQL INJECTION", "XSS", "RAT" ];
-    
+    const meligy_chance = Math.floor(Math.random() * 101)
+    console.log("MELIGY CHANCE IS ${meligy_chance}!")
+    const gonk_chance = Math.floor(Math.random() * 101)
+    console.log("GONK CHANCE IS ${gonk_chance}!")
+    if (meligy_chance = 59) {
+      dataText.push("MELIGY")
+      console.log("MELIGY WILL APPEAR!")
+    }
+    if (gonk_chance = 22) {
+      dataText.push("GONK")
+      console.log("GONK WILL APPEAR!")
+    }
     // type one text in the typwriter
     // keeps calling itself until the text is finished
     function typeWriter(text, i, fnCallback) {
