@@ -27,11 +27,11 @@ document.addEventListener('DOMContentLoaded',function(event){
     console.log("MELIGY CHANCE IS ${meligy_chance}!")
     const gonk_chance = Math.floor(Math.random() * 101)
     console.log("GONK CHANCE IS ${gonk_chance}!")
-    if (meligy_chance = 59) {
+    if (meligy_chance == 59) {
       dataText.push("MELIGY")
       console.log("MELIGY WILL APPEAR!")
     }
-    if (gonk_chance = 22) {
+    if (gonk_chance == 22) {
       dataText.push("GONK")
       console.log("GONK WILL APPEAR!")
     }
