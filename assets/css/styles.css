@@ -50,7 +50,7 @@
     font-family: 'Material Symbols Outlined';
     font-weight: normal;
     font-style: normal;
-    font-size: 72px;
+    font-size: 16px;
     line-height: 1;
     letter-spacing: normal;
     text-transform: none;
@@ -81,7 +81,7 @@ body {
 .funnel-display {
     font-family: "Funnel Display", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 72px;
+    font-weight: 16px;
     font-style: normal;
 }
 
@@ -127,7 +127,7 @@ ul {
     width: auto;
     height: auto;
     max-width: 100%;
-    border-radius: 72px;
+    border-radius: 16px;
     margin: 0 auto;
     display: block;
     padding: 20px;
@@ -249,14 +249,14 @@ h2, h3 {
         -ms-flex-direction: column;
             flex-direction: column;
     border: 2px solid var(--celadon); 
-    border-radius: 72px;
+    border-radius: 16px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
 }
 
 p{
     color: var(--tea-green);
-    border-radius: 72px;
+    border-radius: 16px;
     background-color: var(--brunswick-green);
 }
 
@@ -364,7 +364,7 @@ input[type="text"], input[type="email"] {
     color: var(--tea-green);
     background-color: var(--brunswick-green);
     border: 2px solid var(--celadon);
-    border-radius: 72px;
+    border-radius: 16px;
     padding: 10px;
     font-size: 16px;
     width: 100%;
