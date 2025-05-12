@@ -250,6 +250,7 @@ h2, h3 {
             flex-direction: column;
     border: 2px solid var(--celadon); 
     border-radius: 16px;
+    gap: 30px;
 }
 
 p{
