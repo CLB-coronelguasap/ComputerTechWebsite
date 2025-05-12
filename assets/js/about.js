@@ -10,10 +10,15 @@ document.addEventListener('DOMContentLoaded',function(event){
     if (meligy_chance == 59) {
       dataText.push("MELIGY")
       console.log("MELIGY WILL APPEAR!")
-    }
+    } else {
+      console.log("MELIGY WILL NOT APPEAR!")
+    } 
+
     if (gonk_chance == 22) {
       dataText.push("GONK")
       console.log("GONK WILL APPEAR!")
+    } else {
+      console.log("GONK WILL NOT APPEAR!")
     }
     // type one text in the typwriter
     // keeps calling itself until the text is finished
