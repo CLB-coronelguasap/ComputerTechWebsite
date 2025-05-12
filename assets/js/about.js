@@ -1,20 +1,19 @@
 document.addEventListener('DOMContentLoaded',function(event){
     // array with texts to type in typewriter
     var dataText = [ "MORE ABOUT US"];
-    const meligy_chance = Math.floor(Math.random() * 101)
+    const meligy_chance = Math.floor(Math.random() * 1001)
     const meligymessage = `MELIGY CHANCE IS ${meligy_chance}!`
     console.log(meligymessage)
-    const gonk_chance = Math.floor(Math.random() * 101)
+    const gonk_chance = Math.floor(Math.random() * 1001)
     const gonkmessage = `GONK CHANCE IS ${gonk_chance}!`
     console.log(gonkmessage)
-    if (meligy_chance == 59) {
+    if (meligy_chance == 509) {
       dataText.push("MELIGY")
       console.log("MELIGY WILL APPEAR!")
     } else {
       console.log("MELIGY WILL NOT APPEAR!")
-    } 
-
-    if (gonk_chance == 22) {
+    }
+    if (gonk_chance == 202) {
       dataText.push("GONK")
       console.log("GONK WILL APPEAR!")
     } else {

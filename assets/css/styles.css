@@ -250,8 +250,6 @@ h2, h3 {
             flex-direction: column;
     border: 2px solid var(--celadon); 
     border-radius: 16px;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
 }
 
 p{
@@ -412,7 +410,7 @@ input[type="text"]:focus, input[type="email"]:focus {
 .text-section {
     -webkit-box-flex: 1;
         -ms-flex: 1;
-            flex: 1;
+            flex: 1;flex
     color: var(--tea-green);
     font-size: 18px;
 }
@@ -422,7 +420,7 @@ input[type="text"]:focus, input[type="email"]:focus {
         -ms-flex: 1;
             flex: 1;
     display: -webkit-box;
-    display: -ms-flexbox;
+    display: -ms-flexbox;flex
     display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -491,6 +489,21 @@ input[type="text"]:focus, input[type="email"]:focus {
     transition: transform 0.3s ease-in-out;
     transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
     outline: 2px solid var(--cambridge-blue);
+}
+
+.img-card {
+    background-color: var(--brunswick-green);
+    border-radius: 16px;
+    padding: 20px;
+    color: var(--tea-green);
+    -webkit-box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    transition: -webkit-transform 0.3s ease-in-out;
+    -o-transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+    outline: 2px solid var(--celadon-2);
 }
 
 .info-card img {
