@@ -84,10 +84,30 @@ document.addEventListener('DOMContentLoaded', function () {
         };
     }
 
+
+
     // Page-specific typewriter logic
     const pageTypewriterData = document.body.getAttribute("data-typewriter");
     if (pageTypewriterData) {
         const dataText = JSON.parse(pageTypewriterData);
+        const meligy_chance = Math.floor(Math.random() * 101)
+        const meligymessage = `MELIGY CHANCE IS ${meligy_chance}!`
+        console.log(meligymessage)
+        const gonk_chance = Math.floor(Math.random() * 101)
+        const gonkmessage = `GONK CHANCE IS ${gonk_chance}!`
+        console.log(gonkmessage)
+        if (meligy_chance == 59) {
+          dataText.push("MELIGY")
+          console.log("MELIGY WILL APPEAR!")
+        } else {
+          console.log("MELIGY WILL NOT APPEAR!")
+        }
+        if (gonk_chance == 22) {
+          dataText.push("GONK")
+          console.log("GONK WILL APPEAR!")
+        } else {
+          console.log("GONK WILL NOT APPEAR!")
+        }
         startTextAnimation(dataText);
     }
 });
