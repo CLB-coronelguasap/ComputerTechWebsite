@@ -30,14 +30,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const disable = document.getElementById("disable-btn");
     const span = document.getElementsByClassName("close")[0];
 
-    const musicEnabled = localStorage.getItem("musicEnabled") === "true";
-
-    if (musicEnabled) {
-        audio.volume = 1; // Set volume to full
-        audio.play(); // Play the audio
-        btn.innerHTML = '<span class="material-symbols-outlined">music_note</span> Disable Music';
-    }
-
     if (btn) {
         btn.onclick = function () {
             modal.classList.add("fadein");
@@ -69,7 +61,6 @@ document.addEventListener('DOMContentLoaded', function () {
         enable.onclick = function () {
             audio.volume = 0;
             audio.play();
-            localStorage.setItem("musicEnabled", "true"); // Save preference
             let fadeInInterval = setInterval(() => {
                 if (audio.volume < 1) {
                     audio.volume = Math.min(audio.volume + 0.1, 1);
@@ -82,7 +73,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (disable) {
         disable.onclick = function () {
-            localStorage.setItem("musicEnabled", "false"); // Save preference
             let fadeOutInterval = setInterval(() => {
                 if (audio.volume > 0) {
                     audio.volume = Math.max(audio.volume - 0.1, 0);
