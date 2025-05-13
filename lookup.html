@@ -22,133 +22,144 @@
     <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
     <link rel="icon" type="image/x-icon" href="assets/images/icon.ico">
+    <style>
+     .lookup-hero {
+            position: relative;
+            background: url('assets/images/lookup-hero.jpg') center/cover no-repeat;
+            min-height: 40vh;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            color: var(--alice-blue);
+            text-align: center;
+        }
+        .lookup-hero::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(49,73,60,0.7);
+        }
+        .lookup-hero-content {
+            position: relative;
+        }
+        .lookup-intro {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: var(--brunswick-green);
+            border-radius: 16px;
+            color: var(--alice-blue);
+        }
+        .lookup-container {
+            width: 80%;
+            margin: 40px auto;
+            padding: 30px;
+            border: 2px solid var(--celadon);
+            border-radius: 16px;
+            background-color: var(--brunswick-green);
+        }
+        .lookup-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--alice-blue);
+        }
+        .lookup-form {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            gap: 20px;
+        }
+        .lookup-form label {
+            font-size: 18px;
+            color: var(--celadon);
+        }
+        .lookup-form input {
+            padding: 10px;
+            border-radius: 16px;
+            font-size: 16px;
+            border: 2px solid var(--celadon);
+            background: var(--brunswick-green);
+            color: var(--alice-blue);
+        }
+        .lookup-form button {
+            background-color: var(--celadon);
+            color: var(--rich-black);
+            padding: 15px 25px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            -webkit-transition: background-color 0.3s ease;
+            -o-transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease;
+            -ms-flex-item-align: center;
+                -ms-grid-row-align: center;
+                align-self: center;
+        }
+        .lookup-form button:hover,
+        .lookup-form button:focus {
+            background-color: var(--cambridge-blue);
+            outline: none;
+        }
+        .lookup-results, .lookup-statistics {
+            background-color: var(--brunswick-green);
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 16px;
+            color: var(--alice-blue);
+        }
+        .lookup-statistics ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .lookup-statistics li {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .stats-list, .practices-list {
+            list-style-type: none;
+            padding: 0;
+            line-height: 1.8;
+            font-size: 18px;
+        }
+        .stats-list li::before {
+            content: "• ";
+            color: var(--celadon);
+        }
+
+        video {
+            width: 25.5vw;
+            height: auto;
+            border-radius: 16px;
+            outline: 2px solid var(--celadon);
+        }
+    </style>
 </head>
 <body data-typewriter='["PRIVACY", "BREACH", "EXPOSURE", "SECURITY", "CONSENT", "METADATA", "ENCRYPTION", "SURVEILLANCE", "ANONYMITY", "TRACKING", "COOKIES", "PROFILING", "SHARING", "HACKING", "AUTHENTICATION", "TRANSPARENCY", "DATA-MINING", "CYBERCRIME", "IDENTITY", "ACCESSIBILITY"]'>
-    <style>
-        .lookup-hero {
-               position: relative;
-               background: url('assets/images/lookup-hero.jpg') center/cover no-repeat;
-               min-height: 40vh;
-               display: -webkit-box;
-               display: -ms-flexbox;
-               display: flex;
-               -webkit-box-align: center;
-                   -ms-flex-align: center;
-                       align-items: center;
-               -webkit-box-pack: center;
-                   -ms-flex-pack: center;
-                       justify-content: center;
-               color: var(--alice-blue);
-               text-align: center;
-           }
-           .lookup-hero::before {
-               content: "";
-               position: absolute;
-               top: 0; left: 0;
-               width: 100%;
-               height: 100%;
-               background: rgba(49,73,60,0.7);
-           }
-           .lookup-hero-content {
-               position: relative;
-           }
-           .lookup-intro {
-               margin: 20px 0;
-               padding: 20px;
-               background-color: var(--brunswick-green);
-               border-radius: 16px;
-               color: var(--alice-blue);
-           }
-           .lookup-container {
-               width: 80%;
-               margin: 40px auto;
-               padding: 30px;
-               border: 2px solid var(--celadon);
-               border-radius: 16px;
-               background-color: var(--brunswick-green);
-           }
-           .lookup-container h2 {
-               text-align: center;
-               margin-bottom: 20px;
-               color: var(--alice-blue);
-           }
-           .lookup-form {
-               display: -webkit-box;
-               display: -ms-flexbox;
-               display: flex;
-               -webkit-box-orient: vertical;
-               -webkit-box-direction: normal;
-                   -ms-flex-direction: column;
-                       flex-direction: column;
-               gap: 20px;
-           }
-           .lookup-form label {
-               font-size: 18px;
-               color: var(--celadon);
-           }
-           .lookup-form input {
-               padding: 10px;
-               border-radius: 16px;
-               font-size: 16px;
-               border: 2px solid var(--celadon);
-               background: var(--brunswick-green);
-               color: var(--alice-blue);
-           }
-           .lookup-form button {
-               background-color: var(--celadon);
-               color: var(--rich-black);
-               padding: 15px 25px;
-               font-size: 1.2em;
-               border: none;
-               border-radius: 50px;
-               cursor: pointer;
-               -webkit-transition: background-color 0.3s ease;
-               -o-transition: background-color 0.3s ease;
-               transition: background-color 0.3s ease;
-               -ms-flex-item-align: center;
-                   -ms-grid-row-align: center;
-                   align-self: center;
-           }
-           .lookup-form button:hover,
-           .lookup-form button:focus {
-               background-color: var(--cambridge-blue);
-               outline: none;
-           }
-           .lookup-results, .lookup-statistics {
-               background-color: var(--brunswick-green);
-               margin-top: 20px;
-               padding: 20px;
-               border-radius: 16px;
-               color: var(--alice-blue);
-           }
-           .lookup-statistics ul {
-               list-style-type: none;
-               padding: 0;
-           }
-           .lookup-statistics li {
-               margin: 10px 0;
-               font-size: 18px;
-           }
-   
-           .stats-list, .practices-list {
-               list-style-type: none;
-               padding: 0;
-               line-height: 1.8;
-               font-size: 18px;
-           }
-           .stats-list li::before {
-               content: "• ";
-               color: var(--celadon);
-           }
-   
-           video {
-               width: 25.5vw;
-               height: auto;
-               border-radius: 16px;
-               outline: 2px solid var(--celadon);
-           }
-       </style>
     <div class="plutarco" role="main">
+        <header id="header">
+            <nav aria-label="Main Navigation">
+                <ul class="navbar">
+                    <li><a href="index.html"><span class="material-symbols-outlined">home</span></a></li>
+                    <li><a href="security.html"><span class="material-symbols-outlined">security</span></a></li>
+                    <li><a class="active" href="lookup.html"><span class="material-symbols-outlined">search</span></a></li>
+                    <li><a href="about.html"><span class="material-symbols-outlined">info</span></a></li>
+                    <li><a id="music-btn"><span class="material-symbols-outlined">music_note</span></a></li>
+                </ul>
+            </nav>
+        </header>
 
         <div id="music-modal" class="modal">
 

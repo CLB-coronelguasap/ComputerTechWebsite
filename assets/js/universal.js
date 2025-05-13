@@ -93,6 +93,13 @@ document.addEventListener('DOMContentLoaded', function () {
         };
     }
 
+    // Page-specific typewriter logic
+    const pageTypewriterData = document.body.getAttribute("data-typewriter");
+    if (pageTypewriterData) {
+        const dataText = JSON.parse(pageTypewriterData);
+        startTextAnimation(dataText);
+    }
+
     // Function to load pages dynamically
     function loadPage(page) {
         fetch(page)
@@ -104,24 +111,6 @@ document.addEventListener('DOMContentLoaded', function () {
             })
             .then(html => {
                 document.getElementById('content').innerHTML = html;
-
-                // Extract and apply typewriter data
-                const tempDiv = document.createElement('div');
-                tempDiv.innerHTML = html;
-                const typewriterData = tempDiv.querySelector('body')?.getAttribute('data-typewriter');
-                if (typewriterData) {
-                    startTextAnimation(JSON.parse(typewriterData));
-                }
-
-                // Extract and apply page-specific CSS
-                const styleTags = tempDiv.querySelectorAll('style');
-                const head = document.querySelector('head');
-                styleTags.forEach(styleTag => {
-                    const newStyle = document.createElement('style');
-                    newStyle.innerHTML = styleTag.innerHTML;
-                    head.appendChild(newStyle);
-                });
-
                 updateActiveMenu(page); // Update the active menu item
             })
             .catch(err => {
