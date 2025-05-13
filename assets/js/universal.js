@@ -103,22 +103,26 @@ document.addEventListener('DOMContentLoaded', function () {
                 return response.text();
             })
             .then(html => {
-                // Extract the content inside the <div id="content"> of the fetched page
+                document.getElementById('content').innerHTML = html;
+
+                // Extract and apply typewriter data
                 const tempDiv = document.createElement('div');
                 tempDiv.innerHTML = html;
-                const newContent = tempDiv.querySelector('#content').innerHTML;
-
-                // Replace the content of the current #content div
-                document.getElementById('content').innerHTML = newContent;
-
-                // Reinitialize the typewriter effect
-                const typewriterData = document.body.getAttribute('data-typewriter');
+                const typewriterData = tempDiv.querySelector('body')?.getAttribute('data-typewriter');
                 if (typewriterData) {
                     startTextAnimation(JSON.parse(typewriterData));
                 }
 
-                // Update the active menu item
-                updateActiveMenu(page);
+                // Extract and apply page-specific CSS
+                const styleTags = tempDiv.querySelectorAll('style');
+                const head = document.querySelector('head');
+                styleTags.forEach(styleTag => {
+                    const newStyle = document.createElement('style');
+                    newStyle.innerHTML = styleTag.innerHTML;
+                    head.appendChild(newStyle);
+                });
+
+                updateActiveMenu(page); // Update the active menu item
             })
             .catch(err => {
                 console.error('Error loading page:', err);
