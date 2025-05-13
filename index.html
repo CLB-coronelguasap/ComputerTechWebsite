@@ -68,8 +68,8 @@
           width: 100%; /* Full width */
           height: 100%; /* Full height */
           overflow: auto; /* Enable scroll if needed */
+          background-color: rgb(0, 26, 35, 0.4); /* Black w/ opacity */
           background-color: var(--rich-black); /* Fallback color */
-          background-color: var(0, 26, 35, 0.4); /* Black w/ opacity */
         }
 
         /* Modal Content */
@@ -78,7 +78,7 @@
           margin: auto;
           padding: 20px;
           border: 2px solid var(--tea-green);
-          width: 80%;
+          width: 40%;
           border-radius: 16px;
         }
 
@@ -89,7 +89,19 @@
           border: 2px solid var(--tea-green);
           width: 80%;
           border-radius: 16px;
-          float: right;
+        }
+
+        .modal-footer button {
+          background-color: var(--tea-green);
+          color: var(--gunmetal);
+          border: none;
+          padding: 15px 25px;
+          font-size: 1.2em;
+          border-radius: 50px;
+          cursor: pointer;
+          -webkit-transition: background-color 0.3s ease;
+          -o-transition: background-color 0.3s ease;
+          transition: background-color 0.3s ease;
         }
 
         /* The Close Button */
@@ -171,6 +183,26 @@
             }
         }
 
+        #music-btn {
+            position: fixed; /* Keeps the button in a fixed position relative to the viewport */
+            bottom: 20px; /* Distance from the bottom of the screen */
+            right: 20px; /* Distance from the right of the screen */
+            z-index: 1000; /* Ensures the button stays on top of other elements */
+            background-color:  var(--celadon); /* Dark green background */
+            color: var(--rich-black); /* White text/icon color */
+            border: none; /* Remove default button border */
+            border-radius: 50%; /* Make the button circular */
+            padding: 15px; /* Add padding for size */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            font-size: 24px; /* Adjust font size for the icon */
+            transition: transform 0.2s ease, background-color 0.3s ease; /* Add hover effects */
+        }
+
+        #music-btn:hover {
+            transform: scale(1.1); /* Slightly enlarge the button on hover */
+            background-color: var(--celadon-2);
+        }
     </style>
 </head>
 <body>
@@ -183,7 +215,7 @@
                         <li><a href="lookup.html"><span class="material-symbols-outlined">search</span></a></li>
                         <li><a href="about.html"><span class="material-symbols-outlined">info</span></a></li>
                     </ul>
-                    <button style="float:right" id="music-btn"><span class="material-symbols-outlined">music_note</span></button>
+                    <button id="music-btn"><span class="material-symbols-outlined">music_note</span></button>
                     <audio loop id="audio" src="assets/audio/lease.mp3"></audio>
                 </nav>
             </header>

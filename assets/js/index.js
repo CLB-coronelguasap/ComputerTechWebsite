@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded',function(event){
         // Get the modal
     var modal = document.getElementById("music-modal");
 
-    var hero = document.getElementsByClassName("hero-content")
+    var hero = document.getElementsBy-ClassName("hero")[0]
 
     var audio = document.getElementById("audio")
     // Get the button that opens the modal
