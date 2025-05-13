@@ -468,7 +468,6 @@ input[type="text"]:focus, input[type="email"]:focus {
 .hero-content {
     position: relative;
     text-align: center;
-    z-index: 1;
 }
 .info-grid {
     display: -ms-grid;

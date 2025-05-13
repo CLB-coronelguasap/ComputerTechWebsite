@@ -47,7 +47,6 @@
         .hero-content {
             position: relative;
             text-align: center;
-            z-index: 1;
         }
         .info-grid {
             display: -ms-grid;
@@ -80,6 +79,7 @@
           border: 2px solid var(--tea-green);
           width: 40%;
           border-radius: 16px;
+          margin-bottom: 15px
         }
 
         .modal-footer {
@@ -102,6 +102,10 @@
           -webkit-transition: background-color 0.3s ease;
           -o-transition: background-color 0.3s ease;
           transition: background-color 0.3s ease;
+        }
+
+        .modal-content p {
+          background-color: transparent;
         }
 
         /* The Close Button */
@@ -181,6 +185,32 @@
                 margin: 20px;
                 padding: 20px;
             }
+        }
+
+        @keyframes fadein {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+
+        @keyframes fadeout {
+          from {
+            opacity: 1;
+          }
+          to {
+            opacity: 0;
+          }
+        }
+
+        .fadeout {
+          animation: fadeout 0.5s;
+        }
+
+        .fadein {
+          animation: fadein 0.5s;
         }
 
         #music-btn {
