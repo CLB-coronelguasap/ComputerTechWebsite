@@ -95,7 +95,7 @@
         }
     </style>
 </head>
-<body>
+<body data-typewriter='["MORE ABOUT US"]'>
     <div class="plutarco" role="main">
         <header>
             <nav aria-label="Main Navigation">
@@ -104,9 +104,25 @@
                     <li><a href="security.html"><span class="material-symbols-outlined">security</span></a></li>
                     <li><a href="lookup.html"><span class="material-symbols-outlined">search</span></a></li>
                     <li><a class="active" href="about.html"><span class="material-symbols-outlined">info</span></a></li>
+                    <li><a id="music-btn"><span class="material-symbols-outlined">music_note</span></a></li>
                 </ul>
+                <audio loop id="audio" src="assets/audio/options.mp3"></audio>
             </nav>
         </header>
+
+        <div id="music-modal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>Would you like to enable background music?</p>
+            </div>
+            <div class="modal-footer">
+                <button id="enable-btn"><span class="material-symbols-outlined">music_note_add</span>Enable</button>
+                <button id="disable-btn"><span class="material-symbols-outlined">music_off</span>Disable</button>
+            </div>
+          
+          </div>
         
         <!-- Hero Section for About -->
         <section class="about-hero" aria-labelledby="aboutHeroHeading">
@@ -147,7 +163,7 @@
                 </div>
             </div>
         </main>
-        <script src="assets/js/about.js"></script>
+        <script src="assets/js/universal.js"></script>
         <footer class="footer" role="contentinfo">
             <p>This website is on <a href="https://github.com/CLB-coronelguasap/ComputerTechWebsite/tree/main" target="_blank">GitHub</a></p>
             <p>#!</p>

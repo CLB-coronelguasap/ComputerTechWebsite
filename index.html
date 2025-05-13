@@ -212,30 +212,9 @@
         .fadein {
           animation: fadein 0.5s;
         }
-
-        #music-btn {
-            position: fixed; /* Keeps the button in a fixed position relative to the viewport */
-            bottom: 20px; /* Distance from the bottom of the screen */
-            right: 20px; /* Distance from the right of the screen */
-            z-index: 1000; /* Ensures the button stays on top of other elements */
-            background-color:  var(--celadon); /* Dark green background */
-            color: var(--rich-black); /* White text/icon color */
-            border: none; /* Remove default button border */
-            border-radius: 50%; /* Make the button circular */
-            padding: 15px; /* Add padding for size */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-            cursor: pointer; /* Change cursor to pointer on hover */
-            font-size: 24px; /* Adjust font size for the icon */
-            transition: transform 0.2s ease, background-color 0.3s ease; /* Add hover effects */
-        }
-
-        #music-btn:hover {
-            transform: scale(1.1); /* Slightly enlarge the button on hover */
-            background-color: var(--celadon-2);
-        }
     </style>
 </head>
-<body>
+<body data-typewriter='["#!", "SHEBANG", "CYBERSECURITY"]'>
         <div class="plutarco" role="main">
             <header id="header">
                 <nav aria-label="Main Navigation">
@@ -244,8 +223,8 @@
                         <li><a href="security.html"><span class="material-symbols-outlined">security</span></a></li>
                         <li><a href="lookup.html"><span class="material-symbols-outlined">search</span></a></li>
                         <li><a href="about.html"><span class="material-symbols-outlined">info</span></a></li>
+                        <li><a id="music-btn"><span class="material-symbols-outlined">music_note</span></a></li>
                     </ul>
-                    <button id="music-btn"><span class="material-symbols-outlined">music_note</span></button>
                     <audio loop id="audio" src="assets/audio/lease.mp3"></audio>
                 </nav>
             </header>
@@ -321,7 +300,7 @@
                 </div>
             </main>
 
-            <script src="assets/js/index.js"></script>
+            <script src="assets/js/universal.js"></script>
             <footer class="footer" role="contentinfo">
                 <p>This website is on <a href="https://github.com/CLB-coronelguasap/ComputerTechWebsite/tree/main" target="_blank">GitHub</a></p>
                 <p>#!</p>
