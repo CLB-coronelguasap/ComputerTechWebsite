@@ -56,6 +56,58 @@
             gap: 20px;
             margin: 40px 0;
         }
+
+                /* The Modal (background) */
+        .modal {
+          display: none; /* Hidden by default */
+          position: fixed; /* Stay in place */
+          z-index: 1; /* Sit on top */
+          padding-top: 100px; /* Location of the box */
+          left: 0;
+          top: 0;
+          width: 100%; /* Full width */
+          height: 100%; /* Full height */
+          overflow: auto; /* Enable scroll if needed */
+          background-color: var(--rich-black); /* Fallback color */
+          background-color: var(0, 26, 35, 0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+          background-color: var(--gunmetal);
+          margin: auto;
+          padding: 20px;
+          border: 2px solid var(--tea-green);
+          width: 80%;
+          border-radius: 16px;
+        }
+
+        .modal-footer {
+          background-color: var(--gunmetal);
+          margin: auto;
+          padding: 20px;
+          border: 2px solid var(--tea-green);
+          width: 80%;
+          border-radius: 16px;
+          float: right;
+        }
+
+        /* The Close Button */
+        .close {
+          color: var(--gunmetal);
+          float: right;
+          font-size: 28px;
+          font-weight: bold;
+          -webkit-text-stroke: 2px var(--tea-green)
+        }
+
+        .close:hover,
+        .close:focus {
+          color: var(--rich-black);
+          text-decoration: none;
+          cursor: pointer;
+        }
+
         .info-card {
             background-color: var(--brunswick-green);
             border-radius: 16px;
@@ -131,8 +183,23 @@
                         <li><a href="lookup.html"><span class="material-symbols-outlined">search</span></a></li>
                         <li><a href="about.html"><span class="material-symbols-outlined">info</span></a></li>
                     </ul>
+                    <button style="float:right" id="music-btn"><span class="material-symbols-outlined">music_note</span></button>
                 </nav>
             </header>
+
+            <div id="music-modal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <p>Would you like to enable background music?</p>
+                </div>
+                <div class="modal-footer">
+                    <button id="enable-btn"><span class="material-symbols-outlined">music_note_add</span>Enable</button>
+                    <button id="disable-btn"><span class="material-symbols-outlined">music_off</span>Disable</button>
+                </div>
+              
+              </div>
 
             <!-- Hero Section -->
             <section class="hero" aria-labelledby="heroHeading">
