@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (musicEnabled) {
         audio.volume = 1; // Set volume to full
         audio.play(); // Play the audio
+        btn.innerHTML = '<span class="material-symbols-outlined">music_note</span> Disable Music';
     }
 
     if (btn) {
@@ -99,48 +100,4 @@ document.addEventListener('DOMContentLoaded', function () {
         const dataText = JSON.parse(pageTypewriterData);
         startTextAnimation(dataText);
     }
-
-    // Function to load pages dynamically
-    function loadPage(page) {
-        fetch(page)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`Page not found: ${page}`);
-                }
-                return response.text();
-            })
-            .then(html => {
-                document.getElementById('content').innerHTML = html;
-                updateActiveMenu(page); // Update the active menu item
-            })
-            .catch(err => {
-                console.error('Error loading page:', err);
-                document.getElementById('content').innerHTML = '<p>Page not found.</p>';
-            });
-    }
-
-    // Function to update the active menu item
-    function updateActiveMenu(page) {
-        const menuItems = document.querySelectorAll('.navbar a');
-        menuItems.forEach(item => {
-            if (item.getAttribute('data-page') === page) {
-                item.classList.add('active'); // Add the active class
-            } else {
-                item.classList.remove('active'); // Remove the active class
-            }
-        });
-    }
-
-    // Add click event listeners to menu items
-    const menuItems = document.querySelectorAll('.navbar a');
-    menuItems.forEach(item => {
-        item.addEventListener('click', event => {
-            event.preventDefault(); // Prevent default link behavior
-            const page = item.getAttribute('data-page');
-            loadPage(page); // Load the selected page
-        });
-    });
-
-    // Load the initial page (default to index.html)
-    loadPage('index.html');
 });
