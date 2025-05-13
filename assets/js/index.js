@@ -42,6 +42,8 @@ document.addEventListener('DOMContentLoaded',function(event){
 
     // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
+      modal.classList.add("fadeout");
+      // Wait for the fadeout animation to finish before hiding the modal
       setTimeout(() => {
         modal.style.display = "none";
         modal.classList.remove("fadeout");
@@ -52,6 +54,7 @@ document.addEventListener('DOMContentLoaded',function(event){
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
+      modal.classList.add("fadeout");
       if (event.target == modal) {
         setTimeout(() => {
           modal.style.display = "none";
@@ -60,23 +63,28 @@ document.addEventListener('DOMContentLoaded',function(event){
       }
     }
 
-    const fadeAudio = setInterval(() => {
-      const fadePoint = sound.currentTime + 2;
-      if ((sound.currentTime <= fadePoint) && (sound.volume !== 0)) {
-        sound.volume -= 0.1
-      }
-    
-      if (sound.volume < 0.003) {
-        clearInterval(fadeAudio);
-      }
-    }, 200);
-
     enable.onclick = function() {
-      audio.play()
+      audio.volume = 0; // Start with volume at 0
+      audio.play(); // Start playing the audio
+    
+      let fadeInInterval = setInterval(() => {
+        if (audio.volume < 1) {
+          audio.volume = Math.min(audio.volume + 0.1, 1); // Gradually increase volume
+        } else {
+          clearInterval(fadeInInterval); // Stop the interval when volume reaches 1
+        }
+      }, 200); // Adjust the interval time for smoother or faster fade-in
     }
 
     disable.onclick = function() {
-      audio.pause()
+      let fadeOutInterval = setInterval(() => {
+        if (audio.volume > 0) {
+          audio.volume = Math.max(audio.volume - 0.1, 0); // Gradually decrease volume
+        } else {
+          clearInterval(fadeOutInterval); // Stop the interval when volume reaches 0
+          audio.pause(); // Pause the audio
+        }
+      }, 200); // Adjust the interval time for smoother or faster fade-out
     }
 
     // type one text in the typwriter
