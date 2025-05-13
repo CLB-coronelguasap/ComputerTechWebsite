@@ -60,7 +60,16 @@ document.addEventListener('DOMContentLoaded',function(event){
       }
     }
 
-
+    const fadeAudio = setInterval(() => {
+      const fadePoint = sound.currentTime + 2;
+      if ((sound.currentTime <= fadePoint) && (sound.volume !== 0)) {
+        sound.volume -= 0.1
+      }
+    
+      if (sound.volume < 0.003) {
+        clearInterval(fadeAudio);
+      }
+    }, 200);
 
     enable.onclick = function() {
       audio.play()
