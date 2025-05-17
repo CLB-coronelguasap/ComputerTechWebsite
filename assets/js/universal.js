@@ -42,34 +42,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    async function fetchPlaylist() {
-        try {
-            const playlistresponse = await fetch('/api/list-audio');
-            const data = await playlistresponse.json();
-            return data.audioFiles;
-        } catch (error) {
-            console.error('Error fetching playlist:', error);
-            return [];
-        }
-    }
-
-    fetchPlaylist().then(audioFiles => {
-        playlist.push(...audioFiles); // Spread the array to add individual elements
-        loadSong(currentIndex);
-    });
-
-    // Function to load a song by index
-function loadSong(index) {
-    if (playlist.length === 0) {
-        console.error("Playlist is empty. Cannot load song.");
-        return;
-    }
-    if (index >= 0 && index < playlist.length) {
-        audio.src = `assets/audio/${playlist[index]}`;
-    }
-}
-
-
     let currentIndex = 0;
     function nextSong() {
         currentIndex = (currentIndex + 1) % playlist.length;
@@ -134,6 +106,8 @@ function loadSong(index) {
             if (randomSong) {
                 audio.volume = 0;
                 audio.play();
+                currentIndex = 0; // Reset the current index   
+                audio.loop = false; // Set loop to false
                 audio.onended = nextSong; // Assign the function reference, not the result of calling it
 
                 // Fade in the audio
@@ -190,9 +164,5 @@ function loadSong(index) {
         startTextAnimation(dataText);
     }
 
-    window.addEventListener('beforeunload', () => {
-        localStorage.setItem('currentSong', playlist[currentIndex]);
-        localStorage.setItem('currentTime', audio.currentTime);
-    });
 });
 
