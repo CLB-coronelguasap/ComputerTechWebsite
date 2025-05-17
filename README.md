@@ -70,7 +70,7 @@ cybersecurity-website
 
 Once the server is running, you can access the website at `http://127.0.0.1:8080`. Navigate through the different pages using the navigation bar to explore the content and features.
 
-Alternatively, visit the website at https://clb-coronelguasap.github.io/ComputerTechWebsite
+Alternatively, visit the website at https://gonksite.vercel.app
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a pull request or open an issue for any suggestions or improvements.
