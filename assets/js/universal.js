@@ -128,12 +128,13 @@ function loadSong(index) {
         enable.onclick = async function () {
             const audioFiles = await fetchAudioFiles(); // Fetch the list of audio files
             const randomSong = audioFiles[Math.floor(Math.random() * audioFiles.length)]; // Select a random song
+            audio.src = `assets/audio/${randomSong}`; // Set the audio source
+
 
             if (randomSong) {
-                audio.src = `assets/audio/${randomSong}`; // Set the audio source
                 audio.volume = 0;
                 audio.play();
-                audio.onended = nextSong; // Assign the function reference, not the result of calling it
+                audio.onended = nextSong(); // Assign the function reference, not the result of calling it
 
                 // Fade in the audio
                 let fadeInInterval = setInterval(() => {
