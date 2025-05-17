@@ -485,13 +485,22 @@ h1 span {
     background-color: var(--tea-green);
     color: var(--gunmetal);
     border: none;
-    padding: 15px 25px;
+    width: 60px; /* Make the button a circle */
+    height: 60px; /* Make the button a circle */
     font-size: 1.2em;
-    border-radius: 50px;
+    border-radius: 50%; /* Circle shape */
     cursor: pointer;
-    -webkit-transition: background-color 0.3s ease;
-    -o-transition: background-color 0.3s ease;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+}
+.modal-footer button:hover {
+    background-color: var(--celadon-2); /* Darken the button on hover */
+    width: 100px; /* Transform into a rounded rectangle */
+    height: 50px; /* Transform into a rounded rectangle */
+    border-radius: 15px; /* Rounded rectangle shape */
 }
 .modal-content p {
     background-color: transparent;
