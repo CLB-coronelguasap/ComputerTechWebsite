@@ -134,7 +134,7 @@ function loadSong(index) {
             if (randomSong) {
                 audio.volume = 0;
                 audio.play();
-                audio.onended = nextSong(); // Assign the function reference, not the result of calling it
+                audio.onended = nextSong; // Assign the function reference, not the result of calling it
 
                 // Fade in the audio
                 let fadeInInterval = setInterval(() => {
