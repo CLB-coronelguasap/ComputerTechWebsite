@@ -485,8 +485,8 @@ h1 span {
     background-color: var(--tea-green);
     color: var(--gunmetal);
     border: none;
-    width: 60px; /* Make the button a circle */
-    height: 60px; /* Make the button a circle */
+    width: 100px; /* Make the button a circle */
+    height: 50px; /* Make the button a circle */
     font-size: 1.2em;
     border-radius: 50%; /* Circle shape */
     cursor: pointer;
@@ -495,12 +495,11 @@ h1 span {
     justify-content: center;
     align-items: center;
     line-height: 1;
+    border-radius: 15px; /* Rounded rectangle shape */
+    margin: auto;
 }
 .modal-footer button:hover {
     background-color: var(--celadon-2); /* Darken the button on hover */
-    width: 100px; /* Transform into a rounded rectangle */
-    height: 50px; /* Transform into a rounded rectangle */
-    border-radius: 15px; /* Rounded rectangle shape */
 }
 .modal-content p {
     background-color: transparent;
