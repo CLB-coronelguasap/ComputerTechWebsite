@@ -485,10 +485,9 @@ h1 span {
     background-color: var(--tea-green);
     color: var(--gunmetal);
     border: none;
-    width: 100px; /* Make the button a circle */
-    height: 50px; /* Make the button a circle */
+    width: 100px; 
+    height: 50px; 
     font-size: 1.2em;
-    border-radius: 50%; /* Circle shape */
     cursor: pointer;
     transition: all 0.3s ease; /* Smooth transition for hover effect */
     display: flex;
