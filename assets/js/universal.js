@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const randomSong = getRandomAudioFile(audioFiles); // Get a random song
 
             if (randomSong) {
-                audio.src = randomSong; // Set the audio source
+                audio.src = `assets/audio/${randomSong}`; // Set the audio source
                 audio.volume = 0;
                 audio.play();
 
