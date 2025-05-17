@@ -1,4 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
+
+    const modal = document.getElementById("music-modal");
+    const audio = document.getElementById("audio");
+    const btn = document.getElementById("music-btn");
+    const enable = document.getElementById("enable-btn");
+    const disable = document.getElementById("disable-btn");
+    const span = document.getElementsByClassName("close")[0];
+    const playlist = [
+    ];
     // Shared typewriter functionality
     function typeWriter(text, i, fnCallback) {
         if (i < text.length) {
@@ -33,19 +42,58 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    async function fetchPlaylist() {
+        try {
+            const playlistresponse = await fetch('/api/list-audio');
+            const data = await playlistresponse.json();
+            return data.audioFiles;
+        } catch (error) {
+            console.error('Error fetching playlist:', error);
+            return [];
+        }
+    }
+
+    fetchPlaylist().then(audioFiles => {
+        playlist.push(...audioFiles); // Spread the array to add individual elements
+        loadSong(currentIndex);
+    });
+
+    // Function to load a song by index
+function loadSong(index) {
+    if (playlist.length === 0) {
+        console.error("Playlist is empty. Cannot load song.");
+        return;
+    }
+    if (index >= 0 && index < playlist.length) {
+        audio.src = `assets/audio/${playlist[index]}`;
+    }
+}
+
+
+    let currentIndex = 0;
+    function nextSong() {
+        currentIndex = (currentIndex + 1) % playlist.length;
+        loadSong(currentIndex);
+    }
+    
+
     fetchAudioFiles().then(audioFiles => {
         console.log('Audio files:', audioFiles);
     });
 
-    // Music modal functionality
-    const modal = document.getElementById("music-modal");
-    const audio = document.getElementById("audio");
-    const btn = document.getElementById("music-btn");
-    const enable = document.getElementById("enable-btn");
-    const disable = document.getElementById("disable-btn");
-    const span = document.getElementsByClassName("close")[0];
 
-    if (btn) {
+    function shufflePlaylist(playlist) {
+        const shuffled = [...playlist];
+        for (let i = shuffled.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]; // Swap elements
+        }
+        return shuffled;
+    }
+    // Music modal functionality
+
+
+    if (modal && btn) {
         btn.onclick = function () {
             modal.classList.add("fadein");
             modal.style.display = "block";
@@ -75,32 +123,17 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     // Improved function to get a random audio file
-    let lastPlayedIndex = null; // Keep track of the last played index
-
-    function getRandomAudioFile(audioFiles) {
-        if (!audioFiles || audioFiles.length === 0) {
-            console.error("No audio files available.");
-            return null;
-        }
-
-        let randomIndex;
-        do {
-            randomIndex = Math.floor(Math.random() * audioFiles.length);
-        } while (randomIndex === lastPlayedIndex && audioFiles.length > 1);
-
-        lastPlayedIndex = randomIndex; // Update the last played index
-        return audioFiles[randomIndex];
-    }
 
     if (enable) {
         enable.onclick = async function () {
             const audioFiles = await fetchAudioFiles(); // Fetch the list of audio files
-            const randomSong = getRandomAudioFile(audioFiles); // Get a random song
+            const randomSong = audioFiles[Math.floor(Math.random() * audioFiles.length)]; // Select a random song
 
             if (randomSong) {
                 audio.src = `assets/audio/${randomSong}`; // Set the audio source
                 audio.volume = 0;
                 audio.play();
+                audio.onended = nextSong; // Assign the function reference, not the result of calling it
 
                 // Fade in the audio
                 let fadeInInterval = setInterval(() => {
@@ -155,4 +188,10 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         startTextAnimation(dataText);
     }
+
+    window.addEventListener('beforeunload', () => {
+        localStorage.setItem('currentSong', playlist[currentIndex]);
+        localStorage.setItem('currentTime', audio.currentTime);
+    });
 });
+
