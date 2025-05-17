@@ -22,6 +22,21 @@ document.addEventListener('DOMContentLoaded', function () {
         startAnimation(0);
     }
 
+    async function fetchAudioFiles() {
+        try {
+            const response = await fetch('/api/list-audio');
+            const data = await response.json();
+            return data.audioFiles;
+        } catch (error) {
+            console.error('Error fetching audio files:', error);
+            return [];
+        }
+    }
+
+    fetchAudioFiles().then(audioFiles => {
+        console.log('Audio files:', audioFiles);
+    });
+
     // Music modal functionality
     const modal = document.getElementById("music-modal");
     const audio = document.getElementById("audio");
@@ -39,6 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (span) {
         span.onclick = function () {
+            modal.classList.remove("fadein");
             modal.classList.add("fadeout");
             setTimeout(() => {
                 modal.style.display = "none";
@@ -49,6 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     window.onclick = function (event) {
         if (event.target === modal) {
+            modal.classList.remove("fadein");
             modal.classList.add("fadeout");
             setTimeout(() => {
                 modal.style.display = "none";
@@ -57,17 +74,45 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     };
 
+    // Improved function to get a random audio file
+    let lastPlayedIndex = null; // Keep track of the last played index
+
+    function getRandomAudioFile(audioFiles) {
+        if (!audioFiles || audioFiles.length === 0) {
+            console.error("No audio files available.");
+            return null;
+        }
+
+        let randomIndex;
+        do {
+            randomIndex = Math.floor(Math.random() * audioFiles.length);
+        } while (randomIndex === lastPlayedIndex && audioFiles.length > 1);
+
+        lastPlayedIndex = randomIndex; // Update the last played index
+        return audioFiles[randomIndex];
+    }
+
     if (enable) {
-        enable.onclick = function () {
-            audio.volume = 0;
-            audio.play();
-            let fadeInInterval = setInterval(() => {
-                if (audio.volume < 1) {
-                    audio.volume = Math.min(audio.volume + 0.1, 1);
-                } else {
-                    clearInterval(fadeInInterval);
-                }
-            }, 200);
+        enable.onclick = async function () {
+            const audioFiles = await fetchAudioFiles(); // Fetch the list of audio files
+            const randomSong = getRandomAudioFile(audioFiles); // Get a random song
+
+            if (randomSong) {
+                audio.src = randomSong; // Set the audio source
+                audio.volume = 0;
+                audio.play();
+
+                // Fade in the audio
+                let fadeInInterval = setInterval(() => {
+                    if (audio.volume < 1) {
+                        audio.volume = Math.min(audio.volume + 0.1, 1);
+                    } else {
+                        clearInterval(fadeInInterval);
+                    }
+                }, 200);
+            } else {
+                console.error("Failed to play audio: No valid audio file selected.");
+            }
         };
     }
 

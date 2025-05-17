@@ -107,6 +107,24 @@
           animation: caret 1s steps(1) infinite;
         }
 
+        .icon-container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 100%;
+            max-width: 370px;
+            height: 185px;
+            background-color: var(--brunswick-green);
+            border-radius: 16px;
+            padding: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+         .icon-container span {
+            font-size: 3em;
+            color: var(--celadon);
+            transition: transform 0.3s ease;
+        }   
         @keyframes caret {
           50% {
             border-color: transparent;
@@ -186,28 +204,44 @@
                             <div class="info-grid">
                                 <div class="info-card">
                                     <a href="https://www.cisa.gov/news-events/cybersecurity-advisories" target="_blank">
-                                        <img src="assets/images/cyber-threat.png" alt="Cyber Threats Illustration">
+                                        <div class="icon-container" aria-label="Cyber Threats Illustration">
+                                            <span class="material-symbols-outlined">arrow_right_alt</span>
+                                            <span class="material-symbols-outlined">shield_lock</span>
+                                            <span class="material-symbols-outlined">trending_up</span>
+                                        </div>
                                         <h3>Rising Cyber Threats</h3>
                                         <p>Digital attacks continually evolve, targeting individuals and organizations across the globe. Staying informed about the latest trends is crucial.</p>
                                     </a>
                                 </div>
                                 <div class="info-card">
                                     <a href="https://www.ftc.gov/news-events/media-resources/consumer-finance" target="_blank">
-                                        <img src="assets/images/protection.png" alt="Data Protection">
+                                        <div class="icon-container" aria-label="Cyber Threats Illustration">
+                                            <span class="material-symbols-outlined">visibility_lock</span>
+                                            <span class="material-symbols-outlined">lock_person</span>
+                                            <span class="material-symbols-outlined">key</span>
+                                        </div>
                                         <h3>Data Protection</h3>
                                         <p>Secure your personal and professional data with strong passwords, two-factor authentication, and proactive cybersecurity measures.</p>
                                     </a>
                                 </div>
                                 <div class="info-card">
                                     <a href="https://www.nist.gov/topics/cybersecurity" target="_blank">
-                                        <img src="assets/images/education.png" alt="Cybersecurity Education">
+                                        <div class="icon-container" aria-label="Cyber Threats Illustration">
+                                            <span class="material-symbols-outlined">shield_locked</span>
+                                            <span class="material-symbols-outlined">campaign</span>
+                                            <span class="material-symbols-outlined">school</span>
+                                        </div>
                                         <h3>Cybersecurity Education</h3>
                                         <p>Knowledge is power. Explore our resources, guides, and tutorials to understand how to protect your digital presence.</p>
                                     </a>
                                 </div>
                                 <div class="info-card">
                                     <a href="https://www.reuters.com/technology/cybersecurity/" target="_blank">
-                                        <img src="assets/images/innovation.png" alt="Innovative Security Solutions">
+                                        <div class="icon-container" aria-label="Cyber Threats Illustration">
+                                            <span class="material-symbols-outlined">threat_intelligence</span>
+                                            <span class="material-symbols-outlined">newspaper</span>
+                                            <span class="material-symbols-outlined">radio</span>
+                                        </div>
                                         <h3>Cybersecurity News</h3>
                                         <p>Read up on the latest news in the world of cybersecurity and inform yourself on the topic.</p>
                                     </a>

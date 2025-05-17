@@ -198,7 +198,7 @@ p {
 }
 .active {
     background-color: var(--celadon);
-    color: var(--rich-#000);
+    color: var(--rich-black);
 }
 .card {
     background: var(--brunswick-green);
@@ -225,7 +225,7 @@ p {
     float: left;
 }
 .button {
-    background-color: var(--rich-#000);
+    background-color: var(--rich-black);
     color: var(--tea-green);
     padding: 10px 15px;
     border: none;
@@ -299,7 +299,7 @@ input[type="text"]:focus, input[type="email"]:focus {
     outline: 0;
     border-color: var(--cambridge-#00f);
     background-color: var(--tea-green);
-    color: var(--rich-#000);
+    color: var(--rich-black);
 }
 .cybersecurity-grid {
     display: -webkit-box;
@@ -430,7 +430,7 @@ input[type="text"]:focus, input[type="email"]:focus {
 }
 .cta-btn {
     background-color: var(--celadon);
-    color: var(--rich-#000);
+    color: var(--rich-black);
     border: none;
     padding: 15px 25px;
     font-size: 1.2em;
@@ -463,7 +463,7 @@ h1 span {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: #001a23;
+    background-color: rgba(0, 26, 35, 0.75); /* Black w/ opacity */;
 }
 .modal-content {
     background-color: var(--gunmetal);
@@ -504,7 +504,7 @@ h1 span {
     -webkit-text-stroke: 2px var(--tea-green);
 }
 .close:hover, .close:focus {
-    color: var(--rich-#000);
+    color: var(--rich-black);
     text-decoration: none;
     cursor: pointer;
 }
@@ -514,3 +514,14 @@ h1 span {
 .fadein {
     animation: fadein 0.5s;
 }
+
+h1 span {
+    border-right: .05em solid;
+    animation: caret 1s steps(1) infinite;
+  }
+
+  @keyframes caret {
+    50% {
+      border-color: transparent;
+    }
+  }
