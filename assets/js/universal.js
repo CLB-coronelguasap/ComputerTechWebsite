@@ -133,26 +133,6 @@ document.addEventListener('DOMContentLoaded', function () {
         };
     }
 
-    // Form submission handler for lookup functionality
-    document.getElementById('lookup-form').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent default form submission
-        const name = document.getElementById('name').value; // Get the name input
-        const email = document.getElementById('email').value; // Get the email input
-        
-        // Simulate lookup processing with a timed delay
-        setTimeout(() => {
-            document.getElementById('results').style.display = 'block'; // Show results section
-            document.getElementById('result-message').innerText = `We discovered several public records and social signals linked to ${name} (${email}).`;
-            
-            // Simulated stats
-            document.getElementById('social-media-count').innerText = Math.floor(Math.random()*10) + 1; // Random social media count
-            document.getElementById('data-breach-count').innerText = Math.floor(Math.random()*5) + 1; // Random data breach count
-            document.getElementById('public-records-count').innerText = Math.floor(Math.random()*15) + 1; // Random public records count
-            
-            document.getElementById('statistics').style.display = 'block'; // Show statistics section
-        }, 1200); // Delay duration
-    });
-
     // Page-specific typewriter logic
     const pageTypewriterData = document.body.getAttribute("data-typewriter");
     if (pageTypewriterData) {
