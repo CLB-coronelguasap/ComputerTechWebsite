@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Metadata for SEO and social media sharing -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="SHEBANG - About">
     <meta property="og:description" content="Learn more about our mission and the person behind SHEBANG.">
-    <meta property="og:image" content="https://clb-coronelguasap.github.io/ComputerTechWebsite/assets/images/embed.png">
-    <meta property="og:url" content="https://clb-coronelguasap.github.io/ComputerTechWebsite/about.html">
+    <meta name="google-site-verification" content="OBjUQQrynmuUjMPfXjpMPX6kmvW7ehUIYkBb4KW1lcQ" />
+    <meta property="og:image" content="https://gonksite.vercel.app/assets/images/embed.png">
+    <meta property="og:url" content="https://gonksite.vercel.app/about.html">
     <meta property="og:type" content="website">
     <meta name="keywords" content="Cybersecurity, About, #!, SHEBANG, Cybersecurity Organization, Cybersecurity Community">
     <meta name="robots" content="index, follow">
@@ -15,26 +17,27 @@
     <meta name="revisit-after" content="3 days">
     <meta name="author" content="SHEBANG">
     <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Page title -->
     <title>SHEBANG - About</title>
+    
+    <!-- External CSS and fonts -->
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="assets/images/icon.ico">
+    
+    <!-- Inline CSS for specific styles -->
     <style>
+        /* Hero section styling */
         .about-hero {
             position: relative;
             background: url('assets/images/about-hero.jpg') center/cover no-repeat;
             min-height: 40vh;
-            display: -webkit-box;
-            display: -ms-flexbox;
             display: flex;
-            -webkit-box-align: center;
-                -ms-flex-align: center;
-                    align-items: center;
-            -webkit-box-pack: center;
-                -ms-flex-pack: center;
-                    justify-content: center;
+            align-items: center;
+            justify-content: center;
             color: var(--alice-blue);
             text-align: center;
         }
@@ -49,22 +52,24 @@
         .about-hero-content {
             position: relative;
         }
+
+        /* Info box styling */
         .info-box {
             background-color: var(--brunswick-green);
             border-radius: 16px;
             padding: 30px;
             margin: 40px auto;
             max-width: 800px;
-            -webkit-box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-                    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             color: var(--alice-blue);
         }
         .info-box h2 {
             text-align: center;
             margin-bottom: 20px;
         }
+
+        /* Team section styling */
         .team-grid {
-            display: -ms-grid;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
@@ -78,14 +83,17 @@
         }
         .team-card img {
             height: 200px;
-            -o-object-fit: cover;
-               object-fit: cover;
+            object-fit: cover;
             border-radius: 16px;
         }
+
+        /* Contact info link styling */
         .contact-info a {
             color: var(--celadon);
             text-decoration: underline;
         }
+
+        /* Responsive design for smaller screens */
         @media (max-width: 768px) {
             .info-box {
                 margin: 20px;
@@ -96,6 +104,7 @@
 </head>
 <body data-typewriter='["MORE ABOUT US"]'>
     <div class="plutarco" role="main">
+        <!-- Header with navigation bar -->
         <header>
             <nav aria-label="Main Navigation">
                 <ul class="navbar">
@@ -105,13 +114,13 @@
                     <li><a class="active" href="about.html"><span class="material-symbols-outlined">info</span></a></li>
                     <li><a id="music-btn"><span class="material-symbols-outlined">music_note</span></a></li>
                 </ul>
+                <!-- Background music audio -->
                 <audio loop id="audio" src="assets/audio/options.mp3"></audio>
             </nav>
         </header>
 
+        <!-- Modal for enabling/disabling background music -->
         <div id="music-modal" class="modal">
-
-            <!-- Modal content -->
             <div class="modal-content">
               <span class="close">&times;</span>
               <p>Would you like to enable background music? (Click Enable for next song)</p>
@@ -120,10 +129,9 @@
                 <button id="enable-btn"><span class="material-symbols-outlined">check</span>Enable</button>
                 <button id="disable-btn"><span class="material-symbols-outlined">close</span>Disable</button>
             </div>
-          
-          </div>
+        </div>
         
-        <!-- Hero Section for About -->
+        <!-- Hero Section -->
         <section class="about-hero" aria-labelledby="aboutHeroHeading">
             <div class="about-hero-content">
                 <h1 id="aboutHeroHeading"></h1>
@@ -131,6 +139,7 @@
             </div>
         </section>
         
+        <!-- Main content -->
         <main style="padding-bottom: 20px;">
             <div class="container">
                 <!-- Mission Section -->
@@ -144,12 +153,10 @@
                     <h2 id="teamHeading">More About Me</h2>
                     <div class="team-grid">
                         <div class="team-card">
-                            <img style="height: auto; width: 20%;"  src="assets/images/pfp.png" alt="me">
+                            <img style="height: auto; width: 20%;" src="assets/images/pfp.png" alt="me">
                             <h3>Me! (Caleb)</h3>
                             <p>Dev, Tester, etc.</p>
                             <p style="width: 50%; margin:auto;">Hi there! This website was developed alone by me, I put lots of effort into it so I hope you like it</p>
-                        </div>
-
                         </div>
                     </div>
                 </div>
@@ -162,7 +169,8 @@
                 </div>
             </div>
         </main>
-        <script src="assets/js/universal.js"></script>
+
+        <!-- Footer -->
         <footer class="footer" role="contentinfo">
             <p>This website is on <a href="https://github.com/CLB-coronelguasap/ComputerTechWebsite/tree/main" target="_blank">GitHub</a></p>
             <p>#!</p>
