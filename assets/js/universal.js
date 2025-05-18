@@ -137,6 +137,24 @@ document.addEventListener('DOMContentLoaded', function () {
         };
     }
 
+    document.getElementById('lookup-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        
+        // Simulate lookup processing with a timed delay
+        setTimeout(() => {
+            document.getElementById('results').style.display = 'block';
+            document.getElementById('result-message').innerText = `We discovered several public records and social signals linked to ${name} (${email}).`;
+            
+            // Simulated stats
+            document.getElementById('social-media-count').innerText = Math.floor(Math.random()*10) + 1;
+            document.getElementById('data-breach-count').innerText = Math.floor(Math.random()*5) + 1;
+            document.getElementById('public-records-count').innerText = Math.floor(Math.random()*15) + 1;
+            
+            document.getElementById('statistics').style.display = 'block';
+        }, 1200);
+    });
 
 
     // Page-specific typewriter logic
