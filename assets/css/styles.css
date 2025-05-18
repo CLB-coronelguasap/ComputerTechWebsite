@@ -1,552 +1,568 @@
+/* Define CSS variables for consistent color usage throughout the stylesheet */
 :root {
-    --alice-blue: #e8f1f2ff;
-    --tea-green: #cef0d2ff;
-    --celadon: #b3efb2ff;
-    --celadon-2: #97c798ff;
-    --cambridge-blue: #7a9e7eff;
-    --hookers-green: #56745dff;
-    --brunswick-green: #31493cff;
-    --gunmetal: #193230ff;
-    --rich-black: #001a23ff;
-    --gunmetal-2: #172f37ff;
+    --alice-blue: #e8f1f2ff; /* Light blue color */
+    --tea-green: #cef0d2ff; /* Soft green color for backgrounds */
+    --celadon: #b3efb2ff; /* Light green color for text or borders */
+    --celadon-2: #97c798ff; /* Slightly darker green for hover effects */
+    --cambridge-blue: #7a9e7eff; /* Muted blue-green for accents */
+    --hookers-green: #56745dff; /* Dark green for text or backgrounds */
+    --brunswick-green: #31493cff; /* Deep green for primary backgrounds */
+    --gunmetal: #193230ff; /* Dark grayish-blue for overlays or modals */
+    --rich-black: #001a23ff; /* Very dark color for text or buttons */
+    --gunmetal-2: #172f37ff; /* Slightly lighter gunmetal for variations */
 }
+
+/* Import a custom font from Google Fonts */
 @font-face {
-    font-family: 'Material Symbols Outlined';
-    font-style: normal;
-    font-weight: 400;
-    src: url(https://fonts.gstatic.com/s/materialsymbolsoutlined/v236/kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzazHD_dY43zj-jCxv3fzvRNU22ZXGJpEpjC_1v-p_4MrImHCIJIZrDCvHOej.woff2) format('woff2');
+    font-family: 'Material Symbols Outlined'; /* Name of the custom font */
+    font-style: normal; /* Normal font style */
+    font-weight: 400; /* Regular font weight */
+    src: url(https://fonts.gstatic.com/s/materialsymbolsoutlined/v236/kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzazHD_dY43zj-jCxv3fzvRNU22ZXGJpEpjC_1v-p_4MrImHCIJIZrDCvHOej.woff2) format('woff2'); /* URL to the font file in WOFF2 format */
 }
+
+/* Style for the Material Symbols Outlined font */
 .material-symbols-outlined {
-    font: normal 400 24px/1 'Material Symbols Outlined';
-    letter-spacing: normal;
-    text-transform: none;
-    display: inline-block;
-    white-space: nowrap;
-    word-wrap: normal;
-    direction: ltr;
-    animation: none;
-    border-right: transparent;
-    -moz-osx-font-smoothing: grayscale;
+    font: normal 400 24px/1 'Material Symbols Outlined'; /* Font settings: weight, size, line height, and family */
+    letter-spacing: normal; /* Default letter spacing */
+    text-transform: none; /* No text transformation */
+    display: inline-block; /* Inline-block for proper alignment */
+    white-space: nowrap; /* Prevent text wrapping */
+    word-wrap: normal; /* Default word wrapping */
+    direction: ltr; /* Left-to-right text direction */
+    animation: none; /* No animation */
+    border-right: transparent; /* Transparent border on the right */
+    -moz-osx-font-smoothing: grayscale; /* Smoothing for macOS */
 }
+
+/* Smaller variant of the Material Symbols Outlined font */
 .material-symbols-outlined-large {
-    font: normal 400 16px/1 'Material Symbols Outlined';
-    letter-spacing: normal;
-    text-transform: none;
-    display: inline-block;
-    white-space: nowrap;
-    word-wrap: normal;
-    direction: ltr;
-    -moz-font-feature-settings: 'liga';
-    -moz-osx-font-smoothing: grayscale;
+    font: normal 400 16px/1 'Material Symbols Outlined'; /* Smaller font size */
+    letter-spacing: normal; /* Default letter spacing */
+    text-transform: none; /* No text transformation */
+    display: inline-block; /* Inline-block for proper alignment */
+    white-space: nowrap; /* Prevent text wrapping */
+    word-wrap: normal; /* Default word wrapping */
+    direction: ltr; /* Left-to-right text direction */
+    -moz-font-feature-settings: 'liga'; /* Enable ligatures for Mozilla browsers */
+    -moz-osx-font-smoothing: grayscale; /* Smoothing for macOS */
 }
+
+/* Global body styles */
 body {
-    margin: 0;
-    padding: 0;
-    background-color: var(--tea-green);
-    font-family: "Funnel Display", sans-serif;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-color: var(--tea-green); /* Set background color using a variable */
+    font-family: "Funnel Display", sans-serif; /* Set font family */
 }
+
+/* Paragraph-specific font styles */
 .funnel-sans-p {
-    font-family: "Funnel Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 13px;
-    font-style: normal;
+    font-family: "Funnel Sans", sans-serif; /* Use Funnel Sans font */
+    font-optical-sizing: auto; /* Automatically adjust font size for readability */
+    font-weight: 13px; /* Set font weight */
+    font-style: normal; /* Normal font style */
 }
+
+/* Display-specific font styles */
 .funnel-display {
-    font-family: "Funnel Display", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 16px;
-    font-style: normal;
+    font-family: "Funnel Display", sans-serif; /* Use Funnel Display font */
+    font-optical-sizing: auto; /* Automatically adjust font size for readability */
+    font-weight: 16px; /* Set font weight */
+    font-style: normal; /* Normal font style */
 }
+
+/* Header styles */
 header {
-    background-color: var(--brunswick-green);
-    color: var(--celadon);
-    padding: 20px;
-    text-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: sticky;
+    background-color: var(--brunswick-green); /* Set background color */
+    color: var(--celadon); /* Set text color */
+    padding: 20px; /* Add padding */
+    text-align: center; /* Center-align text */
+    display: -webkit-box; /* Flexbox for older WebKit browsers */
+    display: -ms-flexbox; /* Flexbox for older Microsoft browsers */
+    display: flex; /* Modern flexbox */
+    position: sticky; /* Sticky positioning for header */
 }
+
+/* Navigation container styles */
 nav {
-    margin: 20px 0;
+    margin: 20px 0; /* Add vertical margin */
 }
+
+/* Navigation link styles */
 nav a {
-    color: var(--celadon);
-    background-color: var(--brunswick-green);
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-    display: block;
+    color: var(--celadon); /* Set text color */
+    background-color: var(--brunswick-green); /* Set background color */
+    text-decoration: none; /* Remove underline */
+    margin: 0 15px; /* Add horizontal margin */
+    font-weight: bold; /* Bold text */
+    display: block; /* Block-level element */
 }
+
+/* Unordered list styles */
 ul {
-    position: sticky;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: var(--brunswick-green);
-    width: 100%}
+    position: sticky; /* Sticky positioning */
+    list-style: none; /* Remove default list styling */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    overflow: hidden; /* Hide overflow */
+    background-color: var(--brunswick-green); /* Set background color */
+    width: 100%; /* Full width */
+}
+
+/* List item styles */
 li {
-    display: block;
+    display: block; /* Block-level element */
 }
+
+/* Image styles */
 img {
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    border-radius: 16px;
-    margin: 0 auto;
-    display: block;
-    padding: 20px;
-    border: 2px solid var(--celadon);
-    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: auto; /* Automatic width */
+    height: auto; /* Automatic height */
+    max-width: 100%; /* Restrict maximum width */
+    border-radius: 16px; /* Rounded corners */
+    margin: 0 auto; /* Center image horizontally */
+    display: block; /* Block-level element */
+    padding: 20px; /* Add padding */
+    border: 2px solid var(--celadon); /* Border with celadon color */
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for WebKit browsers */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* General shadow */
 }
-li a {
-    display: block;
-    color: var(--celadon);
-    background-color: var(--brunswick-green);
-    text-align: center;
-    padding: 8px 8px 6px;
-    text-decoration: none;
-    border-radius: 20%}
-li a:hover {
-    background-color: var(--cambridge-#00f);
+li a { /* Styles for anchor tags inside list items */
+    display: block; /* Makes the anchor tag a block-level element */
+    color: var(--celadon); /* Sets the text color using the celadon variable */
+    background-color: var(--brunswick-green); /* Sets the background color using the brunswick-green variable */
+    text-align: center; /* Centers the text horizontally */
+    padding: 8px 8px 6px; /* Adds padding: 8px top and bottom, 6px bottom */
+    text-decoration: none; /* Removes the underline from the text */
+    border-radius: 20%; /* Rounds the corners of the anchor tag */
 }
-nav a:hover {
-    text-decoration: underline;
+li a:hover { /* Hover state for anchor tags inside list items */
+    background-color: var(--cambridge-#00f); /* Changes the background color on hover */
 }
-body, p, a, button, input, textarea, span, li, div {
-    font-family: "Funnel Sans", sans-serif;
+nav a:hover { /* Hover state for anchor tags inside the nav element */
+    text-decoration: underline; /* Adds an underline to the text on hover */
 }
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Funnel Display", sans-serif;
+body, p, a, button, input, textarea, span, li, div { /* Applies styles to multiple elements */
+    font-family: "Funnel Sans", sans-serif; /* Sets the font family to Funnel Sans */
 }
-h2, h3, h4, h5, h6 {
-    color: var(--tea-green);
+h1, h2, h3, h4, h5, h6 { /* Applies styles to all heading levels */
+    font-family: "Funnel Display", sans-serif; /* Sets the font family to Funnel Display */
 }
-div {
-    background-color: var(--brunswick-green);
+h2, h3, h4, h5, h6 { /* Applies additional styles to heading levels 2 through 6 */
+    color: var(--tea-green); /* Sets the text color using the tea-green variable */
 }
-a {
-    color: var(--tea-green);
-    font-weight: bold;
-    font-size: 18px;
-    text-decoration: none;
-    -webkit-transition: color 0.3s ease;
-    -o-transition: color 0.3s ease;
-    transition: color 0.3s ease;
+div { /* Styles for all div elements */
+    background-color: var(--brunswick-green); /* Sets the background color using the brunswick-green variable */
 }
-a:hover {
-    text-decoration: none;
-    -webkit-transition: ease-in-out;
-    -o-transition: ease-in-out;
-    transition: ease-in-out;
-    scale: 101%;
-    background-color: var(--cambridge-#00f);
+a { /* Styles for all anchor tags */
+    color: var(--tea-green); /* Sets the text color using the tea-green variable */
+    font-weight: bold; /* Makes the text bold */
+    font-size: 18px; /* Sets the font size to 18px */
+    text-decoration: none; /* Removes the underline from the text */
+    -webkit-transition: color 0.3s ease; /* Adds a smooth color transition for WebKit browsers */
+    -o-transition: color 0.3s ease; /* Adds a smooth color transition for Opera browsers */
+    transition: color 0.3s ease; /* Adds a smooth color transition for all browsers */
 }
-h1 {
-    color: var(--celadon);
-    background-color: var(--brunswick-green);
-    text-transform: uppercase;
-    font-size: 10vw;
+a:hover { /* Hover state for all anchor tags */
+    text-decoration: none; /* Ensures no underline on hover */
+    -webkit-transition: ease-in-out; /* Adds a smooth transition effect for WebKit browsers */
+    -o-transition: ease-in-out; /* Adds a smooth transition effect for Opera browsers */
+    transition: ease-in-out; /* Adds a smooth transition effect for all browsers */
+    scale: 101%; /* Slightly enlarges the element on hover */
+    background-color: var(--cambridge-#00f); /* Changes the background color on hover */
 }
-h2, h3 {
-    color: var(--celadon);
-    background-color: var(--brunswick-green);
+h1 { /* Styles for the h1 heading */
+    color: var(--celadon); /* Sets the text color using the celadon variable */
+    background-color: var(--brunswick-green); /* Sets the background color using the brunswick-green variable */
+    text-transform: uppercase; /* Converts text to uppercase */
+    font-size: 10vw; /* Sets the font size to 10% of the viewport width */
 }
-.icon_font {
-    color: var(--celadon);
-    background-color: var(--brunswick-green);
-    font-size: xx-large;
+h2, h3 { /* Styles for h2 and h3 headings */
+    color: var(--celadon); /* Sets the text color using the celadon variable */
+    background-color: var(--brunswick-green); /* Sets the background color using the brunswick-green variable */
 }
-.inner_container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    padding: 20px;
+.icon_font { /* Styles for elements with the icon_font class */
+    color: var(--celadon); /* Sets the text color using the celadon variable */
+    background-color: var(--brunswick-green); /* Sets the background color using the brunswick-green variable */
+    font-size: xx-large; /* Sets the font size to xx-large */
 }
-.container {
-    width: 80%;
-    margin: 30px auto;
-    overflow: hidden;
-    padding: 30px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    border: 2px solid var(--celadon);
-    border-radius: 16px;
-    gap: 30px;
+.inner_container { /* Styles for elements with the inner_container class */
+    display: -webkit-box; /* Uses the WebKit box model for layout */
+    display: -ms-flexbox; /* Uses the Microsoft flexbox model for layout */
+    display: flex; /* Uses the modern flexbox model for layout */
+    -webkit-box-orient: vertical; /* Sets the box orientation to vertical for WebKit browsers */
+    -webkit-box-direction: normal; /* Sets the box direction to normal for WebKit browsers */
+    -ms-flex-direction: column; /* Sets the flex direction to column for Microsoft browsers */
+    flex-direction: column; /* Sets the flex direction to column */
+    -webkit-box-align: center; /* Aligns items to the center for WebKit browsers */
+    -ms-flex-align: center; /* Aligns items to the center for Microsoft browsers */
+    align-items: center; /* Aligns items to the center */
+    -webkit-box-pack: center; /* Centers content along the main axis for WebKit browsers */
+    -ms-flex-pack: center; /* Centers content along the main axis for Microsoft browsers */
+    justify-content: center; /* Centers content along the main axis */
+    padding: 20px; /* Adds 20px padding to all sides */
 }
-p {
-    color: var(--tea-green);
-    border-radius: 16px;
-    background-color: var(--brunswick-green);
+.container { /* Styles for elements with the container class */
+    width: 80%; /* Sets the width to 80% of the parent element */
+    margin: 30px auto; /* Adds 30px vertical margin and centers horizontally */
+    overflow: hidden; /* Hides content that overflows the container */
+    padding: 30px; /* Adds 30px padding to all sides */
+    display: -webkit-box; /* Uses the WebKit box model for layout */
+    display: -ms-flexbox; /* Uses the Microsoft flexbox model for layout */
+    display: flex; /* Uses the modern flexbox model for layout */
+    -webkit-box-orient: vertical; /* Sets the box orientation to vertical for WebKit browsers */
+    -webkit-box-direction: normal; /* Sets the box direction to normal for WebKit browsers */
+    -ms-flex-direction: column; /* Sets the flex direction to column for Microsoft browsers */
+    flex-direction: column; /* Sets the flex direction to column */
+    border: 2px solid var(--celadon); /* Adds a 2px solid border with the celadon color */
+    border-radius: 16px; /* Rounds the corners of the container */
+    gap: 30px; /* Adds 30px spacing between child elements */
 }
-.active {
-    background-color: var(--celadon);
-    color: var(--rich-black);
+p { /* Styles for all paragraph elements */
+    color: var(--tea-green); /* Sets the text color using the tea-green variable */
+    border-radius: 16px; /* Rounds the corners of the paragraph */
+    background-color: var(--brunswick-green); /* Sets the background color using the brunswick-green variable */
 }
-.card {
-    background: var(--brunswick-green);
-    border-radius: 8px;
-    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin: 20px 0;
-    padding: 20px;
+.active { /* Styles for elements with the active class */
+    background-color: var(--celadon); /* Sets the background color using the celadon variable */
+    color: var(--rich-black); /* Sets the text color using the rich-black variable */
 }
-.footer {
-    background-color: var(--brunswick-green);
-    color: var(--celadon);
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%}
-.navbar {
-    background-color: var(--brunswick-green);
-    color: var(--cambridge-#00f);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    float: left;
+.card { /* Styles for elements with the card class */
+    background: var(--brunswick-green); /* Sets the background color using the brunswick-green variable */
+    border-radius: 8px; /* Rounds the corners of the card */
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a shadow for WebKit browsers */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a shadow for all browsers */
+    margin: 20px 0; /* Adds 20px vertical margin */
+    padding: 20px; /* Adds 20px padding to all sides */
 }
-.button {
-    background-color: var(--rich-black);
-    color: var(--tea-green);
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.footer { /* Styles for the footer section */
+    background-color: var(--brunswick-green); /* Sets the background color using the brunswick-green variable */
+    color: var(--celadon); /* Sets the text color using the celadon variable */
+    text-align: center; /* Centers the text horizontally */
+    padding: 10px 0; /* Adds 10px padding to the top and bottom */
+    position: relative; /* Positions the footer relative to its normal position */
+    bottom: 0; /* Aligns the footer to the bottom of its container */
+    width: 100%; /* Makes the footer span the full width of its container */
 }
-.img_container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    margin: 20px 0;
+.navbar { /* Styles for the navigation bar */
+    background-color: var(--brunswick-green); /* Sets the background color using the brunswick-green variable */
+    color: var(--cambridge-#00f); /* Sets the text color using the cambridge-blue variable */
+    display: -webkit-box; /* Uses the WebKit box model for layout */
+    display: -ms-flexbox; /* Uses the Microsoft flexbox model for layout */
+    display: flex; /* Uses the modern flexbox model for layout */
+    float: left; /* Aligns the navbar to the left */
 }
-.img_container img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
+.button { /* Styles for button elements */
+    background-color: var(--rich-black); /* Sets the background color using the rich-black variable */
+    color: var(--tea-green); /* Sets the text color using the tea-green variable */
+    padding: 10px 15px; /* Adds padding: 10px top and bottom, 15px left and right */
+    border: none; /* Removes the border */
+    border-radius: 5px; /* Rounds the corners of the button */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
 }
-.button:focus {
-    outline: 0;
+.img_container { /* Styles for image container elements */
+    display: -webkit-box; /* Uses the WebKit box model for layout */
+    display: -ms-flexbox; /* Uses the Microsoft flexbox model for layout */
+    display: flex; /* Uses the modern flexbox model for layout */
+    -webkit-box-pack: center; /* Centers content along the main axis for WebKit browsers */
+    -ms-flex-pack: center; /* Centers content along the main axis for Microsoft browsers */
+    justify-content: center; /* Centers content along the main axis */
+    -webkit-box-align: center; /* Aligns items to the center for WebKit browsers */
+    -ms-flex-align: center; /* Aligns items to the center for Microsoft browsers */
+    align-items: center; /* Aligns items to the center */
+    margin: 20px 0; /* Adds 20px vertical margin */
 }
-.button:hover {
-    background-color: #3700b3;
+.img_container img { /* Styles for images inside the image container */
+    max-width: 100%; /* Restricts the maximum width to 100% of the container */
+    height: auto; /* Maintains the aspect ratio of the image */
+    border-radius: 8px; /* Rounds the corners of the image */
 }
-.statistic {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    margin: 10px 0;
+.button:focus { /* Styles for buttons when focused */
+    outline: 0; /* Removes the default focus outline */
 }
-.plutarco {
-    background-color: var(--brunswick-green);
+.button:hover { /* Styles for buttons when hovered */
+    background-color: #3700b3; /* Changes the background color to a specific shade of blue */
 }
-.statistic div {
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    text-align: center;
+.statistic { /* Styles for statistic elements */
+    display: -webkit-box; /* Uses the WebKit box model for layout */
+    display: -ms-flexbox; /* Uses the Microsoft flexbox model for layout */
+    display: flex; /* Uses the modern flexbox model for layout */
+    -webkit-box-pack: justify; /* Distributes content evenly along the main axis for WebKit browsers */
+    -ms-flex-pack: justify; /* Distributes content evenly along the main axis for Microsoft browsers */
+    justify-content: space-between; /* Distributes content evenly along the main axis */
+    -webkit-box-align: center; /* Aligns items to the center for WebKit browsers */
+    -ms-flex-align: center; /* Aligns items to the center for Microsoft browsers */
+    align-items: center; /* Aligns items to the center */
+    margin: 10px 0; /* Adds 10px vertical margin */
 }
-label {
-    font-size: 18px;
-    color: var(--celadon);
+.plutarco { /* Styles for elements with the plutarco class */
+    background-color: var(--brunswick-green); /* Sets the background color using the brunswick-green variable */
 }
-.statistic h4 {
-    margin: 5px 0;
+.statistic div { /* Styles for div elements inside statistic */
+    -webkit-box-flex: 1; /* Allows the div to grow and shrink as needed for WebKit browsers */
+    -ms-flex: 1; /* Allows the div to grow and shrink as needed for Microsoft browsers */
+    flex: 1; /* Allows the div to grow and shrink as needed */
+    text-align: center; /* Centers the text horizontally */
 }
-input[type="text"], input[type="email"] {
-    color: var(--tea-green);
-    background-color: var(--brunswick-green);
-    border: 2px solid var(--celadon);
-    border-radius: 16px;
-    padding: 10px;
-    font-size: 16px;
-    width: 100%;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    margin: 10px 0;
+label { /* Styles for label elements */
+    font-size: 18px; /* Sets the font size to 18px */
+    color: var(--celadon); /* Sets the text color using the celadon variable */
 }
-input[type="text"]:focus, input[type="email"]:focus {
-    outline: 0;
-    border-color: var(--cambridge-#00f);
-    background-color: var(--tea-green);
-    color: var(--rich-black);
+.statistic h4 { /* Styles for h4 headings inside statistic */
+    margin: 5px 0; /* Adds 5px vertical margin */
 }
-.cybersecurity-grid {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    gap: 20px;
+input[type="text"], input[type="email"] { /* Styles for text and email input fields */
+    color: var(--tea-green); /* Sets the text color using the tea-green variable */
+    background-color: var(--brunswick-green); /* Sets the background color using the brunswick-green variable */
+    border: 2px solid var(--celadon); /* Adds a 2px solid border with the celadon color */
+    border-radius: 16px; /* Rounds the corners of the input field */
+    padding: 10px; /* Adds 10px padding to all sides */
+    font-size: 16px; /* Sets the font size to 16px */
+    width: 100%; /* Makes the input field span the full width of its container */
+    -webkit-box-sizing: border-box; /* Ensures padding and border are included in the element's total width for WebKit browsers */
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width */
+    margin: 10px 0; /* Adds 10px vertical margin */
 }
-.content-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    background-color: var(--brunswick-green);
-    border-radius: 16px;
-    overflow: hidden;
-    padding: 20px;
-    gap: 20px;
+input[type="text"]:focus, input[type="email"]:focus { /* Styles for text and email input fields when focused */
+    outline: 0; /* Removes the default focus outline */
+    border-color: var(--cambridge-#00f); /* Changes the border color to cambridge-blue */
+    background-color: var(--tea-green); /* Changes the background color to tea-green */
+    color: var(--rich-black); /* Changes the text color to rich-black */
 }
-.text-section {
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    color: var(--tea-green);
-    font-size: 18px;
+.cybersecurity-grid { /* Styles for the cybersecurity grid layout */
+    display: -webkit-box; /* Uses the WebKit box model for layout */
+    display: -ms-flexbox; /* Uses the Microsoft flexbox model for layout */
+    display: flex; /* Uses the modern flexbox model for layout */
+    -webkit-box-orient: vertical; /* Sets the box orientation to vertical for WebKit browsers */
+    -webkit-box-direction: normal; /* Sets the box direction to normal for WebKit browsers */
+    -ms-flex-direction: column; /* Sets the flex direction to column for Microsoft browsers */
+    flex-direction: column; /* Sets the flex direction to column */
+    gap: 20px; /* Adds 20px spacing between child elements */
 }
-.image-section {
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+.content-container { /* Styles for the main content container */
+    display: -webkit-box; /* Uses the WebKit box model for layout */
+    display: -ms-flexbox; /* Uses the Microsoft flexbox model for layout */
+    display: flex; /* Uses the modern flexbox model for layout */
+    -webkit-box-orient: horizontal; /* Sets the box orientation to horizontal for WebKit browsers */
+    -webkit-box-direction: normal; /* Sets the box direction to normal for WebKit browsers */
+    -ms-flex-direction: row; /* Sets the flex direction to row for Microsoft browsers */
+    flex-direction: row; /* Sets the flex direction to row */
+    -webkit-box-align: center; /* Aligns items to the center for WebKit browsers */
+    -ms-flex-align: center; /* Aligns items to the center for Microsoft browsers */
+    align-items: center; /* Aligns items to the center */
+    background-color: var(--brunswick-green); /* Sets the background color using the brunswick-green variable */
+    border-radius: 16px; /* Rounds the corners of the container */
+    overflow: hidden; /* Hides content that overflows the container */
+    padding: 20px; /* Adds 20px padding to all sides */
+    gap: 20px; /* Adds 20px spacing between child elements */
 }
-.image-section img {
-    width: 100%;
-    max-width: 300px;
-    max-height: 200px;
-    height: auto;
-    border-radius: 16px;
-    -o-object-fit: cover;
-    object-fit: cover;
-    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.text-section { /* Styles for the text section inside the content container */
+    -webkit-box-flex: 1; /* Allows the text section to grow and shrink as needed for WebKit browsers */
+    -ms-flex: 1; /* Allows the text section to grow and shrink as needed for Microsoft browsers */
+    flex: 1; /* Allows the text section to grow and shrink as needed */
+    color: var(--tea-green); /* Sets the text color using the tea-green variable */
+    font-size: 18px; /* Sets the font size to 18px */
 }
-.hero {
-    position: relative;
-    min-height: 60vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    color: var(--tea-green);
+.image-section { /* Styles for the image section inside the content container */
+    -webkit-box-flex: 1; /* Allows the image section to grow and shrink as needed for WebKit browsers */
+    -ms-flex: 1; /* Allows the image section to grow and shrink as needed for Microsoft browsers */
+    flex: 1; /* Allows the image section to grow and shrink as needed */
+    display: -webkit-box; /* Uses the WebKit box model for layout */
+    display: -ms-flexbox; /* Uses the Microsoft flexbox model for layout */
+    display: flex; /* Uses the modern flexbox model for layout */
+    -webkit-box-pack: center; /* Centers content along the main axis for WebKit browsers */
+    -ms-flex-pack: center; /* Centers content along the main axis for Microsoft browsers */
+    justify-content: center; /* Centers content along the main axis */
+    -webkit-box-align: center; /* Aligns items to the center for WebKit browsers */
+    -ms-flex-align: center; /* Aligns items to the center for Microsoft browsers */
+    align-items: center; /* Aligns items to the center */
 }
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(49, 73, 60, 0.7);
+.image-section img { /* Styles for images inside the image section */
+    width: 100%; /* Makes the image span the full width of its container */
+    max-width: 300px; /* Restricts the maximum width to 300px */
+    max-height: 200px; /* Restricts the maximum height to 200px */
+    height: auto; /* Maintains the aspect ratio of the image */
+    border-radius: 16px; /* Rounds the corners of the image */
+    -o-object-fit: cover; /* Ensures the image covers its container for Opera browsers */
+    object-fit: cover; /* Ensures the image covers its container */
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a shadow for WebKit browsers */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a shadow for all browsers */
 }
-.hero-content {
-    position: relative;
-    text-align: center;
+.hero { /* Styles for the hero section */
+    position: relative; /* Positions the hero section relative to its normal position */
+    min-height: 60vh; /* Sets the minimum height to 60% of the viewport height */
+    display: -webkit-box; /* Uses the WebKit box model for layout */
+    display: -ms-flexbox; /* Uses the Microsoft flexbox model for layout */
+    display: flex; /* Uses the modern flexbox model for layout */
+    -webkit-box-align: center; /* Aligns items to the center for WebKit browsers */
+    -ms-flex-align: center; /* Aligns items to the center for Microsoft browsers */
+    align-items: center; /* Aligns items to the center */
+    -webkit-box-pack: center; /* Centers content along the main axis for WebKit browsers */
+    -ms-flex-pack: center; /* Centers content along the main axis for Microsoft browsers */
+    justify-content: center; /* Centers content along the main axis */
+    color: var(--tea-green); /* Sets the text color using the tea-green variable */
 }
-.info-grid {
-    display: -ms-grid;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    margin: 40px 0;
+.hero-overlay { /* Styles for the overlay inside the hero section */
+    position: absolute; /* Positions the overlay relative to its nearest positioned ancestor */
+    top: 0; /* Aligns the overlay to the top of its container */
+    left: 0; /* Aligns the overlay to the left of its container */
+    width: 100%; /* Makes the overlay span the full width of its container */
+    height: 100%; /* Makes the overlay span the full height of its container */
+    background-color: rgba(49, 73, 60, 0.7); /* Sets a semi-transparent background color */
 }
-.info-card {
-    background-color: var(--brunswick-green);
-    border-radius: 16px;
-    padding: 20px;
-    color: var(--tea-green);
-    -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    -webkit-transition: -webkit-transform 0.3s ease-in-out;
-    transition: -webkit-transform 0.3s ease-in-out;
-    -o-transition: transform 0.3s ease-in-out;
-    transition: transform 0.3s ease-in-out;
-    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-    outline: 2px solid;
+.hero-content { /* Styles for the content inside the hero section */
+    position: relative; /* Positions the content relative to its normal position */
+    text-align: center; /* Centers the text horizontally */
 }
-.img-card {
-    background-color: var(--brunswick-green);
-    border-radius: 16px;
-    padding: 20px;
-    color: var(--tea-green);
-    -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    -webkit-transition: -webkit-transform 0.3s ease-in-out;
-    transition: -webkit-transform 0.3s ease-in-out;
-    -o-transition: transform 0.3s ease-in-out;
-    transition: transform 0.3s ease-in-out;
-    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-    outline: 2px solid;
+.info-grid { /* Styles for the grid layout used for information cards */
+    display: -ms-grid; /* Uses the Microsoft grid model for layout */
+    display: grid; /* Uses the modern grid model for layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Creates responsive columns with a minimum width of 300px */
+    gap: 20px; /* Adds 20px spacing between grid items */
+    margin: 40px 0; /* Adds 40px vertical margin */
 }
-.info-card img {
-    width: 100%;
-    border-radius: 16px;
-    -o-object-fit: cover;
-    object-fit: cover;
-    padding: 0;
+.info-card { /* Styles for individual information cards */
+    background-color: var(--brunswick-green); /* Sets the background color using the brunswick-green variable */
+    border-radius: 16px; /* Rounds the corners of the card */
+    padding: 20px; /* Adds 20px padding to all sides */
+    color: var(--tea-green); /* Sets the text color using the tea-green variable */
+    -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a shadow for WebKit browsers */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a shadow for all browsers */
+    -webkit-transition: -webkit-transform 0.3s ease-in-out; /* Adds a smooth transform transition for WebKit browsers */
+    transition: -webkit-transform 0.3s ease-in-out; /* Adds a smooth transform transition for WebKit browsers */
+    -o-transition: transform 0.3s ease-in-out; /* Adds a smooth transform transition for Opera browsers */
+    transition: transform 0.3s ease-in-out; /* Adds a smooth transform transition for all browsers */
+    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out; /* Adds a smooth transform transition for all browsers */
+    outline: 2px solid; /* Adds a 2px solid outline */
 }
-.cta-btn {
-    background-color: var(--celadon);
-    color: var(--rich-black);
-    border: none;
-    padding: 15px 25px;
-    font-size: 1.2em;
-    border-radius: 50px;
-    cursor: pointer;
-    -webkit-transition: background-color 0.3s ease;
-    -o-transition: background-color 0.3s ease;
-    transition: background-color 0.3s ease;
-    font-family: inherit;
+.img-card { /* Styles for image cards */
+    background-color: var(--brunswick-green); /* Sets the background color using the brunswick-green variable */
+    border-radius: 16px; /* Rounds the corners of the card */
+    padding: 20px; /* Adds 20px padding to all sides */
+    color: var(--tea-green); /* Sets the text color using the tea-green variable */
+    -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a shadow for WebKit browsers */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a shadow for all browsers */
+    -webkit-transition: -webkit-transform 0.3s ease-in-out; /* Adds a smooth transform transition for WebKit browsers */
+    transition: -webkit-transform 0.3s ease-in-out; /* Adds a smooth transform transition for WebKit browsers */
+    -o-transition: transform 0.3s ease-in-out; /* Adds a smooth transform transition for Opera browsers */
+    transition: transform 0.3s ease-in-out; /* Adds a smooth transform transition for all browsers */
+    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out; /* Adds a smooth transform transition for all browsers */
+    outline: 2px solid; /* Adds a 2px solid outline */
 }
-.cta-btn:hover, .cta-btn:focus {
-    background-color: var(--cambridge-#00f);
-    outline: 0;
+.info-card img { /* Styles for images inside the info-card */
+    width: 100%; /* Makes the image span the full width of its container */
+    border-radius: 16px; /* Rounds the corners of the image */
+    -o-object-fit: cover; /* Ensures the image covers its container for Opera browsers */
+    object-fit: cover; /* Ensures the image covers its container */
+    padding: 0; /* Removes any padding around the image */
 }
-h1 span {
-    border-right: 05em solid;
-    animation: caret 1s steps(1) infinite;
+.cta-btn { /* Styles for call-to-action buttons */
+    background-color: var(--celadon); /* Sets the background color using the celadon variable */
+    color: var(--rich-black); /* Sets the text color using the rich-black variable */
+    border: none; /* Removes the border */
+    padding: 15px 25px; /* Adds padding: 15px top and bottom, 25px left and right */
+    font-size: 1.2em; /* Sets the font size to 1.2 times the base size */
+    border-radius: 50px; /* Rounds the corners of the button */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+    -webkit-transition: background-color 0.3s ease; /* Adds a smooth background color transition for WebKit browsers */
+    -o-transition: background-color 0.3s ease; /* Adds a smooth background color transition for Opera browsers */
+    transition: background-color 0.3s ease; /* Adds a smooth background color transition for all browsers */
+    font-family: inherit; /* Inherits the font family from the parent element */
 }
-@keyframes caret {
-    50% {
-    border-color: transparent;
+.cta-btn:hover, .cta-btn:focus { /* Styles for call-to-action buttons on hover or focus */
+    background-color: var(--cambridge-#00f); /* Changes the background color to cambridge-blue */
+    outline: 0; /* Removes the default focus outline */
 }
-}.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    padding-top: 100px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 26, 35, 0.75); /* Black w/ opacity */;
+h1 span { /* Styles for spans inside h1 headings */
+    border-right: 0.05em solid; /* Adds a solid border to the right of the span */
+    animation: caret 1s steps(1) infinite; /* Applies a caret animation */
 }
-.modal-content {
-    background-color: var(--gunmetal);
-    margin: auto auto 15px;
-    padding: 20px;
-    border: 2px solid var(--tea-green);
-    width: 40%;
-    border-radius: 16px;
-}
-.modal-footer {
-    background-color: var(--gunmetal);
-    margin: auto;
-    padding: 20px;
-    border: 2px solid var(--tea-green);
-    width: 40%;
-    border-radius: 16px;
-}
-.modal-footer button {
-    background-color: var(--tea-green);
-    color: var(--gunmetal);
-    border: none;
-    width: 100px; 
-    height: 50px; 
-    font-size: 1.2em;
-    cursor: pointer;
-    transition: all 0.3s ease; /* Smooth transition for hover effect */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 1;
-    border-radius: 15px; /* Rounded rectangle shape */
-    margin: auto;
-}
-.modal-footer button:hover {
-    background-color: var(--celadon-2); /* Darken the button on hover */
-}
-.modal-content p {
-    background-color: transparent;
-}
-.close {
-    color: var(--gunmetal);
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    -webkit-text-stroke: 2px var(--tea-green);
-}
-.close:hover, .close:focus {
-    color: var(--rich-black);
-    text-decoration: none;
-    cursor: pointer;
-}
-.fadeout {
-    animation: fadeout 0.5s;
-}
-.fadein {
-    animation: fadein 0.5s;
-}
-
-h1 span {
-    border-right: .05em solid;
-    animation: caret 1s steps(1) infinite;
-  }
-
-  @keyframes caret {
-    50% {
-      border-color: transparent;
+@keyframes caret { /* Keyframes for the caret animation */
+    50% { /* At 50% of the animation */
+        border-color: transparent; /* Makes the border color transparent */
     }
-  }
-
-  @keyframes fadein {
-    from {
-      opacity: 0;
+}
+.modal { /* Styles for modal elements */
+    display: none; /* Hides the modal by default */
+    position: fixed; /* Positions the modal relative to the viewport */
+    z-index: 1; /* Ensures the modal appears above other elements */
+    padding-top: 100px; /* Adds 100px padding to the top */
+    left: 0; /* Aligns the modal to the left of the viewport */
+    top: 0; /* Aligns the modal to the top of the viewport */
+    width: 100%; /* Makes the modal span the full width of the viewport */
+    height: 100%; /* Makes the modal span the full height of the viewport */
+    overflow: auto; /* Adds scrollbars if the content overflows */
+    background-color: rgba(0, 26, 35, 0.75); /* Sets a semi-transparent black background */
+}
+.modal-content { /* Styles for the content inside the modal */
+    background-color: var(--gunmetal); /* Sets the background color using the gunmetal variable */
+    margin: auto auto 15px; /* Centers the modal content horizontally and adds 15px bottom margin */
+    padding: 20px; /* Adds 20px padding to all sides */
+    border: 2px solid var(--tea-green); /* Adds a 2px solid border with the tea-green color */
+    width: 40%; /* Sets the width to 40% of the viewport */
+    border-radius: 16px; /* Rounds the corners of the modal content */
+}
+.modal-footer { /* Styles for the footer inside the modal */
+    background-color: var(--gunmetal); /* Sets the background color using the gunmetal variable */
+    margin: auto; /* Centers the footer horizontally */
+    padding: 20px; /* Adds 20px padding to all sides */
+    border: 2px solid var(--tea-green); /* Adds a 2px solid border with the tea-green color */
+    width: 40%; /* Sets the width to 40% of the viewport */
+    border-radius: 16px; /* Rounds the corners of the modal footer */
+}
+.modal-footer button { /* Styles for buttons inside the modal footer */
+    background-color: var(--tea-green); /* Sets the background color using the tea-green variable */
+    color: var(--gunmetal); /* Sets the text color using the gunmetal variable */
+    border: none; /* Removes the border */
+    width: 100px; /* Sets the width to 100px */
+    height: 50px; /* Sets the height to 50px */
+    font-size: 1.2em; /* Sets the font size to 1.2 times the base size */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+    transition: all 0.3s ease; /* Adds a smooth transition for all properties */
+    display: flex; /* Uses flexbox for layout */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    line-height: 1; /* Sets the line height to 1 */
+    border-radius: 15px; /* Rounds the corners of the button */
+    margin: auto; /* Centers the button horizontally */
+}
+.modal-footer button:hover { /* Styles for buttons inside the modal footer on hover */
+    background-color: var(--celadon-2); /* Changes the background color to a darker celadon */
+}
+.modal-content p { /* Styles for paragraphs inside the modal content */
+    background-color: transparent; /* Sets a transparent background */
+}
+.close { /* Styles for the close button inside the modal */
+    color: var(--gunmetal); /* Sets the text color using the gunmetal variable */
+    float: right; /* Aligns the close button to the right */
+    font-size: 28px; /* Sets the font size to 28px */
+    font-weight: bold; /* Makes the text bold */
+    -webkit-text-stroke: 2px var(--tea-green); /* Adds a 2px text stroke with the tea-green color for WebKit browsers */
+}
+.close:hover, .close:focus { /* Styles for the close button on hover or focus */
+    color: var(--rich-black); /* Changes the text color to rich-black */
+    text-decoration: none; /* Removes any text decoration */
+    cursor: pointer; /* Changes the cursor to a pointer */
+}
+.fadeout { /* Styles for elements with the fadeout animation */
+    animation: fadeout 0.5s; /* Applies the fadeout animation over 0.5 seconds */
+}
+.fadein { /* Styles for elements with the fadein animation */
+    animation: fadein 0.5s; /* Applies the fadein animation over 0.5 seconds */
+}
+@keyframes fadein { /* Keyframes for the fadein animation */
+    from { /* Starting state */
+        opacity: 0; /* Fully transparent */
     }
-    to {
-      opacity: 1;
+    to { /* Ending state */
+        opacity: 1; /* Fully visible */
     }
-  }
-
-  @keyframes fadeout {
-    from {
-      opacity: 1;
+}
+@keyframes fadeout { /* Keyframes for the fadeout animation */
+    from { /* Starting state */
+        opacity: 1; /* Fully visible */
     }
-    to {
-      opacity: 0;
+    to { /* Ending state */
+        opacity: 0; /* Fully transparent */
     }
-  }
+}

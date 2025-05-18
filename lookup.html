@@ -1,250 +1,215 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="SHEBANG - Lookup">
-    <meta property="og:description" content="Look up yourself. You'll be surprised with what you can find.">
-    <meta name="google-site-verification" content="OBjUQQrynmuUjMPfXjpMPX6kmvW7ehUIYkBb4KW1lcQ" />
-    <meta property="og:image" content="https://clb-coronelguasap.github.io/ComputerTechWebsite/assets/images/embed.png">
-    <meta property="og:url" content="https://clb-coronelguasap.github.io/ComputerTechWebsite/lookup.html">
-    <meta property="og:type" content="website">
-    <meta name="keywords" content="Cybersecurity, Lookup, #!, SHEBANG, Cybersecurity Lookup, Online Safety, Digital Security, Cyber Threats, Data Protection, Cybersecurity Education">
-    <meta name="robots" content="index, follow">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="language" content="English">
-    <meta name="revisit-after" content="3 days">
-    <meta name="author" content="SHEBANG">
-    <meta name="twitter:card" content="summary_large_image">
-    <title>SHEBANG - Lookup</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
-    <link rel="icon" type="image/x-icon" href="assets/images/icon.ico">
+<!DOCTYPE html> <!-- Declares the document type as HTML5 -->
+<html lang="en"> <!-- Opens the HTML document and sets the language to English -->
+<head> <!-- Metadata and resources for the document -->
+    <meta charset="UTF-8"> <!-- Sets the character encoding to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures proper rendering on mobile devices -->
+    <meta property="og:title" content="SHEBANG - Lookup"> <!-- Open Graph metadata for the page title -->
+    <meta property="og:description" content="Look up yourself. You'll be surprised with what you can find."> <!-- Open Graph description -->
+    <meta name="google-site-verification" content="OBjUQQrynmuUjMPfXjpMPX6kmvW7ehUIYkBb4KW1lcQ" /> <!-- Google site verification token -->
+    <meta property="og:image" content="https://gonksite.vercel.app/assets/images/embed.png"> <!-- Open Graph image for social sharing -->
+    <meta property="og:url" content="https://gonksite.vercel.app/lookup.html"> <!-- Open Graph URL -->
+    <meta property="og:type" content="website"> <!-- Open Graph type -->
+    <meta name="keywords" content="Cybersecurity, Lookup, #!, SHEBANG, Cybersecurity Lookup, Online Safety, Digital Security, Cyber Threats, Data Protection, Cybersecurity Education"> <!-- Keywords for SEO -->
+    <meta name="robots" content="index, follow"> <!-- Allows search engines to index and follow links -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> <!-- Specifies the document's content type and character encoding -->
+    <meta name="language" content="English"> <!-- Specifies the language of the document -->
+    <meta name="revisit-after" content="3 days"> <!-- Suggests search engines revisit the page after 3 days -->
+    <meta name="author" content="SHEBANG"> <!-- Specifies the author of the document -->
+    <meta name="twitter:card" content="summary_large_image"> <!-- Twitter card metadata for large image previews -->
+    <title>SHEBANG - Lookup</title> <!-- Sets the title of the document -->
+    <link rel="stylesheet" href="assets/css/styles.css"> <!-- Links to an external CSS file -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Preconnects to Google's font server for faster loading -->
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet"> <!-- Loads the Funnel Display font -->
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet"> <!-- Loads the Funnel Sans font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" /> <!-- Loads Material Symbols font -->
+    <link rel="icon" type="image/x-icon" href="assets/images/icon.ico"> <!-- Sets the favicon for the page -->
     <style>
-     .lookup-hero {
-            position: relative;
-            background: url('assets/images/lookup-hero.jpg') center/cover no-repeat;
-            min-height: 40vh;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-align: center;
-                -ms-flex-align: center;
-                    align-items: center;
-            -webkit-box-pack: center;
-                -ms-flex-pack: center;
-                    justify-content: center;
-            color: var(--alice-blue);
-            text-align: center;
+     .lookup-hero { /* Styles for the hero section */
+            position: relative; /* Positions the element relative to itself */
+            background: url('assets/images/lookup-hero.jpg') center/cover no-repeat; /* Sets a background image */
+            min-height: 40vh; /* Minimum height of 40% of the viewport height */
+            display: flex; /* Enables flexbox layout */
+            align-items: center; /* Centers content vertically */
+            justify-content: center; /* Centers content horizontally */
+            color: var(--alice-blue); /* Text color */
+            text-align: center; /* Centers text */
         }
-        .lookup-hero::before {
-            content: "";
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(49,73,60,0.7);
+        .lookup-hero::before { /* Adds an overlay effect */
+            content: ""; /* Empty content for the pseudo-element */
+            position: absolute; /* Positions relative to the parent */
+            top: 0; left: 0; /* Covers the entire parent */
+            width: 100%; height: 100%; /* Full width and height */
+            background: rgba(49,73,60,0.7); /* Semi-transparent overlay */
         }
-        .lookup-hero-content {
-            position: relative;
+        .lookup-hero-content { /* Styles for the hero content */
+            position: relative; /* Positions relative to the parent */
         }
-        .lookup-intro {
-            margin: 20px 0;
-            padding: 20px;
-            background-color: var(--brunswick-green);
-            border-radius: 16px;
-            color: var(--alice-blue);
+        .lookup-intro { /* Styles for the introduction section */
+            margin: 20px 0; /* Vertical margin */
+            padding: 20px; /* Padding inside the element */
+            background-color: var(--brunswick-green); /* Background color */
+            border-radius: 16px; /* Rounded corners */
+            color: var(--alice-blue); /* Text color */
         }
-        .lookup-container {
-            width: 80%;
-            margin: 40px auto;
-            padding: 30px;
-            border: 2px solid var(--celadon);
-            border-radius: 16px;
-            background-color: var(--brunswick-green);
+        .lookup-container { /* Styles for the main container */
+            width: 80%; /* 80% of the parent width */
+            margin: 40px auto; /* Centered with vertical margin */
+            padding: 30px; /* Padding inside the container */
+            border: 2px solid var(--celadon); /* Border with color */
+            border-radius: 16px; /* Rounded corners */
+            background-color: var(--brunswick-green); /* Background color */
         }
-        .lookup-container h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: var(--alice-blue);
+        .lookup-container h2 { /* Styles for headings inside the container */
+            text-align: center; /* Centers the text */
+            margin-bottom: 20px; /* Bottom margin */
+            color: var(--alice-blue); /* Text color */
         }
-        .lookup-form {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-                -ms-flex-direction: column;
-                    flex-direction: column;
-            gap: 20px;
+        .lookup-form { /* Styles for the form */
+            display: flex; /* Flexbox layout */
+            flex-direction: column; /* Stacks items vertically */
+            gap: 20px; /* Space between items */
         }
-        .lookup-form label {
-            font-size: 18px;
-            color: var(--celadon);
+        .lookup-form label { /* Styles for form labels */
+            font-size: 18px; /* Font size */
+            color: var(--celadon); /* Text color */
         }
-        .lookup-form input {
-            padding: 10px;
-            border-radius: 16px;
-            font-size: 16px;
-            border: 2px solid var(--celadon);
-            background: var(--brunswick-green);
-            color: var(--alice-blue);
+        .lookup-form input { /* Styles for input fields */
+            padding: 10px; /* Padding inside the input */
+            border-radius: 16px; /* Rounded corners */
+            font-size: 16px; /* Font size */
+            border: 2px solid var(--celadon); /* Border with color */
+            background: var(--brunswick-green); /* Background color */
+            color: var(--alice-blue); /* Text color */
         }
-        .lookup-form button {
-            background-color: var(--celadon);
-            color: var(--rich-black);
-            padding: 15px 25px;
-            font-size: 1.2em;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            -webkit-transition: background-color 0.3s ease;
-            -o-transition: background-color 0.3s ease;
-            transition: background-color 0.3s ease;
-            -ms-flex-item-align: center;
-                -ms-grid-row-align: center;
-                align-self: center;
+        .lookup-form button { /* Styles for the submit button */
+            background-color: var(--celadon); /* Background color */
+            color: var(--rich-black); /* Text color */
+            padding: 15px 25px; /* Padding inside the button */
+            font-size: 1.2em; /* Font size */
+            border: none; /* Removes border */
+            border-radius: 50px; /* Fully rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background-color 0.3s ease; /* Smooth background color transition */
+            align-self: center; /* Centers the button */
         }
         .lookup-form button:hover,
-        .lookup-form button:focus {
-            background-color: var(--cambridge-blue);
-            outline: none;
+        .lookup-form button:focus { /* Hover and focus states for the button */
+            background-color: var(--cambridge-blue); /* Changes background color */
+            outline: none; /* Removes focus outline */
         }
-        .lookup-results, .lookup-statistics {
-            background-color: var(--brunswick-green);
-            margin-top: 20px;
-            padding: 20px;
-            border-radius: 16px;
-            color: var(--alice-blue);
+        .lookup-results, .lookup-statistics { /* Styles for results and statistics sections */
+            background-color: var(--brunswick-green); /* Background color */
+            margin-top: 20px; /* Top margin */
+            padding: 20px; /* Padding inside the sections */
+            border-radius: 16px; /* Rounded corners */
+            color: var(--alice-blue); /* Text color */
         }
-        .lookup-statistics ul {
-            list-style-type: none;
-            padding: 0;
+        .lookup-statistics ul { /* Styles for unordered lists in statistics */
+            list-style-type: none; /* Removes default list styling */
+            padding: 0; /* Removes padding */
         }
-        .lookup-statistics li {
-            margin: 10px 0;
-            font-size: 18px;
+        .lookup-statistics li { /* Styles for list items in statistics */
+            margin: 10px 0; /* Vertical margin */
+            font-size: 18px; /* Font size */
         }
-
-        .stats-list, .practices-list {
-            list-style-type: none;
-            padding: 0;
-            line-height: 1.8;
-            font-size: 18px;
+        .stats-list, .practices-list { /* Styles for specific lists */
+            list-style-type: none; /* Removes default list styling */
+            padding: 0; /* Removes padding */
+            line-height: 1.8; /* Line height for readability */
+            font-size: 18px; /* Font size */
         }
-        .stats-list li::before {
-            content: "• ";
-            color: var(--celadon);
+        .stats-list li::before { /* Adds a bullet before list items */
+            content: "• "; /* Bullet character */
+            color: var(--celadon); /* Bullet color */
         }
-
-        video {
-            width: 25.5vw;
-            height: auto;
-            border-radius: 16px;
-            outline: 2px solid var(--celadon);
+        video { /* Styles for video elements */
+            width: 25.5vw; /* Width relative to viewport */
+            height: auto; /* Maintains aspect ratio */
+            border-radius: 16px; /* Rounded corners */
+            outline: 2px solid var(--celadon); /* Outline with color */
         }
     </style>
 </head>
-<body data-typewriter='["PRIVACY", "BREACH", "EXPOSURE", "SECURITY", "CONSENT", "METADATA", "ENCRYPTION", "SURVEILLANCE", "ANONYMITY", "TRACKING", "COOKIES", "PROFILING", "SHARING", "HACKING", "AUTHENTICATION", "TRANSPARENCY", "DATA-MINING", "CYBERCRIME", "IDENTITY", "ACCESSIBILITY"]'>
-    <div class="plutarco" role="main">
-        <header id="header">
-            <nav aria-label="Main Navigation">
-                <ul class="navbar">
-                    <li><a href="/"><span class="material-symbols-outlined">home</span></a></li>
-                    <li><a href="security.html"><span class="material-symbols-outlined">security</span></a></li>
-                    <li><a class="active" href="lookup.html"><span class="material-symbols-outlined">search</span></a></li>
-                    <li><a href="about.html"><span class="material-symbols-outlined">info</span></a></li>
-                    <li><a id="music-btn"><span class="material-symbols-outlined">music_note</span></a></li>
+<body data-typewriter='["PRIVACY", "BREACH", "EXPOSURE", "SECURITY", "CONSENT", "METADATA", "ENCRYPTION", "SURVEILLANCE", "ANONYMITY", "TRACKING", "COOKIES", "PROFILING", "SHARING", "HACKING", "AUTHENTICATION", "TRANSPARENCY", "DATA-MINING", "CYBERCRIME", "IDENTITY", "ACCESSIBILITY"]'> <!-- Opens the body and sets a data attribute for typewriter effect -->
+    <div class="plutarco" role="main"> <!-- Main container with a semantic role -->
+        <header id="header"> <!-- Header section -->
+            <nav aria-label="Main Navigation"> <!-- Navigation with an accessible label -->
+                <ul class="navbar"> <!-- Unordered list for navigation links -->
+                    <li><a href="/"><span class="material-symbols-outlined">home</span></a></li> <!-- Home link with icon -->
+                    <li><a href="security.html"><span class="material-symbols-outlined">security</span></a></li> <!-- Security page link -->
+                    <li><a class="active" href="lookup.html"><span class="material-symbols-outlined">search</span></a></li> <!-- Active link for lookup page -->
+                    <li><a href="about.html"><span class="material-symbols-outlined">info</span></a></li> <!-- About page link -->
+                    <li><a id="music-btn"><span class="material-symbols-outlined">music_note</span></a></li> <!-- Music toggle button -->
                 </ul>
-                <audio loop id="audio" src="assets/audio/aero.mp3"></audio>
+                <audio loop id="audio" src="assets/audio/aero.mp3"></audio> <!-- Background audio element -->
             </nav>
         </header>
-
-        <div id="music-modal" class="modal">
-
-            <!-- Modal content -->
-            <div class="modal-content">
-              <span class="close">&times;</span>
-              <p>Would you like to enable background music? (Click Enable for next song)</p>
+        <div id="music-modal" class="modal"> <!-- Modal for music settings -->
+            <div class="modal-content"> <!-- Modal content -->
+              <span class="close">&times;</span> <!-- Close button -->
+              <p>Would you like to enable background music? (Click Enable for next song)</p> <!-- Modal text -->
             </div>
-            <div class="modal-footer">
-                <button id="enable-btn"><span class="material-symbols-outlined">check</span>Enable</button>
-                <button id="disable-btn"><span class="material-symbols-outlined">close</span>Disable</button>
+            <div class="modal-footer"> <!-- Modal footer with buttons -->
+                <button id="enable-btn"><span class="material-symbols-outlined">check</span>Enable</button> <!-- Enable button -->
+                <button id="disable-btn"><span class="material-symbols-outlined">close</span>Disable</button> <!-- Disable button -->
             </div>
-          
           </div>
-
-        <!-- Hero Section for Lookup -->
-        <section class="lookup-hero" aria-labelledby="lookupHeroHeading">
-            <div class="lookup-hero-content">
-                <h1 id="lookupHeroHeading"></h1>
-                <p>Your data is available online, find out where and why.</p>
+        <section class="lookup-hero" aria-labelledby="lookupHeroHeading"> <!-- Hero section with accessible heading -->
+            <div class="lookup-hero-content"> <!-- Content inside the hero section -->
+                <h1 id="lookupHeroHeading"></h1> <!-- Main heading for the hero -->
+                <p>Your data is available online, find out where and why.</p> <!-- Subtitle -->
             </div>
         </section>
-        
-        <main>
-            <div class="container lookup-container">
-                <!-- Introduction -->
-                <section class="lookup-intro" aria-labelledby="introHeading">
-                    <h2 id="introHeading">Your Data, Your Choice</h2>
-                    <p>The internet has become an integral part of our lives, facilitating communication, commerce, and access to vast amounts of information. However, this interconnectedness has also led to an unprecedented availability of personal information online. From social media profiles and online shopping accounts to digital footprints left through browsing history and location data, a significant amount of our personal details is now accessible in the digital realm. This widespread availability creates both convenience and considerable risks.</p>
-                    <p>Personal information on the internet can be exposed through various means, including data breaches, social media oversharing, unsecure websites, and even publicly available records. Once this information is exposed, it can be exploited for malicious purposes such as identity theft, financial fraud, and cyberstalking. Understanding the extent of your digital footprint and the potential risks associated with it is the first step towards protecting yourself.</p>
-                    <p>Taking proactive measures to manage your personal information online is crucial in today's digital age. This includes adjusting privacy settings on social media, being cautious about the information you share, using strong and unique passwords, enabling multi-factor authentication, and being aware of phishing attempts. Regularly reviewing your online presence and taking steps to limit the exposure of sensitive data can significantly reduce your vulnerability to online threats and help safeguard your personal life in an increasingly digital world.</p>
-                    <h2 id="statsHeading">Cybersecurity Statistics</h2>
-                    <ul class="stats-list">
-                        <li>In 2024, the United States Internet Crime Complaint Center (IC3) received 859,532 complaints of suspected internet crime, with reported losses exceeding $16 billion, a 33% increase from 2023.</li>
-                        <li>33% of data breaches in Australia in a specific period were due to personal information being sent to the wrong recipient email.</li>
-                        <li>A significant number of data breaches in 2024 and 2025 have exposed the personal information of hundreds of thousands of individuals, including names, social security numbers, medical histories, and financial details.</li>
-                        <li>Over 82% of iOS apps track private user data, and free apps are significantly more likely to do so than paid apps.</li>
-                        <li>68% of breaches in 2024 involved a human element.</li>
-                        <li>Less than one-quarter of American smartphone users feel in control of their personal data online, and only 64% use tools to help protect their online privacy.</li>
-                        <li>85% of global adults want to do more to protect their online privacy.</li>
+        <main> <!-- Main content area -->
+            <div class="container lookup-container"> <!-- Container for lookup content -->
+                <section class="lookup-intro" aria-labelledby="introHeading"> <!-- Introduction section -->
+                    <h2 id="introHeading">Your Data, Your Choice</h2> <!-- Section heading -->
+                    <p>The internet has become an integral part of our lives, facilitating communication, commerce, and access to vast amounts of information. However, this interconnectedness has also led to an unprecedented availability of personal information online. From social media profiles and online shopping accounts to digital footprints left through browsing history and location data, a significant amount of our personal details is now accessible in the digital realm. This widespread availability creates both convenience and considerable risks.</p> <!-- Introductory paragraph -->
+                    <p>Personal information on the internet can be exposed through various means, including data breaches, social media oversharing, unsecure websites, and even publicly available records. Once this information is exposed, it can be exploited for malicious purposes such as identity theft, financial fraud, and cyberstalking. Understanding the extent of your digital footprint and the potential risks associated with it is the first step towards protecting yourself.</p> <!-- Risks paragraph -->
+                    <p>Taking proactive measures to manage your personal information online is crucial in today's digital age. This includes adjusting privacy settings on social media, being cautious about the information you share, using strong and unique passwords, enabling multi-factor authentication, and being aware of phishing attempts. Regularly reviewing your online presence and taking steps to limit the exposure of sensitive data can significantly reduce your vulnerability to online threats and help safeguard your personal life in an increasingly digital world.</p> <!-- Proactive measures paragraph -->
+                    <h2 id="statsHeading">Cybersecurity Statistics</h2> <!-- Statistics heading -->
+                    <ul class="stats-list"> <!-- List of statistics -->
+                        <li>In 2024, the United States Internet Crime Complaint Center (IC3) received 859,532 complaints of suspected internet crime, with reported losses exceeding $16 billion, a 33% increase from 2023.</li> <!-- Statistic 1 -->
+                        <li>33% of data breaches in Australia in a specific period were due to personal information being sent to the wrong recipient email.</li> <!-- Statistic 2 -->
+                        <li>A significant number of data breaches in 2024 and 2025 have exposed the personal information of hundreds of thousands of individuals, including names, social security numbers, medical histories, and financial details.</li> <!-- Statistic 3 -->
+                        <li>Over 82% of iOS apps track private user data, and free apps are significantly more likely to do so than paid apps.</li> <!-- Statistic 4 -->
+                        <li>68% of breaches in 2024 involved a human element.</li> <!-- Statistic 5 -->
+                        <li>Less than one-quarter of American smartphone users feel in control of their personal data online, and only 64% use tools to help protect their online privacy.</li> <!-- Statistic 6 -->
+                        <li>85% of global adults want to do more to protect their online privacy.</li> <!-- Statistic 7 -->
                     </ul>
                 </section>
-                
-                <!-- Lookup Form Section -->
-                <section aria-labelledby="lookupFormHeading">
-                    <h2 id="lookupFormHeading">Personal Information Lookup</h2>
-                    <form id="lookup-form" class="lookup-form">
-                        <label for="name">Full Name:</label>
-                        <input type="text" id="name" name="name" required>
-                        
-                        <label for="email">Email Address:</label>
-                        <input type="email" id="email" name="email" required>
-                        
-                        <button type="submit">Lookup Now</button>
+                <section aria-labelledby="lookupFormHeading"> <!-- Lookup form section -->
+                    <h2 id="lookupFormHeading">Personal Information Lookup</h2> <!-- Section heading -->
+                    <form id="lookup-form" class="lookup-form"> <!-- Form for user input -->
+                        <label for="name">Full Name:</label> <!-- Label for name input -->
+                        <input type="text" id="name" name="name" required> <!-- Text input for name -->
+                        <label for="email">Email Address:</label> <!-- Label for email input -->
+                        <input type="email" id="email" name="email" required> <!-- Email input -->
+                        <button type="submit">Lookup Now</button> <!-- Submit button -->
                     </form>
                 </section>
-                
-                <!-- Results Section -->
-                <section class="lookup-results" id="results" style="display:none;" aria-live="polite">
-                    <h3>Lookup Results</h3>
-                    <p id="result-message"></p>
-                    <button class="cta-btn" id="remove-info" onclick="alert('Information removal process initiated. Please check your email for further instructions.')">Remove Information</button>
+                <section class="lookup-results" id="results" style="display:none;" aria-live="polite"> <!-- Results section, hidden by default -->
+                    <h3>Lookup Results</h3> <!-- Results heading -->
+                    <p id="result-message"></p> <!-- Placeholder for result message -->
+                    <button class="cta-btn" id="remove-info" onclick="alert('Information removal process initiated. Please check your email for further instructions.')">Remove Information</button> <!-- Button to remove information -->
                 </section>
-                
-                <!-- Statistics Section -->
-                <section class="lookup-statistics" id="statistics" style="display:none;">
-                    <h3>Statistics</h3>
-                    <p>Based on our analysis, we found the following public data associated with your identity:</p>
-                    <ul>
-                        <li><strong>Social Media Profiles:</strong> <span id="social-media-count">0</span><br></li>
-                        <li><strong>Data Breaches:</strong> <span id="data-breach-count">0</span><br></li>
-                        <li><strong>Public Records:</strong> <span id="public-records-count">0</span></li>
+                <section class="lookup-statistics" id="statistics" style="display:none;"> <!-- Statistics section, hidden by default -->
+                    <h3>Statistics</h3> <!-- Statistics heading -->
+                    <p>Based on our analysis, we found the following public data associated with your identity:</p> <!-- Introductory text -->
+                    <ul> <!-- List of statistics -->
+                        <li><strong>Social Media Profiles:</strong> <span id="social-media-count">0</span><br></li> <!-- Social media count -->
+                        <li><strong>Data Breaches:</strong> <span id="data-breach-count">0</span><br></li> <!-- Data breach count -->
+                        <li><strong>Public Records:</strong> <span id="public-records-count">0</span></li> <!-- Public records count -->
                     </ul>
                 </section>
             </div>
         </main>
-        
-        <footer class="footer" role="contentinfo">
-            <p>This website is on <a href="https://github.com/CLB-coronelguasap/ComputerTechWebsite/tree/main" target="_blank">GitHub</a></p>
-            <p>#!</p>
+        <footer class="footer" role="contentinfo"> <!-- Footer section -->
+            <p>This website is on <a href="https://github.com/CLB-coronelguasap/ComputerTechWebsite/tree/main" target="_blank">GitHub</a></p> <!-- GitHub link -->
+            <p>#!</p> <!-- Footer branding -->
         </footer>
-        <noscript>Sorry, your browser does not support JavaScript!</noscript>
+        <noscript>Sorry, your browser does not support JavaScript!</noscript> <!-- Message for users without JavaScript -->
     </div>
-    <script src="assets/js/universal.js"></script>
+    <script src="assets/js/universal.js"></script> <!-- Links to an external JavaScript file -->
 </body>
 </html>

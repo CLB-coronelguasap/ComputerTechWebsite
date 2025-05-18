@@ -1,256 +1,215 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- Define the character encoding for the document -->
-    <meta charset="UTF-8">
-    <!-- Ensure proper rendering and touch zooming on mobile devices -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Open Graph metadata for social media sharing -->
-    <meta property="og:title" content="SHEBANG - Home">
-    <meta name="google-site-verification" content="OBjUQQrynmuUjMPfXjpMPX6kmvW7ehUIYkBb4KW1lcQ" />
-    <meta property="og:description" content="Empowering you with the knowledge, tools, and best practices to stay safe online.">
-    <meta property="og:image" content="https://gonksite.vercel.app/assets/images/embed.png">
-    <meta property="og:url" content="https://gonksite.vercel.app/index.html">
-    <meta property="og:type" content="website">
-    <!-- Keywords for SEO -->
-    <meta name="keywords" content="Cybersecurity, Home, #!, Portal, SHEBANG, Security, Information, Technology, Cyber, Threats, Protection, Education, News">
-    <!-- Allow search engines to index and follow links -->
-    <meta name="robots" content="index, follow">
-    <!-- Specify the content type and character encoding -->
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <!-- Specify the language of the document -->
-    <meta name="language" content="English">
-    <!-- Suggest search engines revisit the page after 3 days -->
-    <meta name="revisit-after" content="3 days">
-    <!-- Author of the website -->
-    <meta name="author" content="SHEBANG">
-    <!-- Twitter card metadata for sharing -->
-    <meta name="twitter:card" content="summary_large_image">
-    <!-- Title of the page -->
-    <title>SHEBANG - Home</title>
-    <!-- Link to external CSS file -->
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <!-- Preconnect to Google Fonts for performance -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Import custom fonts from Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <!-- Favicon for the website -->
-    <link rel="icon" type="image/x-icon" href="assets/images/icon.ico">
-    <!-- Inline CSS for specific styles -->
-    <style>
-        /* Hero section styling */
-        .hero {
-            position: relative;
-            min-height: 60vh; /* Minimum height of the hero section */
-            display: flex; /* Use flexbox for alignment */
-            align-items: center; /* Vertically center content */
-            justify-content: center; /* Horizontally center content */
-            color: var(--alice-blue); /* Text color */
+<!DOCTYPE html> <!-- Declares the document type as HTML5 -->
+<html lang="en"> <!-- Specifies the language of the document as English -->
+<head> <!-- Contains metadata and links for the document -->
+    <meta charset="UTF-8"> <!-- Sets the character encoding to UTF-8 for supporting various characters -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures proper rendering and touch zooming on mobile devices -->
+    <meta property="og:title" content="SHEBANG - Home"> <!-- Defines the title for Open Graph protocol used in social media sharing -->
+    <meta name="google-site-verification" content="OBjUQQrynmuUjMPfXjpMPX6kmvW7ehUIYkBb4KW1lcQ" /> <!-- Verifies site ownership for Google -->
+    <meta property="og:description" content="Empowering you with the knowledge, tools, and best practices to stay safe online."> <!-- Description for Open Graph -->
+    <meta property="og:image" content="https://gonksite.vercel.app/assets/images/embed.png"> <!-- Image URL for Open Graph -->
+    <meta property="og:url" content="https://gonksite.vercel.app/index.html"> <!-- URL for Open Graph -->
+    <meta property="og:type" content="website"> <!-- Specifies the type of Open Graph object -->
+    <meta name="keywords" content="Cybersecurity, Home, #!, Portal, SHEBANG, Security, Information, Technology, Cyber, Threats, Protection, Education, News"> <!-- Keywords for SEO -->
+    <meta name="robots" content="index, follow"> <!-- Instructs search engines to index the page and follow links -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> <!-- Specifies the content type and character encoding -->
+    <meta name="language" content="English"> <!-- Declares the language of the content -->
+    <meta name="revisit-after" content="3 days"> <!-- Suggests search engines revisit the page after 3 days -->
+    <meta name="author" content="SHEBANG"> <!-- Specifies the author of the website -->
+    <meta name="twitter:card" content="summary_large_image"> <!-- Defines the Twitter card type for sharing -->
+    <title>SHEBANG - Home</title> <!-- Sets the title of the webpage -->
+    <link rel="stylesheet" href="assets/css/styles.css"> <!-- Links an external CSS file for styling -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Preconnects to Google Fonts for performance -->
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet"> <!-- Imports Funnel Display font -->
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet"> <!-- Imports Funnel Sans font -->
+    <link rel="icon" type="image/x-icon" href="assets/images/icon.ico"> <!-- Sets the favicon for the website -->
+    <style> /* Internal CSS for additional styling */
+        .hero { /* Styles the hero section */
+            position: relative; /* Positions the element relative to its normal position */
+            min-height: 60vh; /* Sets a minimum height of 60% of the viewport height */
+            display: flex; /* Enables flexbox for alignment */
+            align-items: center; /* Vertically centers content */
+            justify-content: center; /* Horizontally centers content */
+            color: var(--alice-blue); /* Sets the text color */
         }
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%; /* Full width */
-            height: 100%; /* Full height */
-            background-color: rgba(49, 73, 60, 0.7); /* Semi-transparent overlay */
+        .hero-overlay { /* Styles the overlay in the hero section */
+            position: absolute; /* Positions the element relative to its nearest positioned ancestor */
+            top: 0; /* Aligns the top edge with the parent */
+            left: 0; /* Aligns the left edge with the parent */
+            width: 100%; /* Sets the width to 100% of the parent */
+            height: 100%; /* Sets the height to 100% of the parent */
+            background-color: rgba(49, 73, 60, 0.7); /* Applies a semi-transparent green overlay */
         }
-        .hero-content {
-            position: relative; /* Position relative to allow layering */
-            text-align: center; /* Center text */
+        .hero-content { /* Styles the content within the hero section */
+            position: relative; /* Positions the element relative to itself */
+            text-align: center; /* Centers the text horizontally */
         }
-        /* Grid layout for information cards */
-        .info-grid {
-            display: grid; /* Use CSS grid */
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
-            gap: 20px; /* Space between grid items */
-            margin: 40px 0; /* Vertical margin */
+        .info-grid { /* Styles the grid layout for information cards */
+            display: grid; /* Enables CSS grid layout */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Creates responsive columns */
+            gap: 20px; /* Adds space between grid items */
+            margin: 40px 0; /* Adds vertical margin */
         }
-        /* Styling for individual information cards */
-        .info-card {
-            background-color: var(--brunswick-green); /* Card background color */
-            border-radius: 16px; /* Rounded corners */
-            padding: 20px; /* Inner padding */
-            color: var(--alice-blue); /* Text color */
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Subtle shadow */
+        .info-card { /* Styles individual information cards */
+            background-color: var(--brunswick-green); /* Sets the background color */
+            border-radius: 16px; /* Rounds the corners */
+            padding: 20px; /* Adds padding inside the card */
+            color: var(--alice-blue); /* Sets the text color */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Adds a subtle shadow */
             transition: transform 0.3s ease-in-out; /* Smooth scaling on hover */
-            outline: 2px solid var(--cambridge-blue); /* Border outline */
+            outline: 2px solid var(--cambridge-blue); /* Adds a border outline */
         }
-        .info-card:hover {
-            transform: scale(105%); /* Slightly enlarge on hover */
-            outline: 2px solid var(--celadon); /* Change border color on hover */
+        .info-card:hover { /* Styles the card on hover */
+            transform: scale(105%); /* Slightly enlarges the card */
+            outline: 2px solid var(--celadon); /* Changes the border color */
         }
-        .info-card img {
-            width: 100%; /* Full width image */
-            border-radius: 16px; /* Rounded corners */
-            object-fit: cover; /* Maintain aspect ratio */
+        .info-card img { /* Styles images within the cards */
+            width: 100%; /* Sets the image width to 100% of the card */
+            border-radius: 16px; /* Rounds the corners */
+            object-fit: cover; /* Ensures the image maintains its aspect ratio */
         }
-        /* Call-to-action button styling */
-        .cta-btn {
-            background-color: var(--celadon); /* Button background color */
-            color: var(--rich-black); /* Button text color */
-            border: none; /* Remove border */
-            padding: 15px 25px; /* Padding for size */
-            font-size: 1.2em; /* Font size */
-            border-radius: 50px; /* Rounded button */
-            cursor: pointer; /* Pointer cursor on hover */
+        .cta-btn { /* Styles the call-to-action button */
+            background-color: var(--celadon); /* Sets the button background color */
+            color: var(--rich-black); /* Sets the button text color */
+            border: none; /* Removes the border */
+            padding: 15px 25px; /* Adds padding for size */
+            font-size: 1.2em; /* Sets the font size */
+            border-radius: 50px; /* Rounds the button */
+            cursor: pointer; /* Changes the cursor to a pointer on hover */
             transition: background-color 0.3s ease; /* Smooth background color change */
-            font-family: inherit; /* Inherit font from parent */
+            font-family: inherit; /* Inherits the font from the parent */
         }
-        .cta-btn:hover, .cta-btn:focus {
-            background-color: var(--cambridge-blue); /* Change background color on hover/focus */
-            outline: none; /* Remove focus outline */
+        .cta-btn:hover, .cta-btn:focus { /* Styles the button on hover or focus */
+            background-color: var(--cambridge-blue); /* Changes the background color */
+            outline: none; /* Removes the focus outline */
         }
-        /* Caret animation for typewriter effect */
-        h1 span {
-            border-right: .05em solid; /* Caret styling */
-            animation: caret 1s steps(1) infinite; /* Blinking animation */
+        h1 span { /* Styles the caret animation for the typewriter effect */
+            border-right: .05em solid; /* Adds a caret-like border */
+            animation: caret 1s steps(1) infinite; /* Creates a blinking animation */
         }
-        /* Icon container styling */
-        .icon-container {
-            display: flex; /* Use flexbox */
-            justify-content: space-evenly; /* Evenly space icons */
-            align-items: center; /* Center icons vertically */
-            max-width: 370px; /* Maximum width */
-            height: 185px; /* Fixed height */
-            background-color: var(--brunswick-green); /* Background color */
-            border-radius: 16px; /* Rounded corners */
-            padding: 10px; /* Inner padding */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-            outline: 2px solid var(--cambridge-blue); /* Border outline */
+        .icon-container { /* Styles the container for icons */
+            display: flex; /* Enables flexbox */
+            justify-content: space-evenly; /* Evenly spaces icons */
+            align-items: center; /* Centers icons vertically */
+            max-width: 370px; /* Sets a maximum width */
+            height: 185px; /* Sets a fixed height */
+            background-color: var(--brunswick-green); /* Sets the background color */
+            border-radius: 16px; /* Rounds the corners */
+            padding: 10px; /* Adds padding inside the container */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+            outline: 2px solid var(--cambridge-blue); /* Adds a border outline */
         }
-        .icon-container span {
-            font-size: 3em; /* Icon size */
-            color: var(--celadon); /* Icon color */
+        .icon-container span { /* Styles the icons within the container */
+            font-size: 3em; /* Sets the icon size */
+            color: var(--celadon); /* Sets the icon color */
             transition: transform 0.3s ease; /* Smooth scaling on hover */
         }
-        /* Keyframes for caret animation */
-        @keyframes caret {
-            50% {
-                border-color: transparent; /* Make caret invisible */
-            }
+        @keyframes caret { /* Defines the keyframes for the caret animation */
+            50% { border-color: transparent; } /* Makes the caret invisible at 50% of the animation */
         }
-        /* Responsive design for smaller screens */
-        @media (max-width: 768px) {
-            .info-card {
-                margin: 20px; /* Adjust margin */
-                padding: 20px; /* Adjust padding */
+        @media (max-width: 768px) { /* Styles for screens smaller than 768px */
+            .info-card { /* Adjusts the info card styling */
+                margin: 20px; /* Reduces the margin */
+                padding: 20px; /* Adjusts the padding */
             }
         }
     </style>
 </head>
-<body data-typewriter='["#!", "SHEBANG", "CYBERSECURITY"]'>
-    <div class="plutarco" role="main">
-        <!-- Header with navigation bar -->
-        <header id="header">
-            <nav aria-label="Main Navigation">
-                <ul class="navbar">
-                    <!-- Navigation links -->
-                    <li><a class="active" href="/"><span class="material-symbols-outlined">home</span></a></li>
-                    <li><a href="security.html"><span class="material-symbols-outlined">security</span></a></li>
-                    <li><a href="lookup.html"><span class="material-symbols-outlined">search</span></a></li>
-                    <li><a href="about.html"><span class="material-symbols-outlined">info</span></a></li>
-                    <li><a id="music-btn"><span class="material-symbols-outlined">music_note</span></a></li>
+<body data-typewriter='["#!", "SHEBANG", "CYBERSECURITY"]'> <!-- Sets a data attribute for typewriter effect -->
+    <div class="plutarco" role="main"> <!-- Main container with a role for accessibility -->
+        <header id="header"> <!-- Header section -->
+            <nav aria-label="Main Navigation"> <!-- Navigation bar with an accessible label -->
+                <ul class="navbar"> <!-- Unordered list for navigation links -->
+                    <li><a class="active" href="/"><span class="material-symbols-outlined">home</span></a></li> <!-- Home link -->
+                    <li><a href="security.html"><span class="material-symbols-outlined">security</span></a></li> <!-- Security page link -->
+                    <li><a href="lookup.html"><span class="material-symbols-outlined">search</span></a></li> <!-- Lookup page link -->
+                    <li><a href="about.html"><span class="material-symbols-outlined">info</span></a></li> <!-- About page link -->
+                    <li><a id="music-btn"><span class="material-symbols-outlined">music_note</span></a></li> <!-- Music button -->
                 </ul>
-                <!-- Background music audio -->
-                <audio loop id="audio" src="assets/audio/lease.mp3"></audio>
+                <audio loop id="audio" src="assets/audio/lease.mp3"></audio> <!-- Background music audio element -->
             </nav>
         </header>
-
-        <!-- Modal for enabling/disabling background music -->
-        <div id="music-modal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <p>Would you like to enable background music? (Click Enable for next song)</p>
+        <div id="music-modal" class="modal"> <!-- Modal for music control -->
+            <div class="modal-content"> <!-- Modal content -->
+                <span class="close">&times;</span> <!-- Close button -->
+                <p>Would you like to enable background music? (Click Enable for next song)</p> <!-- Modal text -->
             </div>
-            <div class="modal-footer">
-                <button id="enable-btn"><span class="material-symbols-outlined">check</span>Enable</button>
-                <button id="disable-btn"><span class="material-symbols-outlined">close</span>Disable</button>
+            <div class="modal-footer"> <!-- Modal footer -->
+                <button id="enable-btn"><span class="material-symbols-outlined">check</span>Enable</button> <!-- Enable button -->
+                <button id="disable-btn"><span class="material-symbols-outlined">close</span>Disable</button> <!-- Disable button -->
             </div>
         </div>
-
-        <!-- Hero Section -->
-        <section class="hero" aria-labelledby="heroHeading">
-            <div class="hero-overlay"></div>
-            <div class="hero-content">
-                <h1 id="heroHeading" class="typewriter" style="font-size: 10vw; margin: 0;">SHEBANG</h1>
-                <p class="typewriter">Empowering you with the knowledge, tools, and best practices to stay safe online.</p>
-                <button class="cta-btn" onclick="window.location.href='security.html'">Learn More</button>
+        <section class="hero" aria-labelledby="heroHeading"> <!-- Hero section with accessible label -->
+            <div class="hero-overlay"></div> <!-- Overlay for the hero section -->
+            <div class="hero-content"> <!-- Content within the hero section -->
+                <h1 id="heroHeading" class="typewriter" style="font-size: 10vw; margin: 0;">SHEBANG</h1> <!-- Main heading with typewriter effect -->
+                <p class="typewriter">Empowering you with the knowledge, tools, and best practices to stay safe online.</p> <!-- Subheading -->
+                <button class="cta-btn" onclick="window.location.href='security.html'">Learn More</button> <!-- Call-to-action button -->
             </div>
         </section>
-
-        <!-- Main content -->
-        <main>
-            <div class="container">
-                <!-- Information Grid Section -->
-                <section aria-labelledby="infoHeading">
-                    <h2 id="infoHeading" style="text-align: center;">Why Cybersecurity Matters</h2>
-                    <div class="info-grid">
-                        <!-- Info Card 1 -->
-                        <div class="info-card">
-                            <a href="https://www.cisa.gov/news-events/cybersecurity-advisories" target="_blank">
-                                <div class="icon-container" aria-label="Cyber Threats Illustration">
-                                    <span class="material-symbols-outlined">arrow_right_alt</span>
-                                    <span class="material-symbols-outlined">shield_lock</span>
-                                    <span class="material-symbols-outlined">trending_up</span>
+        <main> <!-- Main content section -->
+            <div class="container"> <!-- Container for content -->
+                <section aria-labelledby="infoHeading"> <!-- Section for information grid -->
+                    <h2 id="infoHeading" style="text-align: center;">Why Cybersecurity Matters</h2> <!-- Section heading -->
+                    <div class="info-grid"> <!-- Grid layout for information cards -->
+                        <div class="info-card"> <!-- First information card -->
+                            <a href="https://www.cisa.gov/news-events/cybersecurity-advisories" target="_blank"> <!-- Link to external resource -->
+                                <div class="icon-container" aria-label="Cyber Threats Illustration"> <!-- Icon container -->
+                                    <span class="material-symbols-outlined">arrow_right_alt</span> <!-- Icon -->
+                                    <span class="material-symbols-outlined">shield_lock</span> <!-- Icon -->
+                                    <span class="material-symbols-outlined">trending_up</span> <!-- Icon -->
                                 </div>
-                                <h3>Rising Cyber Threats</h3>
-                                <p>Digital attacks continually evolve, targeting individuals and organizations across the globe. Staying informed about the latest trends is crucial.</p>
+                                <h3>Rising Cyber Threats</h3> <!-- Card title -->
+                                <p>Digital attacks continually evolve, targeting individuals and organizations across the globe. Staying informed about the latest trends is crucial.</p> <!-- Card description -->
                             </a>
                         </div>
-                        <!-- Info Card 2 -->
-                        <div class="info-card">
-                            <a href="https://www.ftc.gov/news-events/media-resources/consumer-finance" target="_blank">
-                                <div class="icon-container" aria-label="Cyber Threats Illustration">
-                                    <span class="material-symbols-outlined">visibility_lock</span>
-                                    <span class="material-symbols-outlined">lock_person</span>
-                                    <span class="material-symbols-outlined">key</span>
+                        <div class="info-card"> <!-- Second information card -->
+                            <a href="https://www.ftc.gov/news-events/media-resources/consumer-finance" target="_blank"> <!-- Link to external resource -->
+                                <div class="icon-container" aria-label="Cyber Threats Illustration"> <!-- Icon container -->
+                                    <span class="material-symbols-outlined">visibility_lock</span> <!-- Icon -->
+                                    <span class="material-symbols-outlined">lock_person</span> <!-- Icon -->
+                                    <span class="material-symbols-outlined">key</span> <!-- Icon -->
                                 </div>
-                                <h3>Data Protection</h3>
-                                <p>Secure your personal and professional data with strong passwords, two-factor authentication, and proactive cybersecurity measures.</p>
+                                <h3>Data Protection</h3> <!-- Card title -->
+                                <p>Secure your personal and professional data with strong passwords, two-factor authentication, and proactive cybersecurity measures.</p> <!-- Card description -->
                             </a>
                         </div>
-                        <!-- Info Card 3 -->
-                        <div class="info-card">
-                            <a href="https://www.nist.gov/topics/cybersecurity" target="_blank">
-                                <div class="icon-container" aria-label="Cyber Threats Illustration">
-                                    <span class="material-symbols-outlined">shield_locked</span>
-                                    <span class="material-symbols-outlined">campaign</span>
-                                    <span class="material-symbols-outlined">school</span>
+                        <div class="info-card"> <!-- Third information card -->
+                            <a href="https://www.nist.gov/topics/cybersecurity" target="_blank"> <!-- Link to external resource -->
+                                <div class="icon-container" aria-label="Cyber Threats Illustration"> <!-- Icon container -->
+                                    <span class="material-symbols-outlined">shield_locked</span> <!-- Icon -->
+                                    <span class="material-symbols-outlined">campaign</span> <!-- Icon -->
+                                    <span class="material-symbols-outlined">school</span> <!-- Icon -->
                                 </div>
-                                <h3>Cybersecurity Education</h3>
-                                <p>Knowledge is power. Explore our resources, guides, and tutorials to understand how to protect your digital presence.</p>
+                                <h3>Cybersecurity Education</h3> <!-- Card title -->
+                                <p>Knowledge is power. Explore our resources, guides, and tutorials to understand how to protect your digital presence.</p> <!-- Card description -->
                             </a>
                         </div>
-                        <!-- Info Card 4 -->
-                        <div class="info-card">
-                            <a href="https://www.reuters.com/technology/cybersecurity/" target="_blank">
-                                <div class="icon-container" aria-label="Cyber Threats Illustration">
-                                    <span class="material-symbols-outlined">threat_intelligence</span>
-                                    <span class="material-symbols-outlined">newspaper</span>
-                                    <span class="material-symbols-outlined">radio</span>
+                        <div class="info-card"> <!-- Fourth information card -->
+                            <a href="https://www.reuters.com/technology/cybersecurity/" target="_blank"> <!-- Link to external resource -->
+                                <div class="icon-container" aria-label="Cyber Threats Illustration"> <!-- Icon container -->
+                                    <span class="material-symbols-outlined">threat_intelligence</span> <!-- Icon -->
+                                    <span class="material-symbols-outlined">newspaper</span> <!-- Icon -->
+                                    <span class="material-symbols-outlined">radio</span> <!-- Icon -->
                                 </div>
-                                <h3>Cybersecurity News</h3>
-                                <p>Read up on the latest news in the world of cybersecurity and inform yourself on the topic.</p>
+                                <h3>Cybersecurity News</h3> <!-- Card title -->
+                                <p>Read up on the latest news in the world of cybersecurity and inform yourself on the topic.</p> <!-- Card description -->
                             </a>
                         </div>
                     </div>
                 </section>
-
-                <!-- Interactive Section -->
-                <section aria-labelledby="interactiveHeading">
-                    <h2 id="interactiveHeading" style="text-align: center;">Join the Conversation</h2>
-                    <p style="text-align: center;">Connect with experts, ask questions, and share your experiences in our cybersecurity community.</p>
-                    <div style="text-align: center; margin-top: 20px;">
-            <script src="assets/js/universal.js"></script>
-            <footer class="footer" role="contentinfo">
-                <p>This website is on <a href="https://github.com/CLB-coronelguasap/ComputerTechWebsite/tree/main" target="_blank">GitHub</a></p>
-                <p>#!</p>
-            </footer>
+                <section aria-labelledby="interactiveHeading"> <!-- Section for interactive content -->
+                    <h2 id="interactiveHeading" style="text-align: center;">Join the Conversation</h2> <!-- Section heading -->
+                    <p style="text-align: center;">Connect with experts, ask questions, and share your experiences in our cybersecurity community.</p> <!-- Section description -->
+                    <div style="text-align: center; margin-top: 20px;"> <!-- Centered container -->
+                </section>
+            <script src="assets/js/universal.js"></script> <!-- Links an external JavaScript file -->
         </div>
         </div>
-            <noscript>Sorry, your browser does not support JavaScript!</noscript>
+        <footer class="footer" role="contentinfo"> <!-- Footer section with a role for accessibility -->
+            <p>This website is on <a href="https://github.com/CLB-coronelguasap/ComputerTechWebsite/tree/main" target="_blank">GitHub</a></p> <!-- GitHub link -->
+            <p>#!</p> <!-- Footer text -->
+        </footer>
+        <noscript>Sorry, your browser does not support JavaScript!</noscript> <!-- Message for users with JavaScript disabled -->
 </body>
-</html>
+</html> <!-- End of the HTML document -->
 

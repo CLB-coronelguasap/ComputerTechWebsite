@@ -1,187 +1,144 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="SHEBANG - Security">
-    <meta name="google-site-verification" content="OBjUQQrynmuUjMPfXjpMPX6kmvW7ehUIYkBb4KW1lcQ" />
-    <meta property="og:description" content="Explore the world of cybersecurity, understand its importance, and learn about the latest statistics and best practices to protect yourself and your organization from cyber threats.">
-    <meta property="og:image" content="https://gonksite.vercel.app/assets/images/embed.png">
-    <meta property="og:url" content="https://gonksite.vercel.app/security.html">
-    <meta property="og:type" content="website">
-    <meta name="keywords" content="Cybersecurity, Information, #!, Security, Data Protection, Cyber Threats, Statistics, Best Practices">
-    <meta name="robots" content="index, follow">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="language" content="English">
-    <meta name="revisit-after" content="3 days">
-    <meta name="author" content="SHEBANG">
-    <meta name="twitter:card" content="summary_large_image">
-    <title>SHEBANG - Security</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
-    <link rel="icon" type="image/x-icon" href="assets/images/icon.ico">
+<!DOCTYPE html> <!-- Declares the document type as HTML5 -->
+<html lang="en"> <!-- Sets the language of the document to English -->
+<head> <!-- Metadata and resources for the document -->
+    <meta charset="UTF-8"> <!-- Specifies the character encoding as UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures proper scaling on mobile devices -->
+    <meta property="og:title" content="SHEBANG - Security"> <!-- Open Graph title for social media sharing -->
+    <meta name="google-site-verification" content="OBjUQQrynmuUjMPfXjpMPX6kmvW7ehUIYkBb4KW1lcQ" /> <!-- Google site verification for ownership -->
+    <meta property="og:description" content="Explore the world of cybersecurity, understand its importance, and learn about the latest statistics and best practices to protect yourself and your organization from cyber threats."> <!-- Open Graph description -->
+    <meta property="og:image" content="https://gonksite.vercel.app/assets/images/embed.png"> <!-- Open Graph image for previews -->
+    <meta property="og:url" content="https://gonksite.vercel.app/security.html"> <!-- Open Graph URL -->
+    <meta property="og:type" content="website"> <!-- Open Graph type -->
+    <meta name="keywords" content="Cybersecurity, Information, #!, Security, Data Protection, Cyber Threats, Statistics, Best Practices"> <!-- Keywords for SEO -->
+    <meta name="robots" content="index, follow"> <!-- Instructs search engines to index and follow links -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> <!-- Specifies the content type and character set -->
+    <meta name="language" content="English"> <!-- Specifies the language as English -->
+    <meta name="revisit-after" content="3 days"> <!-- Suggests search engines revisit the page after 3 days -->
+    <meta name="author" content="SHEBANG"> <!-- Specifies the author of the page -->
+    <meta name="twitter:card" content="summary_large_image"> <!-- Twitter card type for sharing -->
+    <title>SHEBANG - Security</title> <!-- Title of the page -->
+    <link rel="stylesheet" href="assets/css/styles.css"> <!-- Links to an external CSS file -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Preconnects to Google Fonts for performance -->
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet"> <!-- Links to a Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet"> <!-- Links to another Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" /> <!-- Links to Material Symbols font -->
+    <link rel="icon" type="image/x-icon" href="assets/images/icon.ico"> <!-- Sets the favicon for the page -->
     <style>
-
-.security-hero {
-            position: relative;
-            min-height: 45vh;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-align: center;
-                -ms-flex-align: center;
-                    align-items: center;
-            -webkit-box-pack: center;
-                -ms-flex-pack: center;
-                    justify-content: center;
-            color: var(--alice-blue);
-            text-align: center;
+        .security-hero { /* Styles for the hero section */
+            position: relative; /* Allows child elements to be positioned */
+            min-height: 45vh; /* Minimum height of 45% of the viewport height */
+            display: flex; /* Enables flexbox layout */
+            align-items: center; /* Vertically centers content */
+            justify-content: center; /* Horizontally centers content */
+            color: var(--alice-blue); /* Text color using a CSS variable */
+            text-align: center; /* Centers text */
         }
-        .security-hero::before {
-            content: "";
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(49,73,60,0.7);
+        .security-hero::before { /* Adds an overlay to the hero section */
+            content: ""; /* Empty pseudo-element */
+            position: absolute; /* Positioned relative to the parent */
+            top: 0; left: 0; /* Covers the entire parent */
+            width: 100%; height: 100%; /* Full width and height */
+            background: rgba(49,73,60,0.7); /* Semi-transparent background */
         }
-        .security-hero-content {
-            position: relative;
+        .security-hero-content { /* Styles for content inside the hero section */
+            position: relative; /* Ensures it appears above the overlay */
         }
-
-        .mini-div {
-            display: grid;
-            grid-template-columns: 1fr 0.5fr;
-            gap: 30px;
+        .mini-div { /* Grid layout for statistics and video */
+            display: grid; /* Enables grid layout */
+            grid-template-columns: 1fr 0.5fr; /* Two columns with different widths */
+            gap: 30px; /* Spacing between grid items */
         }
-
-
-        video {
-            width: 25.5vw;
-            height: auto;
-            border-radius: 16px;
-            outline: 2px solid var(--celadon);
+        video { /* Styles for video elements */
+            width: 25.5vw; /* Width relative to the viewport */
+            height: auto; /* Maintains aspect ratio */
+            border-radius: 16px; /* Rounds corners */
+            outline: 2px solid var(--celadon); /* Border using a CSS variable */
         }
-
-        .info-card h2 {
-            text-align: center;
-            margin-bottom: 20px;
+        .info-card h2 { /* Styles for headings in info cards */
+            text-align: center; /* Centers text */
+            margin-bottom: 20px; /* Spacing below the heading */
         }
-        .stats-list, .practices-list {
-            list-style-type: none;
-            padding: 0;
-            line-height: 1.8;
-            font-size: 18px;
+        .stats-list, .practices-list { /* Styles for unordered lists */
+            list-style-type: none; /* Removes default bullet points */
+            padding: 0; /* Removes default padding */
+            line-height: 1.8; /* Increases line spacing */
+            font-size: 18px; /* Font size */
         }
-        .stats-list li::before {
-            content: "• ";
-            color: var(--celadon);
+        .stats-list li::before { /* Custom bullet points for stats list */
+            content: "• "; /* Bullet point */
+            color: var(--celadon); /* Bullet color */
         }
-        .practices-list li {
-            margin: 10px 0;
-            padding-left: 20px;
-            position: relative;
-            float: none;
-            display: block;
+        .practices-list li { /* Styles for practices list items */
+            margin: 10px 0; /* Vertical spacing */
+            padding-left: 20px; /* Left padding */
+            position: relative; /* Allows pseudo-elements */
         }
-        .practices-list li::before {
-            content: "✔ ";
-            position: absolute;
-            left: 0;
-            color: var(--celadon);
+        .practices-list li::before { /* Checkmark for practices list items */
+            content: "✔ "; /* Checkmark */
+            position: absolute; /* Positioned relative to the list item */
+            left: 0; /* Aligns to the left */
+            color: var(--celadon); /* Checkmark color */
         }
-
-        .typewriter h1 {
-              overflow: hidden; /* Ensures the content is not revealed until the animation */
-              border-right: .15em solid orange; /* The typwriter cursor */
-              white-space: nowrap; /* Keeps the content on a single line */
-              margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-              letter-spacing: .15em; /* Adjust as needed */
-              -webkit-animation: 
-                typing 3.5s steps(40, end),
-                blink-caret .75s step-end infinite;
-                      animation: 
-                typing 3.5s steps(40, end),
-                blink-caret .75s step-end infinite;
-            }
-
-            /* The typing effect */
-            @-webkit-keyframes typing {
-              from { width: 0 }
-              to { width: 100% }
-            }
-            @keyframes typing {
-              from { width: 0 }
-              to { width: 100% }
-            }
-
-            /* The typewriter cursor effect */
-            @-webkit-keyframes blink-caret {
-              from, to { border-color: transparent }
-              50% { border-color: orange; }
-            }
-            @keyframes blink-caret {
-              from, to { border-color: transparent }
-              50% { border-color: orange; }
-            }
-
-        @media (max-width: 768px) {
+        .typewriter h1 { /* Typewriter effect for headings */
+            overflow: hidden; /* Hides overflowing text */
+            border-right: .15em solid orange; /* Blinking cursor */
+            white-space: nowrap; /* Prevents text wrapping */
+            margin: 0 auto; /* Centers text */
+            letter-spacing: .15em; /* Spacing between letters */
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite; /* Typing and blinking animations */
+        }
+        @keyframes typing { /* Keyframes for typing animation */
+            from { width: 0 } /* Starts with no text visible */
+            to { width: 100% } /* Ends with all text visible */
+        }
+        @keyframes blink-caret { /* Keyframes for blinking cursor */
+            from, to { border-color: transparent } /* Invisible cursor */
+            50% { border-color: orange; } /* Visible cursor */
+        }
+        @media (max-width: 768px) { /* Responsive styles for smaller screens */
             .info-card {
-                margin: 20px;
-                padding: 20px;
+                margin: 20px; /* Margin around the card */
+                padding: 20px; /* Padding inside the card */
             }
-
-           
         }
     </style>
 </head>
-<body data-typewriter='["CRYPTOMINERS", "PHISHING", "RANSOMWARE", "TROJANS", "SPYWARE", "WORM", "ADWARE", "ROOTKIT", "KEYLOGGER", "EXPLOIT", "VIRUS", "MALWARE", "BOTNET", "DDoS", "SQL INJECTION", "XSS", "RAT"]'>
-    <div class="plutarco" role="main">
-        <header id="header">
-            <nav aria-label="Main Navigation">
-                <ul class="navbar">
-                    <li><a href="/"><span class="material-symbols-outlined">home</span></a></li>
-                    <li><a class="active" href="security.html"><span class="material-symbols-outlined">security</span></a></li>
-                    <li><a href="lookup.html"><span class="material-symbols-outlined">search</span></a></li>
-                    <li><a href="about.html"><span class="material-symbols-outlined">info</span></a></li>
-                    <li><a id="music-btn"><span class="material-symbols-outlined">music_note</span></a></li>
+<body data-typewriter='["CRYPTOMINERS", "PHISHING", "RANSOMWARE", "TROJANS", "SPYWARE", "WORM", "ADWARE", "ROOTKIT", "KEYLOGGER", "EXPLOIT", "VIRUS", "MALWARE", "BOTNET", "DDoS", "SQL INJECTION", "XSS", "RAT"]'> <!-- Sets a data attribute for the typewriter effect -->
+    <div class="plutarco" role="main"> <!-- Main container for the page content -->
+        <header id="header"> <!-- Header section -->
+            <nav aria-label="Main Navigation"> <!-- Navigation bar -->
+                <ul class="navbar"> <!-- List of navigation links -->
+                    <li><a href="/"><span class="material-symbols-outlined">home</span></a></li> <!-- Home link -->
+                    <li><a class="active" href="security.html"><span class="material-symbols-outlined">security</span></a></li> <!-- Active link to security page -->
+                    <li><a href="lookup.html"><span class="material-symbols-outlined">search</span></a></li> <!-- Link to lookup page -->
+                    <li><a href="about.html"><span class="material-symbols-outlined">info</span></a></li> <!-- Link to about page -->
+                    <li><a id="music-btn"><span class="material-symbols-outlined">music_note</span></a></li> <!-- Music toggle button -->
                 </ul>
-                <audio loop id="audio" src="assets/audio/lotus.mp3"></audio>
+                <audio loop id="audio" src="assets/audio/lotus.mp3"></audio> <!-- Background music -->
             </nav>
         </header>
-
-        <div id="music-modal" class="modal">
-
-            <!-- Modal content -->
-            <div class="modal-content">
-              <span class="close">&times;</span>
-              <p>Would you like to enable background music? (Click Enable for next song)</p>
+        <div id="music-modal" class="modal"> <!-- Modal for music settings -->
+            <div class="modal-content"> <!-- Modal content -->
+              <span class="close">&times;</span> <!-- Close button -->
+              <p>Would you like to enable background music? (Click Enable for next song)</p> <!-- Modal text -->
             </div>
-            <div class="modal-footer">
-                <button id="enable-btn"><span class="material-symbols-outlined">check</span>Enable</button>
-                <button id="disable-btn"><span class="material-symbols-outlined">close</span>Disable</button>
+            <div class="modal-footer"> <!-- Modal footer -->
+                <button id="enable-btn"><span class="material-symbols-outlined">check</span>Enable</button> <!-- Enable button -->
+                <button id="disable-btn"><span class="material-symbols-outlined">close</span>Disable</button> <!-- Disable button -->
             </div>
-          
-          </div>
-
-        <!-- Hero Section -->
-        <section class="security-hero" aria-labelledby="securityHeroHeading">
-            <div class="security-hero-content">
-                <h1 style="font-size: 10vw;" id="securityHeroHeading">Cybersecurity</h1>
-                <p>Do you know what they all mean?</p>
+        </div>
+        <section class="security-hero" aria-labelledby="securityHeroHeading"> <!-- Hero section -->
+            <div class="security-hero-content"> <!-- Content inside the hero section -->
+                <h1 style="font-size: 10vw;" id="securityHeroHeading">Cybersecurity</h1> <!-- Main heading -->
+                <p>Do you know what they all mean?</p> <!-- Subheading -->
             </div>
         </section>
-        
-        <main>
-            <div class="container">
-                <!-- Statistics Section -->
-                 <div class="mini-div">
-                    <section class="info-card" aria-labelledby="statsHeading">
-                        <h2 id="statsHeading">Cybersecurity Statistics</h2>
-                        <ul class="stats-list">
+        <main> <!-- Main content -->
+            <div class="container"> <!-- Container for sections -->
+                <div class="mini-div"> <!-- Grid layout for statistics and video -->
+                    <section class="info-card" aria-labelledby="statsHeading"> <!-- Statistics section -->
+                        <h2 id="statsHeading">Cybersecurity Statistics</h2> <!-- Heading -->
+                        <ul class="stats-list"> <!-- List of statistics -->
                             <li>The average cost of a data breach globally in 2024 was $4.88 million, a 10% increase from the previous year.</li>
                             <li>Cybercrime is projected to cost the world $10.5 trillion annually by 2025.</li>
                             <li>Organisations experienced an average of 1,636 cyber attacks per week in the second quarter of 2024, a 30% year-over-year increase.</li>
@@ -191,43 +148,41 @@
                             <li>Phishing attacks saw a dramatic increase of 1,265%, partly driven by the growth of Generative AI.</li>
                         </ul>
                     </section>
-                    <video class="img-card" autoplay loop aria-labelledby="videoHeading">
-                        <source src="assets/media/shebang.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
+                    <video class="img-card" autoplay loop aria-labelledby="videoHeading"> <!-- Video section -->
+                        <source src="assets/media/shebang.mp4" type="video/mp4"> <!-- Video source -->
+                        Your browser does not support the video tag. <!-- Fallback message -->
                     </video>
                 </div>
-
-                <section class="info-card" aria-labelledby="understandingHeading">
-                    <h2 id="understandingHeading">Understanding Cybersecurity</h2>
+                <section class="info-card" aria-labelledby="understandingHeading"> <!-- Understanding cybersecurity section -->
+                    <h2 id="understandingHeading">Understanding Cybersecurity</h2> <!-- Heading -->
                     <p>Cybersecurity is the practice of protecting computer systems, networks, devices, and data from unauthorized access, theft, damage, or disruption. In an increasingly digital world, robust cybersecurity measures are essential for individuals, businesses, and governments alike. The threats are constantly evolving, becoming more sophisticated and frequent. From malware and phishing attacks to ransomware and denial-of-service attacks, the landscape of cyber threats requires constant vigilance and proactive defense strategies.</p>
                     <p>Effective cybersecurity involves a multi-layered approach, encompassing technologies, processes, and people. It's not just about installing antivirus software; it includes implementing strong passwords and multi-factor authentication, educating users about social engineering tactics, regularly updating software and systems, and establishing incident response plans. A strong security posture aims to ensure the confidentiality, integrity, and availability of information, safeguarding valuable assets and maintaining trust in the digital realm.</p>
                     <p>Ignoring cybersecurity can lead to severe consequences, including financial losses, reputational damage, legal liabilities, and the compromise of sensitive personal and business information. As our reliance on digital technologies grows, so does the importance of understanding and implementing effective cybersecurity practices to navigate the complex and ever-changing threat landscape.</p>
                 </section>
-
-                <section class="info-card" aria-labelledby="cyberHygieneHeading">
-                    <h2 id="cyberHygieneHeading">Cyber Hygiene</h2>
+                <section class="info-card" aria-labelledby="cyberHygieneHeading"> <!-- Cyber hygiene section -->
+                    <h2 id="cyberHygieneHeading">Cyber Hygiene</h2> <!-- Heading -->
                     <p>Imagine leaving your front door unlocked every time you leave the house. That’s essentially what poor cyber hygiene does to your digital life. Cyber hygiene refers to the simple, everyday practices that keep your devices, data, and networks secure. It’s not just for tech experts—anyone can take steps to protect themselves online.</p>
                     <p>For instance, did you know that 80% of hacking-related breaches are caused by weak or stolen passwords? Using strong, unique passwords for each account and enabling multi-factor authentication can drastically reduce your risk. Regularly updating your software is another critical step—outdated systems are a goldmine for hackers looking to exploit vulnerabilities.</p>
-                    <figure>
-                        <video src="assets/media/rockyou.mp4" alt="Video of rockyou.txt" style="width: 100%; border-radius: 16px;">
-                        <figcaption>Files like rockyou.txt contain millions of passwords</figcaption>
+                    <figure style="display: flex;">
+                        <video autoplay="" loop="" src="assets/media/rockyou.mp4" alt="Video of rockyou.txt" style="border-radius: 16px;margin: auto;margin-right: 30px;">Your browser does not support the video tag</video>
+                            <div class="info-card" style="display: block;margin: auto;max-width: 18vw;margin-left: 30px;height: 16vw;">
+                                <p style="font-size: 2.3vw;">Files like rockyou.txt contain millions of passwords</p>
+                            </div>
                     </figure>
                     <p>Backing up your data is equally important. Whether it’s family photos or critical business documents, having a secure backup ensures you won’t lose everything in the event of a ransomware attack or hardware failure. Remember, cyber hygiene isn’t just about protecting yourself—it’s about contributing to a safer digital world for everyone.</p>
                 </section>
-
-                <section class="info-card" aria-labelledby="humanElementHeading">
-                    <h2 id="humanElementHeading">The Human Element</h2>
+                <section class="info-card" aria-labelledby="humanElementHeading"> <!-- Human element section -->
+                    <h2 id="humanElementHeading">The Human Element</h2> <!-- Heading -->
                     <p>Here’s a surprising fact: 95% of cybersecurity breaches are caused by human error. Whether it’s clicking on a phishing link, using a weak password, or failing to update software, humans are often the weakest link in the cybersecurity chain. But the good news? Awareness and education can turn this weakness into a strength.</p>
                     <p>Take phishing attacks, for example. These scams trick users into revealing sensitive information by pretending to be legitimate entities. In 2024 alone, phishing attacks increased by a staggering 1,265%, partly due to the rise of generative AI, which makes these scams more convincing than ever. By learning to recognize the signs of phishing—like suspicious email addresses or urgent requests for personal information—you can avoid falling victim.</p>
                     <figure>
-                        <img src="assets/images/phishing.png" alt="Example of a Phishing SMS Message" style="border-radius: 16px;">
+                        <img src="assets/images/phishing.png" alt="Example of a Phishing SMS Message" style="width: auto; border-radius: 16px;">
                         <figcaption>Phishing emails and messages often look legitimate but contain subtle red flags.</figcaption>
                     </figure>
                     <p>Organizations can also play a role by providing regular cybersecurity training for employees. Simple steps like teaching staff to verify links before clicking or to report suspicious activity can make a huge difference. Remember, cybersecurity isn’t just about technology—it’s about people, too.</p>
                 </section>
-
-                <section class="info-card" aria-labelledby="futureChallengesHeading">
-                    <h2 id="futureChallengesHeading">Challenges</h2>
+                <section class="info-card" aria-labelledby="futureChallengesHeading"> <!-- Future challenges section -->
+                    <h2 id="futureChallengesHeading">Challenges</h2> <!-- Heading -->
                     <p>The digital world is evolving at an unprecedented pace, and with it comes a host of new cybersecurity challenges. One of the most pressing issues is the rise of artificial intelligence (AI) in cyberattacks. Cybercriminals are using AI to automate attacks, create highly convincing phishing emails, and exploit vulnerabilities faster than ever before.</p>
                     <p>Another growing concern is the Internet of Things (IoT). From smart home devices to industrial sensors, IoT devices are everywhere—and they’re often poorly secured. In 2024, IoT-related attacks increased by 55%, highlighting the urgent need for better security measures in this space.</p>
                     <figure>
@@ -239,13 +194,11 @@
                 </section>
             </div>
         </main>
-        <script src="assets/js/universal.js"></script>
-        <footer class="footer" role="contentinfo">
-            <p>This website is on <a href="https://github.com/CLB-coronelguasap/ComputerTechWebsite/tree/main" target="_blank">GitHub</a></p>
-            <p>#!</p>
+        <footer class="footer" role="contentinfo"> <!-- Footer -->
+            <p>This website is on <a href="https://github.com/CLB-coronelguasap/ComputerTechWebsite/tree/main" target="_blank">GitHub</a></p> <!-- GitHub link -->
+            <p>#!</p> <!-- Branding -->
         </footer>
     </div>
-        <noscript>Sorry, your browser does not support JavaScript!</noscript>
-    </div>
+    <noscript>Sorry, your browser does not support JavaScript!</noscript> <!-- Message for users without JavaScript -->
 </body>
 </html>
