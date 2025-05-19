@@ -507,6 +507,7 @@ h1 span { /* Styles for spans inside h1 headings */
     margin: auto; /* Centers the footer horizontally */
     padding: 20px; /* Adds 20px padding to all sides */
     border: 2px solid var(--tea-green); /* Adds a 2px solid border with the tea-green color */
+    display: flex /* Uses flexbox for layout */
     width: 40%; /* Sets the width to 40% of the viewport */
     border-radius: 16px; /* Rounds the corners of the modal footer */
 }
